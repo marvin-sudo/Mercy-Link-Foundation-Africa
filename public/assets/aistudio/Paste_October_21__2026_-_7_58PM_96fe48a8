@@ -1,0 +1,685 @@
+# MASTER WEBSITE DEVELOPMENT PROMPT
+## MERCY LINK FOUNDATION AFRICA — MODERN NGO WEBSITE REDESIGN
+
+### 1. PROJECT OBJECTIVE
+
+Develop a complete, modern, responsive, production-ready website for **Mercy Link Foundation Africa**, using the organization's existing website, published organizational information, ministry programs, reports, and mission as the primary source of truth.
+
+Official reference website:
+https://mercylinkfoundationafrica.org/
+
+The new website must communicate the foundation's identity as a Christian, non-denominational, community-focused organization committed to reaching unreached communities, equipping churches, developing leaders, empowering vulnerable people, and transforming lives throughout Uganda and Africa.
+
+The website must look like the digital platform of a credible, established African nonprofit organization that can engage churches, donors, international development partners, volunteers, communities, and beneficiaries.
+
+This is a website redesign and improvement project, NOT an invitation to invent a new organization.
+
+### 2. CRITICAL DEVELOPMENT RULES
+
+Before implementation:
+
+1. Inspect the reference website and its available pages, including the homepage, About Us, programs, reports, Children Services, Education Fund, and Events.
+2. Review the available ministry descriptions and published reports to understand the foundation's actual work.
+3. Preserve the organization's name, identity, mission, vision, programs, and established history.
+4. Do not invent achievements, donor names, testimonials, financial figures, staff profiles, registration details, or impact statistics.
+5. Do not remove existing programs merely because they are not featured prominently on the homepage.
+6. Use the current website's content as the baseline and organize it into a more professional, accessible, and compelling digital experience.
+7. Where information is missing or inconsistent, create clearly marked editable content fields for authorized administrators rather than fabricating facts.
+8. Do not rebuild or replace an existing codebase until its architecture, dependencies, assets, and current functionality have been inspected.
+9. If working inside an existing project, preserve useful functionality and integrate the new design incrementally.
+10. Deliver a functioning website, not just a static mockup or a landing-page screenshot.
+
+### 3. ORGANIZATIONAL PROFILE
+
+Organization: Mercy Link Foundation Africa
+
+Organization type: Christian, non-denominational, mission-driven NGO.
+
+Country of origin and primary area of operation: Uganda, East Africa.
+
+Established: 2007, initially through a community Bible club in Bulange Mengo.
+
+Registration: The organization's published About Us page states that it registered as a local NGO in 2013. Preserve this statement, but verify current registration details with the organization before displaying formal legal documentation.
+
+Published geographical reach: Activities across Central, Northern, Western, Southern, and Eastern Uganda, with the existing organizational profile reporting work in more than 70 districts. Treat this as a published organizational claim and allow administrators to verify and update it.
+
+#### Vision
+
+"Develop leaders, transform communities and create a legacy of peace through equipping the church in Africa for relevance, responsibility and sustainability."
+
+#### Mission
+
+"To develop programs that will empower people physically, emotionally, socially, and economically with a goal to draw them to Christ who meets their spiritual needs."
+
+#### Core organizational goal
+
+Facilitate accessible and effective education and training for church and community leaders, strengthen biblical values, support mission work, develop leadership and business capacity, encourage collaboration, and promote sustainable community development.
+
+#### Brand positioning
+
+Mercy Link Foundation Africa is a bridge between faith, practical community support, leadership development, and sustainable transformation.
+
+The brand must communicate:
+
+- Faith and spiritual purpose.
+- Compassion and human dignity.
+- Community transformation.
+- Leadership and capacity building.
+- Inclusion and support for vulnerable people.
+- Integrity and responsible stewardship.
+- Partnerships and sustainable development.
+
+Use the tagline "Transforming Communities – Creating a Legacy of Peace" where appropriate, as it appears in the foundation's published materials.
+
+The existing homepage also uses "Transforming Lives Across Africa" and "Empowering the vulnerable. Serving with compassion across Africa." These may be retained as campaign or hero messaging.
+
+### 4. VISUAL DESIGN DIRECTION
+
+Create a premium African nonprofit website with an authentic, human-centered visual identity.
+
+The design should combine:
+
+- Modern international NGO website standards.
+- Warm African photography and community storytelling.
+- Professional editorial layouts.
+- Clear, accessible typography.
+- Restrained, meaningful animation.
+- Strong calls to action.
+- A balance of spiritual identity and practical community impact.
+
+#### Suggested color palette
+
+Use the existing logo and official brand assets as the final authority. Until those assets are verified, use this proposed palette:
+
+- Deep navy: #17324D
+- Royal blue: #2459A9
+- Warm orange: #E98A32
+- Soft cream: #FAF7F0
+- White: #FFFFFF
+- Charcoal: #242B33
+- Muted gray: #687381
+
+Use navy and blue for trust, structure, and professionalism. Use orange sparingly for important calls to action and highlights. Use white and cream to maintain warmth and readability.
+
+Do not impose this proposed palette if the official brand guidelines specify different colors.
+
+#### Typography
+
+Use a modern, highly readable font pairing such as Manrope for headings and Inter for body copy, or a similar professional combination.
+
+Use:
+- Strong, expressive page headings.
+- Comfortable paragraph line heights.
+- Consistent spacing.
+- Clear visual hierarchy.
+- Accessible text contrast.
+
+#### Photography
+
+Prioritize authentic, documentary-style photographs that represent African communities and the foundation's actual work, including:
+
+- Children participating in learning and Bible clubs.
+- Youth mentorship and leadership development.
+- Church leaders attending training.
+- Community outreach activities.
+- Disability inclusion and accessibility.
+- Prison ministry, represented respectfully.
+- Families and community development initiatives.
+- Volunteers and partner organizations working together.
+
+Use verified organizational photographs wherever available. Do not falsely present stock photography as actual Mercy Link projects. Use appropriately licensed placeholder imagery only when authentic photographs cannot be obtained.
+
+Avoid artificial-looking AI imagery, excessive gradients, generic illustrations, and repetitive template-style cards.
+
+### 5. WEBSITE INFORMATION ARCHITECTURE
+
+Build the following main navigation:
+
+1. Home
+2. About Us
+3. Our Programs
+4. Our Impact / Reports
+5. Children Services
+6. Education Fund
+7. Events
+8. Get Involved
+9. Contact Us
+
+Add a prominent but tasteful "Support Our Mission" or "Donate" button in the header.
+
+Under About Us, provide:
+- Our Story
+- Vision and Mission
+- Core Values
+- Our Approach
+- Our Partners, if verified information is available.
+
+Under Our Programs, provide individual pages for:
+- Disability Ministry
+- Prison Ministry
+- Family Foundations / Positive Parenting
+- Church Planter Training
+- Children's Ministry
+- Youth Empowerment
+- The Better Life Program
+
+Preserve the program naming used by the existing website where appropriate. Where different pages use different names for related programs, reconcile the labels with the organization before publishing.
+
+Include a searchable reports archive and a structured events section.
+
+### 6. HOMEPAGE — COMPLETE EXPERIENCE
+
+Design the homepage as a carefully sequenced storytelling experience that moves visitors from understanding the mission to discovering programs and taking action.
+
+#### Section A: Header and navigation
+
+Create a clean, responsive header with:
+
+- Official organization logo.
+- Main navigation.
+- Accessible mobile menu.
+- Prominent support CTA.
+- Optional social links, only when verified.
+- Sticky navigation on scroll, if it does not interfere with content.
+
+The header must feel professional and lightweight.
+
+#### Section B: Hero section
+
+Use a large, compelling photograph from a genuine community activity where available.
+
+Suggested headline:
+
+"Transforming Communities. Restoring Hope. Building a Legacy of Peace."
+
+Supporting text:
+
+"Mercy Link Foundation Africa works alongside churches and communities to reach the unreached, equip leaders, empower vulnerable people, and create lasting transformation through faith, compassion, and practical action."
+
+Primary CTA: "Explore Our Programs"
+
+Secondary CTA: "Partner With Us"
+
+Optional tertiary link: "Support Our Mission"
+
+Use a balanced split layout or an immersive photographic hero with readable text and a subtle overlay.
+
+The hero should immediately explain who Mercy Link is, what it does, and why visitors should care.
+
+#### Section C: Introduction to Mercy Link
+
+Heading:
+
+"Faith That Reaches Beyond the Church Walls"
+
+Explain that Mercy Link works through local churches, schools, grassroots organizations, Christian groups, and community partnerships to deliver spiritual outreach, discipleship, leadership training, and practical support.
+
+Use a genuine organizational photograph alongside the text.
+
+CTA: "Discover Our Story"
+
+#### Section D: Mission and vision
+
+Present the official vision and mission in a visually engaging layout.
+
+Vision:
+Develop leaders, transform communities, and create a legacy of peace through equipping the church in Africa for relevance, responsibility, and sustainability.
+
+Mission:
+Empower people physically, emotionally, socially, and economically, while pointing them toward Christ and meeting their spiritual needs.
+
+Keep the original meaning intact.
+
+#### Section E: Our core programs
+
+Create a premium program showcase with strong photography, concise descriptions, and links to detailed program pages.
+
+**Disability Ministry**
+Promote dignity, participation, inclusion, compassion, and support for people with disabilities. Explain verified activities and initiatives without making unsupported medical or rehabilitation claims.
+
+**Prison Ministry**
+Present the foundation's prison outreach, spiritual encouragement, discipleship, and related support activities. Describe reintegration support only to the extent confirmed by the organization.
+
+**Family Foundations / Positive Parenting**
+Explain the importance of equipping parents and caregivers to nurture responsible children, build healthy family relationships, and provide values-based guidance.
+
+**Church Planter Training**
+Show how Mercy Link equips church leaders and prospective church planters with biblical knowledge, leadership skills, and practical ministry training.
+
+**Children's Ministry**
+Feature community Bible hubs, discipleship, children's outreach, school programs, and training for children's ministry workers.
+
+**Youth Empowerment**
+Highlight youth mentorship, spiritual development, leadership, life skills, and capacity building supported by verified program information.
+
+**The Better Life Program**
+Use the official program description from the existing website. Do not assume the program's exact scope without reviewing its source page.
+
+Each program card must include:
+- Appropriate image.
+- Program name.
+- Short, human-centered description.
+- "Learn More" link.
+- Optional "Support This Program" link where an approved funding pathway exists.
+
+Do not force all cards into identical visual layouts if an editorial layout would better communicate the stories.
+
+#### Section F: Our approach
+
+Explain how the organization works through four interconnected areas:
+
+1. Reach — engaging underserved communities through outreach and relationships.
+2. Equip — training leaders, churches, caregivers, and community workers.
+3. Empower — strengthening people through knowledge, practical support, and capacity building.
+4. Sustain — encouraging partnerships, local ownership, and long-term community development.
+
+Present these as a communication framework, not as an invented formal organizational doctrine.
+
+#### Section G: Impact at a glance
+
+Create a visually engaging impact section with statistics that can be updated through the content management system.
+
+Potential metrics include:
+- Districts reached.
+- Community outreach activities.
+- Church and ministry leaders trained.
+- Children and young people engaged.
+- Partner churches and organizations.
+- People reached through specific initiatives.
+
+Only display numbers supported by a credible, dated organizational report or confirmed current records.
+
+If a statistic cannot be verified, hide the metric rather than showing a fabricated number or zero.
+
+Every published impact figure should have an identifiable source, reporting period, and update date in the CMS.
+
+#### Section H: Stories of transformation
+
+Create a featured storytelling section with authentic reports and first-hand accounts from the foundation's work.
+
+Each story should support:
+- Title.
+- Program or location.
+- Publication date.
+- Verified story text.
+- Photograph or video.
+- Relevant report or related program.
+- A respectful description of the people involved.
+
+Use informed consent for identifiable beneficiaries, especially children, people with disabilities, and people in vulnerable circumstances.
+
+Never invent names, quotations, outcomes, or testimonials.
+
+#### Section I: Watch our mission in action
+
+Create a video section using the existing organization's verified YouTube content, including the published Disability Ministry video where available.
+
+Include:
+- Accessible video playback.
+- Descriptive video title.
+- Short summary.
+- Link to the relevant program.
+- Optional link to the organization's verified video channel.
+
+Do not embed broken videos or fabricated media links.
+
+#### Section J: Reports and latest updates
+
+Feature the latest verified ministry reports, news, and announcements.
+
+Each item should show:
+- Title.
+- Date.
+- Relevant program.
+- Featured image, when available.
+- Short excerpt.
+- "Read Report" link.
+
+Include pagination or a "View All Reports" action.
+
+Migrate historical reports where practical, retaining their original dates and factual context. Clearly distinguish historical results from current impact.
+
+#### Section K: Events and opportunities
+
+Display upcoming events only when confirmed dates and details are available.
+
+Include event title, date, location or online venue, description, and registration or enquiry action.
+
+If there are no upcoming events, show recent activities or a clear invitation to enquire about volunteering and partnerships instead of inventing events.
+
+#### Section L: Support our mission
+
+Create a compelling, compassionate section explaining how individuals, churches, organizations, and donors can contribute.
+
+Suggested headline:
+
+"Your Partnership Can Help Transform a Community."
+
+Possible actions:
+- Make a Donation.
+- Sponsor an Approved Program.
+- Volunteer.
+- Partner With Us.
+- Support Children's Education.
+
+Build secure, transparent donation pathways only after confirming the organization's approved banking information, payment providers, currencies, and authorization procedures.
+
+Never invent bank account numbers, mobile money details, payment links, or fundraising claims.
+
+Display the purpose of each fundraising appeal and explain how donors can request confirmation or contact the foundation.
+
+#### Section M: Newsletter and contact CTA
+
+Provide a newsletter subscription form with consent, validation, and a clear privacy statement.
+
+Include a final invitation:
+
+"Be Part of the Story of Transformation."
+
+CTA: "Connect With Mercy Link"
+
+#### Section N: Footer
+
+Include:
+- Organization logo.
+- Short organizational description.
+- Quick links.
+- Program links.
+- Contact details.
+- Verified social media links.
+- Privacy policy.
+- Cookie information if applicable.
+- Copyright year generated dynamically.
+
+Use the latest confirmed contact information, not blindly copied details from old reports.
+
+The existing homepage currently displays the following contact details, which should be verified before production:
+
+Postal address: P.O. Box 269, Kampala, Uganda (East Africa).
+
+Emails: mercylink2@gmail.com and mercylinkadm@gmail.com.
+
+Telephone numbers: +256 392 003 454, +256 772 314 262, and +256 704 927 362.
+
+The website's About Us page and older reports may contain different email addresses or phone numbers. Create an editable contact configuration so the authorized administrator can establish the correct current details.
+
+### 7. ABOUT US PAGE
+
+Develop a complete organizational profile page with the following sections:
+
+- Our Story.
+- How Mercy Link Began.
+- Vision.
+- Mission.
+- Organizational Goal.
+- Our Approach to Community Transformation.
+- Core Values.
+- Geographical Scope.
+- Community and Church Partnerships.
+- Call to Partner With Us.
+
+Use the published organizational history: the foundation began in 2007 through a community Bible club at Bulange Mengo and registered as a local NGO in 2013, according to its published profile.
+
+Present the history professionally without overstating its accomplishments or inventing the identities of founders, executives, or board members.
+
+#### Core values
+
+Preserve the six values documented on the official About Us page:
+
+1. God-Fearing — recognizing God as the source of the organization's work.
+2. Teamwork — cooperation, mutual support, and respect.
+3. Excellence — commitment to quality and fulfilling responsibilities.
+4. Partnering — working alongside churches, organizations, and individuals.
+5. Compassion — responding to practical, emotional, and spiritual needs with empathy and dignity.
+6. Integrity — honesty, accountability, and responsible stewardship.
+
+### 8. INDIVIDUAL PROGRAM PAGES
+
+Each program must have a complete page, not simply a short card.
+
+Recommended page structure:
+
+1. Program hero with an authentic photograph.
+2. Overview.
+3. The need the program addresses.
+4. Objectives.
+5. Activities and implementation approach.
+6. Intended participants and communities.
+7. Verified outcomes and case studies.
+8. Photo gallery or video.
+9. Relevant reports and news.
+10. Partnership or support CTA.
+11. Contact or enquiry form.
+
+#### Disability Ministry
+
+Emphasize inclusion, dignity, participation, compassion, and practical community support. Use accessible imagery and accessible interface design.
+
+#### Prison Ministry
+
+Describe prison outreach, discipleship, spiritual encouragement, and any additional support activities confirmed by the organization. Protect the identity and dignity of participants.
+
+#### Family Foundations / Positive Parenting
+
+Describe the program's verified approach to family relationships, positive parenting, caregiver development, and child wellbeing.
+
+#### Church Planter Training
+
+Include church planter training, leadership development, discipleship, and ministry capacity building. Provide training resources and enquiry forms only when supported by the organization.
+
+#### Children's Ministry
+
+Feature children's community Bible hubs, youth and children's discipleship, school outreach, children's worker training, and related scripture-based learning activities.
+
+#### Youth Empowerment
+
+Describe mentorship, leadership development, spiritual growth, practical skills, and life preparation based on the organization's documented work.
+
+#### The Better Life Program
+
+Retrieve the existing page content and preserve the program's intended meaning, objectives, activities, and beneficiary focus.
+
+### 9. CHILDREN SERVICES PAGE
+
+Create a dedicated, child-centered page that explains the foundation's relevant children's programs and services.
+
+Potential content:
+- Children's Community Bible Hubs.
+- Discipleship and Bible learning.
+- School outreach.
+- Children's ministry training.
+- Youth development activities.
+- Relevant educational support initiatives.
+
+Do not imply that the organization operates an orphanage, residential school, healthcare facility, or other institution unless this is explicitly verified.
+
+If services require registration or referrals, explain the actual process and provide a secure enquiry channel.
+
+Protect children's personal information. Do not publish children's contact details, private case records, sensitive information, or identifiable images without appropriate consent and authorization.
+
+### 10. EDUCATION FUND PAGE
+
+Create a dedicated Education Fund page with a transparent explanation of the purpose, eligibility requirements, application process, and approved ways to contribute.
+
+The page should support:
+- Fund overview.
+- Who the fund is intended to help.
+- Application requirements.
+- Application opening and closing dates, when confirmed.
+- Document submission instructions.
+- Application status enquiries.
+- Donor and sponsor information.
+- Frequently asked questions.
+
+Build an application form only after confirming the foundation's actual eligibility rules and operational process.
+
+The system must support validation, secure document handling, privacy notices, and restricted access to sensitive application information.
+
+Do not promise scholarships, admission, financial assistance, or selection outcomes that the organization has not authorized.
+
+### 11. REPORTS AND IMPACT ARCHIVE
+
+Develop a searchable and filterable reporting system.
+
+Categories may include:
+- Children's Ministry.
+- School Outreach.
+- Prison Ministry.
+- Disability Ministry.
+- Leadership Training.
+- Community Outreach.
+- Youth Empowerment.
+- Education and Family Support.
+- Organizational News.
+
+Each report should support:
+- Title.
+- Slug.
+- Publication date.
+- Reporting period.
+- Program category.
+- Location.
+- Author, if confirmed.
+- Main content.
+- Featured image.
+- Image gallery.
+- Video link.
+- Verified impact metrics.
+- Downloadable PDF, when available.
+- Related programs and reports.
+
+Migrate existing historical reports from the official website where practical.
+
+Maintain original dates and historical context. Do not combine figures from different reporting periods into a single current total unless they have been properly reconciled.
+
+Provide search, filters, pagination, and responsive layouts.
+
+### 12. EVENTS PAGE
+
+Build a professional event management section with:
+
+- Upcoming events.
+- Past events.
+- Event details.
+- Registration or enquiry forms.
+- Venue and date information.
+- Contact person or team, when approved.
+- Event photographs and summaries.
+- Related program information.
+
+Include calendar integration only if useful and properly configured.
+
+Allow authorized administrators to publish, edit, cancel, and archive events.
+
+Never display unconfirmed event details as final.
+
+### 13. GET INVOLVED PAGE
+
+Create a dedicated page that explains the different ways people and institutions can work with Mercy Link.
+
+Possible participation pathways:
+
+- Individual giving.
+- Church partnerships.
+- Corporate and institutional partnerships.
+- Volunteering.
+- Program sponsorship.
+- Children's education support.
+- Community outreach participation.
+- Professional or technical support.
+
+Each pathway should have a clear explanation and an enquiry form.
+
+Collect only the information necessary to respond to the enquiry. Use consent, appropriate access controls, and a privacy notice.
+
+### 14. CONTACT PAGE
+
+Build a complete contact experience with:
+
+- Verified postal address.
+- Official email addresses.
+- Verified telephone numbers.
+- Optional map or location information.
+- General enquiry form.
+- Partnership enquiry form.
+- Program-specific enquiry selection.
+- Clear submission confirmation.
+- Spam protection.
+- Accessible form validation.
+
+The backend should validate and securely process form submissions.
+
+Where email notifications are configured, send enquiries to the approved organizational inbox and provide a confirmation to the sender where appropriate.
+
+Do not expose secret API keys or email credentials in frontend code.
+
+### 15. CONTENT MANAGEMENT SYSTEM
+
+Implement a secure content management system so authorized staff can maintain the website without editing source code.
+
+Required administrative capabilities:
+
+- Secure login and logout.
+- Role-based permissions.
+- Dashboard overview.
+- Manage pages and program descriptions.
+- Publish, edit, schedule, and archive reports.
+- Manage events.
+- Upload and organize images and videos.
+- Manage approved contact details.
+- Manage approved donation instructions.
+- Manage Education Fund information.
+- Review contact and partnership enquiries.
+- Manage newsletter subscribers and consent.
+- Update approved impact statistics.
+- Edit SEO metadata.
+- View publication status and dates.
+
+Suggested roles:
+- Super Administrator.
+- Content Editor.
+- Program Manager.
+- Communications Officer.
+- Enquiry Manager.
+
+Restrict access to personal information according to each role's responsibilities.
+
+Use a suitable existing backend or select an appropriate stack based on the project environment. If Firebase is already used, consider Firebase Authentication, Firestore, and Cloud Storage with properly configured security rules. Otherwise, retain the current backend where practical rather than adding unnecessary infrastructure.
+
+All privileged operations must be authorized server-side or through correctly enforced backend security policies.
+
+### 16. DONATION AND PAYMENT FUNCTIONALITY
+
+Build a trustworthy donation experience with a strong emphasis on transparency.
+
+Support a configurable donation form with:
+- One-time donation.
+- Recurring donation, only if the selected payment provider supports it.
+- Donation amount.
+- Currency selection where supported.
+- Donor contact details.
+- Optional program designation.
+- Privacy and communication preferences.
+- Secure payment processing.
+- Payment confirmation.
+- Failed or cancelled payment handling.
+
+Before activating donations, confirm the official payment provider, approved account details, supported currencies, and authorized payment instructions.
+
+Do not collect or store raw bank card details.
+
+Verify payment status through the payment provider's server-side confirmation or webhook mechanism. Do not treat a browser redirect alone as proof of successful payment.
+
+Provide donation receipts only when supported by the foundation's approved processes.
+
+If payment integration is not yet configured, provide a clearly labelled enquiry-based giving pathway rather than a fake checkout or nonfunctional Donate button.
+
+### 17. TECHNICAL ARCHITECTURE
+
+First inspect the existing project. Retain its existing framework and useful dependencies unless there is a clear technical reason to change them.
+
+If building from scratch, choose a maintainable modern stack, for example:
+
+- React with Next.js and TypeScript.
+- Tailwind CSS or a consistent component styling system.
+- A secure, documented

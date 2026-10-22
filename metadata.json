@@ -1,0 +1,6 @@
+{
+  "name": "Mercy Link Foundation Africa",
+  "description": "Official platform for Mercy Link Foundation Africa — a Christian, non-denominational NGO equipping churches, developing leaders, empowering vulnerable communities, and transforming lives across Uganda and Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

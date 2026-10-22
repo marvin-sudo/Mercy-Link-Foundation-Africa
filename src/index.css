@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Manrope", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-navy: #17324D;
+  --color-blue: #2459A9;
+  --color-orange: #E98A32;
+  --color-cream: #FAF7F0;
+  --color-charcoal: #242B33;
+  --color-muted: #687381;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbars for modals and tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom organic mask clip paths for the Africa and children montage */
+.clip-organic-mask {
+  clip-path: polygon(
+    25% 0%, 75% 0%, 100% 25%, 98% 70%, 80% 100%, 30% 98%, 5% 75%, 0% 30%
+  );
+}
+
+.clip-badge-notch {
+  border-top-right-radius: 2.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+}
+
+/* Signature diagonal rounded image border matching user's design reference */
+.charity-image-shape {
+  border-top-right-radius: 44px !important;
+  border-bottom-left-radius: 44px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+@media (min-width: 640px) {
+  .charity-image-shape {
+    border-top-right-radius: 54px !important;
+    border-bottom-left-radius: 54px !important;
+  }
+}
+
+.charity-image-shape-reverse {
+  border-top-left-radius: 44px !important;
+  border-bottom-right-radius: 44px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+@media (min-width: 640px) {
+  .charity-image-shape-reverse {
+    border-top-left-radius: 54px !important;
+    border-bottom-right-radius: 54px !important;
+  }
+}
+
+/* Print and PDF generation styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  /* Hide navigation, header, footer, and non-printable elements */
+  header, footer, nav, .no-print, button:not(.print-keep) {
+    display: none !important;
+  }
+
+  /* Ensure the printable report container takes full page with proper margins */
+  .printable-report-container {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+  }
+
+  .print-page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
+/* =========================================================================
+   SCROLL REVEAL & ENTRANCE ANIMATION SYSTEM
+   - Lightweight, CSS-driven + IntersectionObserver
+   - Easing: cubic-bezier(0.22, 1, 0.36, 1)
+   - Zero-layout shift, single-trigger, responsive & accessible
+   ========================================================================= */
+
+:root {
+  --reveal-timing: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-duration: 800ms;
+  --reveal-distance: 35px;
+  --reveal-distance-x: 25px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --reveal-duration: 700ms;
+    --reveal-distance: 25px;
+    --reveal-distance-x: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --reveal-duration: 600ms;
+    --reveal-distance: 18px;
+    --reveal-distance-x: 14px;
+  }
+}
+
+/* Base Fade + Slide-Up Reveal */
+.reveal,
+.reveal-up {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition: opacity var(--reveal-duration) var(--reveal-timing),
+              transform var(--reveal-duration) var(--reveal-timing);
+  will-change: opacity, transform;
+}
+
+.reveal.is-revealed,
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Horizontal Reveals (Left / Right) */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(calc(-1 * var(--reveal-distance-x)));
+  transition: opacity var(--reveal-duration) var(--reveal-timing),
+              transform var(--reveal-duration) var(--reveal-timing);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(var(--reveal-distance-x));
+  transition: opacity var(--reveal-duration) var(--reveal-timing),
+              transform var(--reveal-duration) var(--reveal-timing);
+  will-change: opacity, transform;
+}
+
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image Reveal: subtle zoom settle from scale(1.03) to scale(1) */
+.reveal-image {
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 900ms var(--reveal-timing),
+              transform 900ms var(--reveal-timing);
+  will-change: opacity, transform;
+}
+
+.reveal-image.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Subtle Scale Reveal */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity var(--reveal-duration) var(--reveal-timing),
+              transform var(--reveal-duration) var(--reveal-timing);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered Reveals for Grouped Elements (cards, lists, grids) */
+.stagger-group > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-group > *:nth-child(2) { transition-delay: 110ms; }
+.stagger-group > *:nth-child(3) { transition-delay: 220ms; }
+.stagger-group > *:nth-child(4) { transition-delay: 330ms; }
+.stagger-group > *:nth-child(5) { transition-delay: 440ms; }
+.stagger-group > *:nth-child(6) { transition-delay: 550ms; }
+.stagger-group > *:nth-child(7) { transition-delay: 660ms; }
+.stagger-group > *:nth-child(8) { transition-delay: 770ms; }
+
+@media (max-width: 640px) {
+  .stagger-group > *:nth-child(1) { transition-delay: 0ms; }
+  .stagger-group > *:nth-child(2) { transition-delay: 60ms; }
+  .stagger-group > *:nth-child(3) { transition-delay: 120ms; }
+  .stagger-group > *:nth-child(4) { transition-delay: 180ms; }
+  .stagger-group > *:nth-child(5) { transition-delay: 240ms; }
+  .stagger-group > *:nth-child(6) { transition-delay: 300ms; }
+}
+
+/* Fast Stagger (for tight stat numbers or small chips) */
+.stagger-fast > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-fast > *:nth-child(2) { transition-delay: 70ms; }
+.stagger-fast > *:nth-child(3) { transition-delay: 140ms; }
+.stagger-fast > *:nth-child(4) { transition-delay: 210ms; }
+
+/* =========================================================================
+   HOMEPAGE HERO ENTRANCE SEQUENCE
+   Polished entrance without waiting for scroll trigger:
+   1. Eyebrow: 0-200ms
+   2. Headline: 100-250ms
+   3. Supporting paragraph: 250-400ms
+   4. CTA buttons: 400-550ms
+   5. Hero visual: 100-250ms (scale 0.985 to 1)
+   6. Trust markers: ~600ms
+   ========================================================================= */
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-eyebrow {
+  animation: heroFadeIn 700ms var(--reveal-timing) 100ms backwards;
+}
+
+.hero-headline {
+  animation: heroSlideUp 850ms var(--reveal-timing) 200ms backwards;
+}
+
+.hero-subtext {
+  animation: heroSlideUp 800ms var(--reveal-timing) 340ms backwards;
+}
+
+.hero-actions {
+  animation: heroSlideUp 800ms var(--reveal-timing) 480ms backwards;
+}
+
+.hero-trust {
+  animation: heroFadeIn 800ms var(--reveal-timing) 600ms backwards;
+}
+
+.hero-visual {
+  animation: heroScaleEntrance 950ms var(--reveal-timing) 180ms backwards;
+}
+
+/* Header subtle mount animation */
+.header-mount {
+  animation: heroFadeIn 500ms ease-out 40ms backwards;
+}
+
+/* =========================================================================
+   MICRO-INTERACTIONS & HOVER REFINEMENTS
+   ========================================================================= */
+
+.interactive-card {
+  transition: transform 300ms var(--reveal-timing),
+              box-shadow 300ms ease,
+              border-color 250ms ease;
+}
+
+.is-revealed.interactive-card:hover,
+.interactive-card:hover {
+  transform: translateY(-4px);
+}
+
+.interactive-button {
+  transition: transform 200ms var(--reveal-timing),
+              box-shadow 200ms ease,
+              background-color 200ms ease;
+}
+
+.interactive-button:hover {
+  transform: translateY(-2px);
+}
+
+.interactive-image {
+  transition: transform 600ms var(--reveal-timing);
+}
+
+.interactive-image:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+   Ensures instantaneous visibility, zero motion, zero transform lag
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-image,
+  .reveal-scale,
+  .hero-eyebrow,
+  .hero-headline,
+  .hero-subtext,
+  .hero-actions,
+  .hero-trust,
+  .hero-visual,
+  .header-mount,
+  .interactive-card,
+  .interactive-button,
+  .interactive-image {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
