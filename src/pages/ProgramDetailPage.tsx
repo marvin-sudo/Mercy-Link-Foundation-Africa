@@ -78,54 +78,54 @@ export const ProgramDetailPage: React.FC = () => {
 
   return (
     <div className="space-y-16 pb-16">
-      {/* 1. Hero Full Width */}
-      <section className="reveal-up w-full relative overflow-hidden bg-[#17324D] text-white min-h-[220px] sm:min-h-[260px] lg:min-h-[280px] flex items-end py-6 sm:py-8 lg:py-10 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
-        <img
-          src={program.imageUrl}
-          alt={program.name}
-          className="reveal-image absolute inset-0 w-full h-full object-cover opacity-35 scale-105"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17324D] via-[#17324D]/75 to-[#17324D]/40" />
+      {/* 1. Hero Full Width with Background Image & Transparent Navy Blue Overlay */}
+      <section className="reveal-up w-full relative overflow-hidden bg-[#000a37] text-white min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] flex items-end py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={program.imageUrl}
+            alt={program.name}
+            className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
+          <div className="absolute inset-0 bg-[#000a37]/50" />
+        </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto space-y-2.5">
+        <div className="relative z-10 w-full max-w-7xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] space-y-3">
           {/* Back button & Breadcrumb */}
           <div>
             <button
               onClick={() => navigateTo('programs')}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-white/80 hover:text-[#E98A32] bg-white/10 hover:bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full transition-all"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-white/80 hover:text-[#ef5a20] bg-white/10 hover:bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full transition-all cursor-pointer"
             >
-              <ArrowLeft className="w-3 h-3" />
-              <span>Back to All Programs</span>
+              ← Back to All Programs
             </button>
           </div>
 
-          <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#E98A32]">
+          <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#ef5a20]">
             {program.category} · Official Ministry Program
           </span>
-          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight">
+          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             {program.name}
           </h1>
-          <p className="text-xs sm:text-sm lg:text-base text-white/90 font-medium italic max-w-3xl line-clamp-2">
+          <p className="text-xs sm:text-sm lg:text-base text-stone-200 font-medium italic max-w-3xl line-clamp-2">
             "{program.tagline}"
           </p>
 
-          <div className="pt-1 flex flex-wrap gap-2.5">
+          <div className="pt-2 flex flex-wrap gap-2.5">
             <button
               onClick={() => openDonationModal(program.name)}
-              className="px-5 py-2.5 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-lg text-xs font-bold transition-all shadow-sm flex items-center gap-2 interactive-button"
+              className="px-6 py-3 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-xl text-xs font-bold transition-all shadow-sm interactive-button cursor-pointer"
             >
-              <Heart className="w-3.5 h-3.5 fill-white" />
-              <span>Support This Program</span>
+              Support This Program
             </button>
 
             {program.id === 'disability-ministry' && (
               <button
                 onClick={openVideoModal}
-                className="px-4 py-2.5 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 interactive-button"
+                className="px-5 py-3 bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white rounded-xl text-xs font-semibold interactive-button cursor-pointer border border-white/20"
               >
-                <Play className="w-3.5 h-3.5 fill-white" />
-                <span>Watch Ministry Video</span>
+                Watch Ministry Video
               </button>
             )}
           </div>
@@ -144,25 +144,25 @@ export const ProgramDetailPage: React.FC = () => {
               <div className="space-y-10">
                 {/* 1. MISSION STATEMENT */}
                 <div className="reveal-up p-8 sm:p-10 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <Heart className="w-4 h-4 text-[#E98A32]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <Heart className="w-4 h-4 text-[#ef5a20]" />
                     <span>MISSION STATEMENT</span>
                   </div>
-                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl text-[#17324D] leading-snug">
+                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl text-[#000a37] leading-snug">
                     Imitating Christ's Love to Restore Dignity & Opportunity
                   </h2>
-                  <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#17324D] leading-relaxed italic border-l-4 border-[#E98A32] pl-4 sm:pl-6 bg-[#FAF7F0] p-5 rounded-r-2xl">
+                  <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#000a37] leading-relaxed italic border-l-4 border-[#ef5a20] pl-4 sm:pl-6 bg-[#FAF9F6] p-5 rounded-r-2xl">
                     “To imitate the love and compassion of Jesus Christ in reaching out to the deprived, neglected and needy people with disabilities, especially children. Helping them to make life meaningful through education, life skills training, and business assistance to integrate well into the Society.”
                   </p>
                 </div>
 
                 {/* 2. DESCRIPTION OF FOCAL PROBLEM */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2459A9]">
-                    <ShieldAlert className="w-4 h-4 text-[#2459A9]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#000a37]">
+                    <ShieldAlert className="w-4 h-4 text-[#000a37]" />
                     <span>DESCRIPTION OF FOCAL PROBLEM</span>
                   </div>
-                  <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#17324D]">
+                  <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#000a37]">
                     Overcoming Social Taboos, Marginalization & Educational Neglect
                   </h3>
                   <div className="space-y-4 text-xs sm:text-sm text-stone-700 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -178,10 +178,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 3. BRIEF DESCRIPTION OF THE PROJECT & PROJECT SCOPE */}
                 <div className="reveal-up space-y-6">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                       PROJECT SCOPE
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#000a37]">
                       BRIEF DESCRIPTION OF THE PROJECT
                     </h3>
                     <p className="text-xs sm:text-sm text-stone-600">
@@ -192,10 +192,10 @@ export const ProgramDetailPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-group">
                     {/* Scope 1: Inclusive Education */}
                     <div className="p-6 rounded-2xl bg-white border border-stone-200/90 shadow-xs space-y-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#2459A9]/10 text-[#2459A9] flex items-center justify-center font-bold text-base">
+                      <div className="w-8 h-8 rounded-lg bg-[#000a37]/10 text-[#000a37] flex items-center justify-center font-bold text-base">
                         □
                       </div>
-                      <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                      <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                         Inclusive Education
                       </h4>
                       <p className="text-xs text-stone-600 leading-relaxed">
@@ -205,10 +205,10 @@ export const ProgramDetailPage: React.FC = () => {
 
                     {/* Scope 2: Disability Service */}
                     <div className="p-6 rounded-2xl bg-white border border-stone-200/90 shadow-xs space-y-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#E98A32]/10 text-[#E98A32] flex items-center justify-center font-bold text-base">
+                      <div className="w-8 h-8 rounded-lg bg-[#ef5a20]/10 text-[#ef5a20] flex items-center justify-center font-bold text-base">
                         □
                       </div>
-                      <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                      <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                         Disability Service
                       </h4>
                       <p className="text-xs text-stone-600 leading-relaxed">
@@ -221,7 +221,7 @@ export const ProgramDetailPage: React.FC = () => {
                       <div className="w-8 h-8 rounded-lg bg-emerald-700/10 text-emerald-700 flex items-center justify-center font-bold text-base">
                         □
                       </div>
-                      <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                      <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                         Inclusive Development
                       </h4>
                       <p className="text-xs text-stone-600 leading-relaxed">
@@ -234,11 +234,11 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 4. MEASURABLE GOALS */}
                 <div className="reveal-up space-y-6">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                      <Target className="w-4 h-4 text-[#E98A32]" />
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                      <Target className="w-4 h-4 text-[#ef5a20]" />
                       <span>SPECIFIC IMPACT MILESTONES</span>
                     </div>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#000a37]">
                       MEASURABLE GOALS
                     </h3>
                     <p className="text-xs sm:text-sm text-stone-600">
@@ -250,11 +250,11 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* Goal 1: Awareness */}
                     <div className="p-6 sm:p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center justify-between flex-wrap gap-2">
-                        <h4 className="font-['Manrope'] font-bold text-lg text-[#17324D] flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-[#17324D] text-white flex items-center justify-center text-xs font-bold">1</span>
+                        <h4 className="font-['Manrope'] font-bold text-lg text-[#000a37] flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-[#000a37] text-white flex items-center justify-center text-xs font-bold">1</span>
                           <span>Awareness</span>
                         </h4>
-                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-50 text-[#E98A32] border border-amber-200">
+                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-50 text-[#ef5a20] border border-amber-200">
                           Active Since January 2014
                         </span>
                       </div>
@@ -264,16 +264,16 @@ export const ProgramDetailPage: React.FC = () => {
                       </p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                        <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center">
-                          <span className="font-extrabold text-2xl text-[#17324D] block">25</span>
+                        <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center">
+                          <span className="font-extrabold text-2xl text-[#000a37] block">25</span>
                           <span className="text-xs text-stone-600 font-semibold">Districts Reached</span>
                         </div>
-                        <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center">
-                          <span className="font-extrabold text-2xl text-[#E98A32] block">83</span>
+                        <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center">
+                          <span className="font-extrabold text-2xl text-[#ef5a20] block">83</span>
                           <span className="text-xs text-stone-600 font-semibold">Community Leaders</span>
                         </div>
-                        <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center">
-                          <span className="font-extrabold text-2xl text-[#2459A9] block">722</span>
+                        <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center">
+                          <span className="font-extrabold text-2xl text-[#000a37] block">722</span>
                           <span className="text-xs text-stone-600 font-semibold">Individuals Engaged</span>
                         </div>
                       </div>
@@ -282,8 +282,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* Goal 2: Community based rehabilitation */}
                     <div className="p-6 sm:p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center justify-between flex-wrap gap-2">
-                        <h4 className="font-['Manrope'] font-bold text-lg text-[#17324D] flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-[#17324D] text-white flex items-center justify-center text-xs font-bold">2</span>
+                        <h4 className="font-['Manrope'] font-bold text-lg text-[#000a37] flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-[#000a37] text-white flex items-center justify-center text-xs font-bold">2</span>
                           <span>Community Based Rehabilitation</span>
                         </h4>
                         <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
@@ -306,11 +306,11 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* Goal 3: Discipleship/life skill programs and Scripture Placement Program */}
                     <div className="p-6 sm:p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center justify-between flex-wrap gap-2">
-                        <h4 className="font-['Manrope'] font-bold text-lg text-[#17324D] flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-[#17324D] text-white flex items-center justify-center text-xs font-bold">3</span>
+                        <h4 className="font-['Manrope'] font-bold text-lg text-[#000a37] flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-[#000a37] text-white flex items-center justify-center text-xs font-bold">3</span>
                           <span>Discipleship/Life Skill Programs & Scripture Placement</span>
                         </h4>
-                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-[#2459A9] border border-blue-200">
+                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-[#000a37] border border-blue-200">
                           “Raising Hope” Discipleship
                         </span>
                       </div>
@@ -319,9 +319,9 @@ export const ProgramDetailPage: React.FC = () => {
                         We shall be engaged in evangelism and discipleship programs including rehabilitation and reconciliation support to the beneficiaries using the <strong>“Raising Hope”</strong> discipleship program. We are currently engaged in reaching and discipling children with disabilities at institutional and community levels. One such program is at <strong>Kampala School of the Handicapped</strong> where <strong>157 children with disabilities</strong> are enrolled in our discipleship and life skill programs.
                       </p>
 
-                      <div className="p-5 bg-gradient-to-r from-[#17324D] to-[#2459A9] text-white rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+                      <div className="p-5 bg-gradient-to-r from-[#000a37] to-[#000a37] text-white rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
                         <div>
-                          <span className="text-xs font-bold text-[#E98A32] uppercase tracking-wider block">
+                          <span className="text-xs font-bold text-[#ef5a20] uppercase tracking-wider block">
                             Key Institutional Partner
                           </span>
                           <p className="font-bold text-base">Kampala School of the Handicapped</p>
@@ -329,7 +329,7 @@ export const ProgramDetailPage: React.FC = () => {
                         </div>
                         <div className="text-left sm:text-right">
                           <span className="font-extrabold text-3xl text-white">157</span>
-                          <p className="text-xs text-[#E98A32] font-bold">Enrolled Children with Disabilities</p>
+                          <p className="text-xs text-[#ef5a20] font-bold">Enrolled Children with Disabilities</p>
                         </div>
                       </div>
                     </div>
@@ -343,11 +343,11 @@ export const ProgramDetailPage: React.FC = () => {
               <div className="space-y-10">
                 {/* 1. Overview & Verified Access */}
                 <div className="reveal-up p-8 sm:p-10 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <ShieldCheck className="w-4 h-4 text-[#E98A32]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <ShieldCheck className="w-4 h-4 text-[#ef5a20]" />
                     <span>OFFICIAL CORRECTIONAL ACCESS</span>
                   </div>
-                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl text-[#17324D] leading-snug">
+                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl text-[#000a37] leading-snug">
                     Reaching Behind Prison Walls with the Gospel of Restoration
                   </h2>
                   <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -355,16 +355,16 @@ export const ProgramDetailPage: React.FC = () => {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                    <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center space-y-1">
-                      <span className="font-extrabold text-3xl text-[#17324D] block">12,000+</span>
+                    <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center space-y-1">
+                      <span className="font-extrabold text-3xl text-[#000a37] block">12,000+</span>
                       <span className="text-xs text-stone-600 font-semibold">Prisoners Accessed</span>
                     </div>
-                    <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center space-y-1">
-                      <span className="font-extrabold text-3xl text-[#E98A32] block">5,130+</span>
+                    <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center space-y-1">
+                      <span className="font-extrabold text-3xl text-[#ef5a20] block">5,130+</span>
                       <span className="text-xs text-stone-600 font-semibold">Committed Lives to Christ</span>
                     </div>
-                    <div className="p-4 bg-[#FAF7F0] rounded-2xl border border-stone-200 text-center space-y-1">
-                      <span className="font-extrabold text-3xl text-[#2459A9] block">30,312</span>
+                    <div className="p-4 bg-[#FAF9F6] rounded-2xl border border-stone-200 text-center space-y-1">
+                      <span className="font-extrabold text-3xl text-[#000a37] block">30,312</span>
                       <span className="text-xs text-stone-600 font-semibold">Inmates in National Scope</span>
                     </div>
                   </div>
@@ -373,11 +373,11 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 2. Statistical Breakdown: Men, Women & Children in Ugandan Prisons */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-6">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2459A9]">
-                      <Users className="w-4 h-4 text-[#2459A9]" />
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#000a37]">
+                      <Users className="w-4 h-4 text-[#000a37]" />
                       <span>PRISON DEMOGRAPHIC REALITY</span>
                     </div>
-                    <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#000a37]">
                       Understanding the Ugandan Prison Population
                     </h3>
                   </div>
@@ -387,8 +387,8 @@ export const ProgramDetailPage: React.FC = () => {
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                    <div className="p-5 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-2">
-                      <h4 className="font-bold text-sm text-[#17324D]">
+                    <div className="p-5 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-2">
+                      <h4 className="font-bold text-sm text-[#000a37]">
                         Women in Uganda Prisons (5%)
                       </h4>
                       <p className="text-stone-600 leading-relaxed">
@@ -396,9 +396,9 @@ export const ProgramDetailPage: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="p-5 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-2">
-                      <h4 className="font-bold text-sm text-[#17324D] flex items-center gap-2">
-                        <Baby className="w-4 h-4 text-[#E98A32]" />
+                    <div className="p-5 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-2">
+                      <h4 className="font-bold text-sm text-[#000a37] flex items-center gap-2">
+                        <Baby className="w-4 h-4 text-[#ef5a20]" />
                         <span>Children in Prison Realities</span>
                       </h4>
                       <p className="text-stone-600 leading-relaxed">
@@ -409,11 +409,11 @@ export const ProgramDetailPage: React.FC = () => {
 
                   {/* Urgent Attention Alert: 161 Innocent Children */}
                   <div className="p-5 bg-amber-50 border-2 border-amber-300/80 rounded-2xl flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#E98A32] text-white flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-full bg-[#ef5a20] text-white flex items-center justify-center shrink-0 mt-0.5">
                       <Heart className="w-5 h-5 fill-white" />
                     </div>
                     <div className="space-y-1 text-xs">
-                      <h5 className="font-bold text-sm text-[#17324D]">
+                      <h5 className="font-bold text-sm text-[#000a37]">
                         Over 161 Innocent Children in Prison
                       </h5>
                       <p className="text-stone-700 leading-relaxed">
@@ -424,7 +424,7 @@ export const ProgramDetailPage: React.FC = () => {
 
                   {/* Youth Population & Preventive Strategy */}
                   <div className="space-y-3 pt-2">
-                    <h4 className="font-bold text-sm text-[#17324D]">
+                    <h4 className="font-bold text-sm text-[#000a37]">
                       The 70% Youth Demographic: Preventive Rehabilitation
                     </h4>
                     <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
@@ -436,10 +436,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 3. Prison Churches, Active Stations & Warders Strategy */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-6">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                       IMPLEMENTATION STRATEGY
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#000a37]">
                       Establishment of Prison Churches & Discipleship Programs
                     </h3>
                     <p className="text-xs sm:text-sm text-stone-600">
@@ -448,32 +448,32 @@ export const ProgramDetailPage: React.FC = () => {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Luzira Remand & Women Prison</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Murchison Bay Prison</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Kauga Prison</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Kigo Prison (Men & Women)</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Jinja Kirinya (Women & Main)</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Kasangati Prison</span>
                     </div>
-                    <div className="p-3.5 bg-[#FAF7F0] rounded-xl border border-stone-200 flex items-center gap-2.5 sm:col-span-2 md:col-span-1">
-                      <MapPin className="w-4 h-4 text-[#2459A9] shrink-0" />
+                    <div className="p-3.5 bg-[#FAF9F6] rounded-xl border border-stone-200 flex items-center gap-2.5 sm:col-span-2 md:col-span-1">
+                      <MapPin className="w-4 h-4 text-[#000a37] shrink-0" />
                       <span className="font-semibold text-stone-800">Kitala Prison</span>
                     </div>
                   </div>
@@ -482,9 +482,9 @@ export const ProgramDetailPage: React.FC = () => {
                   </p>
 
                   {/* Warders Strategy */}
-                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#17324D] to-[#2459A9] text-white space-y-2 shadow-md">
-                    <div className="flex items-center gap-2 text-xs font-bold text-[#E98A32] uppercase tracking-wider">
-                      <ShieldCheck className="w-4 h-4 text-[#E98A32]" />
+                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#000a37] to-[#000a37] text-white space-y-2 shadow-md">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#ef5a20] uppercase tracking-wider">
+                      <ShieldCheck className="w-4 h-4 text-[#ef5a20]" />
                       <span>Correctional Warder Church Planters</span>
                     </div>
                     <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -500,18 +500,18 @@ export const ProgramDetailPage: React.FC = () => {
               <div className="space-y-10">
                 {/* 1. Vision Callout */}
                 <div className="reveal-up p-8 sm:p-10 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <Church className="w-4 h-4 text-[#E98A32]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <Church className="w-4 h-4 text-[#ef5a20]" />
                     <span>CHURCH PLANTING & TRAINING INITIATIVE</span>
                   </div>
-                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17324D] leading-snug">
+                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#000a37] leading-snug">
                     A Living Church in Every Community
                   </h2>
-                  <div className="border-l-4 border-[#E98A32] pl-4 sm:pl-6 bg-[#FAF7F0] p-6 rounded-r-2xl space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#E98A32] block">
+                  <div className="border-l-4 border-[#ef5a20] pl-4 sm:pl-6 bg-[#FAF9F6] p-6 rounded-r-2xl space-y-2">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#ef5a20] block">
                       OUR OVERALL VISION
                     </span>
-                    <p className="font-['Playfair_Display'] text-base sm:text-xl text-[#17324D] leading-relaxed italic font-bold">
+                    <p className="font-['Playfair_Display'] text-base sm:text-xl text-[#000a37] leading-relaxed italic font-bold">
                       “A LIVING CHURCH IN EVERY COMMUNITY, PLANTED BY ORDINARY BELIEVERS WHO ARE EQUIPPED WITH PRACTICAL SKILLS AND TOOLS”
                     </p>
                     <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-['Plus_Jakarta_Sans'] font-normal pt-1">
@@ -521,8 +521,8 @@ export const ProgramDetailPage: React.FC = () => {
 
                   {/* 2. Goal & The Modular Approach */}
                   <div className="space-y-4 pt-2">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2459A9]">
-                      <Target className="w-4 h-4 text-[#2459A9]" />
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#000a37]">
+                      <Target className="w-4 h-4 text-[#000a37]" />
                       <span>THE GOAL OF THE INITIATIVE</span>
                     </div>
                     <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -537,8 +537,8 @@ export const ProgramDetailPage: React.FC = () => {
                   </div>
 
                   {/* Theme Box */}
-                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#17324D] to-[#2459A9] text-white space-y-1.5 shadow-md">
-                    <span className="text-[10px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#000a37] to-[#000a37] text-white space-y-1.5 shadow-md">
+                    <span className="text-[10px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                       INITIATIVE THEME
                     </span>
                     <p className="text-xs sm:text-sm leading-relaxed font-medium">
@@ -557,9 +557,9 @@ export const ProgramDetailPage: React.FC = () => {
                       (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/85 via-[#17324D]/30 to-transparent flex items-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-[#000a37]/30 to-transparent flex items-end p-6">
                     <div>
-                      <span className="text-[10px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                      <span className="text-[10px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                         Indigenous Multiplication
                       </span>
                       <p className="text-white text-base sm:text-lg font-bold font-['Manrope']">
@@ -572,10 +572,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 4. Obligation of the Program (3 Key Pillars) */}
                 <div className="reveal-up space-y-6">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                       PROGRAM ARCHITECTURE
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#000a37]">
                       Obligation of the Program
                     </h3>
                   </div>
@@ -583,8 +583,8 @@ export const ProgramDetailPage: React.FC = () => {
                   {/* Pillar 1: Modular Church Planter Training */}
                   <div className="p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5">
                     <div className="flex items-center gap-2">
-                      <GraduationCap className="w-5 h-5 text-[#2459A9]" />
-                      <h4 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+                      <GraduationCap className="w-5 h-5 text-[#000a37]" />
+                      <h4 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
                         Module Church Planter Training (5 Phases)
                       </h4>
                     </div>
@@ -600,9 +600,9 @@ export const ProgramDetailPage: React.FC = () => {
                         { module: 'Module 4', title: 'Leadership', desc: 'Identifying and equipping pastors and lay leaders with practical administrative and pastoral skills.' },
                         { module: 'Module 5', title: 'Multiplication', desc: 'Training the church to reproduce itself by planting new daughter congregations.' },
                       ].map((mod, idx) => (
-                        <div key={idx} className="p-4 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-1.5 hover:shadow-xs transition-shadow">
-                          <span className="text-[10px] font-mono font-bold text-[#E98A32] uppercase">{mod.module}</span>
-                          <h5 className="font-bold text-sm text-[#17324D]">{mod.title}</h5>
+                        <div key={idx} className="p-4 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-1.5 hover:shadow-xs transition-shadow">
+                          <span className="text-[10px] font-mono font-bold text-[#ef5a20] uppercase">{mod.module}</span>
+                          <h5 className="font-bold text-sm text-[#000a37]">{mod.title}</h5>
                           <p className="text-xs text-stone-600 leading-relaxed">{mod.desc}</p>
                         </div>
                       ))}
@@ -614,8 +614,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* Mentoring & Coaching */}
                     <div className="p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <Users className="w-5 h-5 text-[#E98A32]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <Users className="w-5 h-5 text-[#ef5a20]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Mentoring & Coaching for Pastors
                         </h4>
                       </div>
@@ -641,8 +641,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* Discipleship Materials & Christian Literature */}
                     <div className="p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <BookOpen className="w-5 h-5 text-[#2459A9]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <BookOpen className="w-5 h-5 text-[#000a37]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Discipleship Materials & Christian Literature
                         </h4>
                       </div>
@@ -672,12 +672,12 @@ export const ProgramDetailPage: React.FC = () => {
                 </div>
 
                 {/* 5. Objective of the Program */}
-                <div className="reveal-up p-8 rounded-3xl bg-[#FAF7F0] border border-stone-200/90 shadow-sm space-y-3">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <Target className="w-4 h-4 text-[#E98A32]" />
+                <div className="reveal-up p-8 rounded-3xl bg-[#FAF9F6] border border-stone-200/90 shadow-sm space-y-3">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <Target className="w-4 h-4 text-[#ef5a20]" />
                     <span>PROGRAM OBJECTIVE</span>
                   </div>
-                  <h4 className="font-['Playfair_Display'] font-bold text-xl text-[#17324D]">
+                  <h4 className="font-['Playfair_Display'] font-bold text-xl text-[#000a37]">
                     18 Months Practical Holistic Development Training Program
                   </h4>
                   <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -688,10 +688,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 6. Process of the Church Planting and Training Program */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5">
                   <div className="space-y-1">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#2459A9]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#000a37]">
                       SYSTEMATIC EXECUTION
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#000a37]">
                       Process of the Church Planting & Training Program
                     </h3>
                   </div>
@@ -704,7 +704,7 @@ export const ProgramDetailPage: React.FC = () => {
                       { step: '(d)', text: 'Provide platform for continuous education, resourcing, networking and multiplication in the initiative.' },
                     ].map((proc, idx) => (
                       <div key={idx} className="p-4 rounded-2xl bg-stone-50 border border-stone-200 flex items-start gap-3">
-                        <span className="w-8 h-8 rounded-xl bg-[#17324D] text-white flex items-center justify-center text-xs font-bold shrink-0">
+                        <span className="w-8 h-8 rounded-xl bg-[#000a37] text-white flex items-center justify-center text-xs font-bold shrink-0">
                           {proc.step}
                         </span>
                         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed pt-1">
@@ -722,29 +722,29 @@ export const ProgramDetailPage: React.FC = () => {
               <div className="space-y-10">
                 {/* 1. Guiding Theme & Quote */}
                 <div className="reveal-up p-8 sm:p-10 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <Home className="w-4 h-4 text-[#E98A32]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <Home className="w-4 h-4 text-[#ef5a20]" />
                     <span>FAMILY FOUNDATIONS</span>
                   </div>
-                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17324D] leading-snug">
+                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#000a37] leading-snug">
                     Strengthening the Bedrock of Society
                   </h2>
-                  <p className="font-['Playfair_Display'] text-base sm:text-xl text-[#17324D] leading-relaxed italic border-l-4 border-[#E98A32] pl-4 sm:pl-6 bg-[#FAF7F0] p-5 rounded-r-2xl">
+                  <p className="font-['Playfair_Display'] text-base sm:text-xl text-[#000a37] leading-relaxed italic border-l-4 border-[#ef5a20] pl-4 sm:pl-6 bg-[#FAF9F6] p-5 rounded-r-2xl">
                     “When families struggle or fail, our churches, communities, culture and nations at large suffer.”
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    <div className="p-5 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-1.5">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#2459A9] block">
+                    <div className="p-5 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-1.5">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#000a37] block">
                         Our Vision
                       </span>
-                      <h4 className="font-['Playfair_Display'] font-bold text-lg text-[#17324D]">
+                      <h4 className="font-['Playfair_Display'] font-bold text-lg text-[#000a37]">
                         Healthy Families, Prosperous Communities, Stable Country
                       </h4>
                     </div>
 
-                    <div className="p-5 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-1.5">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#E98A32] block">
+                    <div className="p-5 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-1.5">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#ef5a20] block">
                         Our Mission
                       </span>
                       <p className="text-xs text-stone-700 leading-relaxed font-medium">
@@ -756,10 +756,10 @@ export const ProgramDetailPage: React.FC = () => {
 
                 {/* 2. Changing Family Context in Africa */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#2459A9] block">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#000a37] block">
                     Context & The Need
                   </span>
-                  <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#17324D]">
+                  <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-[#000a37]">
                     Restoring Hope Amid Changing African Family Patterns
                   </h3>
 
@@ -782,9 +782,9 @@ export const ProgramDetailPage: React.FC = () => {
                         (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/80 via-transparent to-transparent flex items-end p-5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/80 via-transparent to-transparent flex items-end p-5">
                       <div>
-                        <span className="text-[10px] font-bold text-[#E98A32] uppercase tracking-wider block">Family Foundations</span>
+                        <span className="text-[10px] font-bold text-[#ef5a20] uppercase tracking-wider block">Family Foundations</span>
                         <p className="text-white text-base font-bold font-['Manrope']">Equipping Families to Lead Fulfilling & Productive Lives</p>
                       </div>
                     </div>
@@ -794,10 +794,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 3. The 12 Official Activities */}
                 <div className="reveal-up space-y-6">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                       CORE INITIATIVES
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#000a37]">
                       Family Foundations Activities
                     </h3>
                     <p className="text-xs sm:text-sm text-stone-600">
@@ -825,10 +825,10 @@ export const ProgramDetailPage: React.FC = () => {
                         className="p-4 bg-white rounded-2xl border border-stone-200/90 shadow-xs hover:shadow-md transition-all space-y-1.5"
                       >
                         <div className="flex items-center justify-between">
-                          <span className="text-[#E98A32] font-mono text-xs font-bold">0{idx + 1}</span>
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#2459A9]" />
+                          <span className="text-[#ef5a20] font-mono text-xs font-bold">0{idx + 1}</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#000a37]" />
                         </div>
-                        <h4 className="font-['Manrope'] font-bold text-sm text-[#17324D]">{item.title}</h4>
+                        <h4 className="font-['Manrope'] font-bold text-sm text-[#000a37]">{item.title}</h4>
                         <p className="text-[11px] text-stone-500 font-normal leading-relaxed">{item.desc}</p>
                       </div>
                     ))}
@@ -842,17 +842,17 @@ export const ProgramDetailPage: React.FC = () => {
               <div className="space-y-10">
                 {/* 1. Goal Callout & Vision */}
                 <div className="reveal-up p-8 sm:p-10 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5 relative overflow-hidden">
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#E98A32]">
-                    <Baby className="w-4 h-4 text-[#E98A32]" />
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
+                    <Baby className="w-4 h-4 text-[#ef5a20]" />
                     <span>CHILD EVANGELISM & DISCIPLESHIP</span>
                   </div>
-                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17324D] leading-snug">
+                  <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#000a37] leading-snug">
                     Nurturing Children for God's Kingdom
                   </h2>
 
                   {/* 3 Pillars of the Goal */}
-                  <div className="p-6 rounded-2xl bg-[#FAF7F0] border border-stone-200 space-y-3">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#E98A32] block">
+                  <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-stone-200 space-y-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#ef5a20] block">
                       CORE GOAL OF THE CHILDREN'S MINISTRY PROGRAM
                     </span>
                     <p className="text-xs sm:text-sm text-stone-700 font-medium">
@@ -860,18 +860,18 @@ export const ProgramDetailPage: React.FC = () => {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
                       <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-1 shadow-xs">
-                        <span className="w-7 h-7 rounded-lg bg-[#17324D] text-white flex items-center justify-center text-xs font-bold">1</span>
-                        <h4 className="font-bold text-sm text-[#17324D]">Personal Relationship with God</h4>
+                        <span className="w-7 h-7 rounded-lg bg-[#000a37] text-white flex items-center justify-center text-xs font-bold">1</span>
+                        <h4 className="font-bold text-sm text-[#000a37]">Personal Relationship with God</h4>
                         <p className="text-[11px] text-stone-500">Cultivating authentic faith and daily walk with Christ.</p>
                       </div>
                       <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-1 shadow-xs">
-                        <span className="w-7 h-7 rounded-lg bg-[#E98A32] text-white flex items-center justify-center text-xs font-bold">2</span>
-                        <h4 className="font-bold text-sm text-[#17324D]">Grow with Healthy Character</h4>
+                        <span className="w-7 h-7 rounded-lg bg-[#ef5a20] text-white flex items-center justify-center text-xs font-bold">2</span>
+                        <h4 className="font-bold text-sm text-[#000a37]">Grow with Healthy Character</h4>
                         <p className="text-[11px] text-stone-500">Pursuing godly character, moral integrity, and respect.</p>
                       </div>
                       <div className="p-4 rounded-xl bg-white border border-stone-200 space-y-1 shadow-xs">
-                        <span className="w-7 h-7 rounded-lg bg-[#2459A9] text-white flex items-center justify-center text-xs font-bold">3</span>
-                        <h4 className="font-bold text-sm text-[#17324D]">Advance the Kingdom through Outreach</h4>
+                        <span className="w-7 h-7 rounded-lg bg-[#000a37] text-white flex items-center justify-center text-xs font-bold">3</span>
+                        <h4 className="font-bold text-sm text-[#000a37]">Advance the Kingdom through Outreach</h4>
                         <p className="text-[11px] text-stone-500">Equipping children as young ambassadors of the Gospel.</p>
                       </div>
                     </div>
@@ -879,8 +879,8 @@ export const ProgramDetailPage: React.FC = () => {
 
                   {/* Raising Hope Background & 3 Modules */}
                   <div className="space-y-4 pt-2">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#2459A9]">
-                      <Sparkles className="w-4 h-4 text-[#2459A9]" />
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#000a37]">
+                      <Sparkles className="w-4 h-4 text-[#000a37]" />
                       <span>THE “RAISING HOPE” CURRICULUM</span>
                     </div>
                     <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-['Plus_Jakarta_Sans']">
@@ -892,18 +892,18 @@ export const ProgramDetailPage: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1">
                       <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#2459A9] block">MODULE 1</span>
-                        <h4 className="font-bold text-base text-[#17324D]">CONNECTED</h4>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#000a37] block">MODULE 1</span>
+                        <h4 className="font-bold text-base text-[#000a37]">CONNECTED</h4>
                         <p className="text-xs text-stone-600">Our personal relationship with God.</p>
                       </div>
                       <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#E98A32] block">MODULE 2</span>
-                        <h4 className="font-bold text-base text-[#17324D]">PERFECTED</h4>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#ef5a20] block">MODULE 2</span>
+                        <h4 className="font-bold text-base text-[#000a37]">PERFECTED</h4>
                         <p className="text-xs text-stone-600">Pursuing Godly character.</p>
                       </div>
                       <div className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-1">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 block">MODULE 3</span>
-                        <h4 className="font-bold text-base text-[#17324D]">DIRECTED</h4>
+                        <h4 className="font-bold text-base text-[#000a37]">DIRECTED</h4>
                         <p className="text-xs text-stone-600">Advancing the Kingdom God’s way.</p>
                       </div>
                     </div>
@@ -914,8 +914,8 @@ export const ProgramDetailPage: React.FC = () => {
                   </div>
 
                   {/* Vision Box */}
-                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#17324D] to-[#2459A9] text-white space-y-1.5 shadow-md">
-                    <span className="text-[10px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                  <div className="p-5 rounded-2xl bg-gradient-to-r from-[#000a37] to-[#000a37] text-white space-y-1.5 shadow-md">
+                    <span className="text-[10px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                       OUR VISION
                     </span>
                     <p className="text-xs sm:text-sm leading-relaxed font-medium">
@@ -934,9 +934,9 @@ export const ProgramDetailPage: React.FC = () => {
                       (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/85 via-transparent to-transparent flex items-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-transparent to-transparent flex items-end p-6">
                     <div>
-                      <span className="text-[10px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                      <span className="text-[10px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                         Raising Hope
                       </span>
                       <p className="text-white text-base sm:text-lg font-bold font-['Manrope']">
@@ -949,10 +949,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 2. Core Programs (6 Pillars) */}
                 <div className="reveal-up space-y-6">
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                       CORE PROGRAMS
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#000a37]">
                       Comprehensive Children's Initiatives
                     </h3>
                   </div>
@@ -961,8 +961,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 1. Facilitator Mentoring & Coaching */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <Users className="w-5 h-5 text-[#2459A9]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <Users className="w-5 h-5 text-[#000a37]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Facilitator Mentoring & Coaching
                         </h4>
                       </div>
@@ -989,8 +989,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 2. Children’s Workers Trainings */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <GraduationCap className="w-5 h-5 text-[#E98A32]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <GraduationCap className="w-5 h-5 text-[#ef5a20]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Children’s Workers Trainings
                         </h4>
                       </div>
@@ -1017,8 +1017,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 3. Discipleship Programs */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <Heart className="w-5 h-5 text-[#E98A32]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <Heart className="w-5 h-5 text-[#ef5a20]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Discipleship Programs
                         </h4>
                       </div>
@@ -1041,8 +1041,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 4. Community Bible Clubs */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <Home className="w-5 h-5 text-[#2459A9]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <Home className="w-5 h-5 text-[#000a37]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Community Bible Clubs
                         </h4>
                       </div>
@@ -1069,8 +1069,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 5. Community & School Outreaches */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <Globe className="w-5 h-5 text-[#2459A9]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <Globe className="w-5 h-5 text-[#000a37]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Community & School Outreaches
                         </h4>
                       </div>
@@ -1097,8 +1097,8 @@ export const ProgramDetailPage: React.FC = () => {
                     {/* 6. Curriculum Hub */}
                     <div className="p-7 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-4">
                       <div className="flex items-center gap-2">
-                        <BookOpen className="w-5 h-5 text-[#E98A32]" />
-                        <h4 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                        <BookOpen className="w-5 h-5 text-[#ef5a20]" />
+                        <h4 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                           Curriculum Hub
                         </h4>
                       </div>
@@ -1127,10 +1127,10 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 3. Program Objectives */}
                 <div className="reveal-up p-8 rounded-3xl bg-white border border-stone-200/90 shadow-sm space-y-5">
                   <div className="space-y-1">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#2459A9]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#000a37]">
                       STRATEGIC OBJECTIVES
                     </span>
-                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#17324D]">
+                    <h3 className="font-['Playfair_Display'] font-bold text-2xl text-[#000a37]">
                       Children's Ministry Objectives
                     </h3>
                   </div>
@@ -1143,7 +1143,7 @@ export const ProgramDetailPage: React.FC = () => {
                       'Produce training materials that will be used by Children’s Ministry Teachers manual and participants work book',
                       'Train Master Trainers an approach aimed at multiplying the program',
                     ].map((obj, idx) => (
-                      <div key={idx} className="p-4 rounded-2xl bg-[#FAF7F0] border border-stone-200 flex items-start gap-3">
+                      <div key={idx} className="p-4 rounded-2xl bg-[#FAF9F6] border border-stone-200 flex items-start gap-3">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                         <span className="font-medium text-stone-800">{obj}</span>
                       </div>
@@ -1156,7 +1156,7 @@ export const ProgramDetailPage: React.FC = () => {
               <>
                 {/* Overview */}
                 <div className="reveal-up space-y-4">
-                  <h2 className="font-['Manrope'] font-bold text-2xl text-[#17324D]">
+                  <h2 className="font-['Manrope'] font-bold text-2xl text-[#000a37]">
                     Program Overview
                   </h2>
                   <p className="text-sm text-stone-700 leading-relaxed">
@@ -1167,8 +1167,8 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* The Need Addressed */}
                 <div className="reveal-up space-y-4 p-6 bg-white rounded-2xl border border-stone-200 shadow-xs">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#E98A32]" />
-                    <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#ef5a20]" />
+                    <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
                       The Community Need We Address
                     </h3>
                   </div>
@@ -1179,13 +1179,13 @@ export const ProgramDetailPage: React.FC = () => {
 
                 {/* 4. Objectives */}
                 <div className="space-y-4">
-                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#17324D]">
+                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#000a37]">
                     Core Program Objectives
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 stagger-group">
                     {program.objectives.map((obj, i) => (
                       <div key={i} className="reveal-up interactive-card flex items-start gap-3 p-4 bg-white rounded-xl border border-stone-200">
-                        <CheckCircle2 className="w-4 h-4 text-[#2459A9] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#000a37] shrink-0 mt-0.5" />
                         <p className="text-xs text-stone-700 leading-snug">{obj}</p>
                       </div>
                     ))}
@@ -1194,13 +1194,13 @@ export const ProgramDetailPage: React.FC = () => {
 
                 {/* 5. Activities and Implementation */}
                 <div className="space-y-4">
-                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#17324D]">
+                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#000a37]">
                     Key Activities & Implementation Approach
                   </h3>
                   <ul className="space-y-2.5 stagger-group">
                     {program.keyActivities.map((act, i) => (
                       <li key={i} className="reveal-up flex items-start gap-3 text-xs sm:text-sm text-stone-700">
-                        <span className="w-5 h-5 rounded-full bg-[#17324D] text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+                        <span className="w-5 h-5 rounded-full bg-[#000a37] text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
                           {i + 1}
                         </span>
                         <span>{act}</span>
@@ -1210,8 +1210,8 @@ export const ProgramDetailPage: React.FC = () => {
                 </div>
 
                 {/* 6. Intended Participants */}
-                <div className="reveal-up p-6 bg-[#FAF7F0] rounded-2xl border border-stone-200 space-y-2">
-                  <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                <div className="reveal-up p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200 space-y-2">
+                  <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                     Intended Participants & Beneficiaries
                   </h3>
                   <p className="text-xs text-stone-600 leading-relaxed">
@@ -1221,7 +1221,7 @@ export const ProgramDetailPage: React.FC = () => {
 
                 {/* 7. Verified Outcomes */}
                 <div className="space-y-4">
-                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#17324D]">
+                  <h3 className="reveal-up font-['Manrope'] font-bold text-xl text-[#000a37]">
                     Documented & Verified Outcomes
                   </h3>
                   <div className="space-y-3 stagger-group">
@@ -1243,7 +1243,7 @@ export const ProgramDetailPage: React.FC = () => {
           {/* Right Sidebar: Quick Actions, Enquiries & Reports */}
           <div className="lg:col-span-4 space-y-8">
             {/* Support CTA Box */}
-            <div className="reveal-up bg-[#17324D] text-white p-6 rounded-2xl shadow-lg space-y-4">
+            <div className="reveal-up bg-[#000a37] text-white p-6 rounded-2xl shadow-lg space-y-4">
               <h3 className="font-['Manrope'] font-bold text-lg text-white">
                 Support {program.name}
               </h3>
@@ -1253,7 +1253,7 @@ export const ProgramDetailPage: React.FC = () => {
               </p>
               <button
                 onClick={() => openDonationModal(program.name)}
-                className="w-full py-3 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 interactive-button"
+                className="w-full py-3 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 interactive-button"
               >
                 <Heart className="w-4 h-4 fill-white" />
                 <span>Designate a Gift to this Ministry</span>
@@ -1262,7 +1262,7 @@ export const ProgramDetailPage: React.FC = () => {
 
             {/* 11. Program Enquiry Form */}
             <div className="reveal-up bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-4">
-              <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+              <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                 Enquire About This Program
               </h3>
               <p className="text-xs text-stone-500">
@@ -1278,7 +1278,7 @@ export const ProgramDetailPage: React.FC = () => {
                   </p>
                   <button
                     onClick={() => setSubmittedEnquiryId(null)}
-                    className="text-[11px] text-[#2459A9] underline font-semibold"
+                    className="text-[11px] text-[#000a37] underline font-semibold"
                   >
                     Send another inquiry
                   </button>
@@ -1291,7 +1291,7 @@ export const ProgramDetailPage: React.FC = () => {
                     placeholder="Your Full Name *"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                   <input
                     type="email"
@@ -1299,14 +1299,14 @@ export const ProgramDetailPage: React.FC = () => {
                     placeholder="Your Email *"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                   <input
                     type="tel"
                     placeholder="Phone / WhatsApp (optional)"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                   <textarea
                     required
@@ -1314,12 +1314,12 @@ export const ProgramDetailPage: React.FC = () => {
                     placeholder="How would you like to engage with this program?"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-2.5 bg-[#17324D] hover:bg-[#2459A9] disabled:opacity-50 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1.5 interactive-button"
+                    className="w-full py-2.5 bg-[#000a37] hover:bg-[#000a37]/90 disabled:opacity-50 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-1.5 interactive-button"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>{submitting ? 'Sending...' : 'Submit Program Enquiry'}</span>
@@ -1331,7 +1331,7 @@ export const ProgramDetailPage: React.FC = () => {
             {/* Related Reports */}
             {relatedReports.length > 0 && (
               <div className="reveal-up bg-stone-50 p-6 rounded-2xl border border-stone-200 space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#17324D]">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#000a37]">
                   Related Field Reports
                 </h4>
                 <div className="space-y-2 stagger-group">
@@ -1339,7 +1339,7 @@ export const ProgramDetailPage: React.FC = () => {
                     <button
                       key={rep.id}
                       onClick={() => navigateTo('reports', undefined, rep.slug)}
-                      className="reveal-up interactive-card w-full text-left p-2.5 bg-white rounded-lg border border-stone-200 hover:border-[#2459A9] text-xs font-semibold text-[#17324D] transition-colors"
+                      className="reveal-up interactive-card w-full text-left p-2.5 bg-white rounded-lg border border-stone-200 hover:border-[#000a37] text-xs font-semibold text-[#000a37] transition-colors"
                     >
                       {rep.title}
                     </button>

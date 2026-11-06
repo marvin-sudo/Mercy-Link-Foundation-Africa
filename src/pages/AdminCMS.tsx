@@ -113,10 +113,10 @@ export const AdminCMS: React.FC = () => {
       <div className="min-h-[70vh] flex items-center justify-center py-12 px-4">
         <div className="bg-white rounded-3xl p-8 sm:p-10 border border-stone-200 shadow-xl max-w-md w-full space-y-6">
           <div className="text-center space-y-2">
-            <div className="w-12 h-12 rounded-2xl bg-[#17324D] text-[#E98A32] flex items-center justify-center mx-auto shadow-md">
+            <div className="w-12 h-12 rounded-2xl bg-[#000a37] text-[#ef5a20] flex items-center justify-center mx-auto shadow-md">
               <Shield className="w-6 h-6" />
             </div>
-            <h2 className="font-['Manrope'] font-extrabold text-2xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-extrabold text-2xl text-[#000a37]">
               Staff CMS Portal
             </h2>
             <p className="text-xs text-stone-500">
@@ -132,7 +132,7 @@ export const AdminCMS: React.FC = () => {
               <select
                 value={selectedRole}
                 onChange={(e) => setSelectedRole(e.target.value as AdminRole)}
-                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
               >
                 {rolesList.map((r) => (
                   <option key={r} value={r}>
@@ -151,7 +151,7 @@ export const AdminCMS: React.FC = () => {
                 required
                 value={loginEmail}
                 onChange={(e) => setLoginEmail(e.target.value)}
-                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
               />
             </div>
 
@@ -164,7 +164,7 @@ export const AdminCMS: React.FC = () => {
                 required
                 value={loginPassword}
                 onChange={(e) => setLoginPassword(e.target.value)}
-                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
               />
             </div>
 
@@ -174,7 +174,7 @@ export const AdminCMS: React.FC = () => {
 
             <button
               type="submit"
-              className="w-full py-3 bg-[#17324D] hover:bg-[#2459A9] text-white rounded-xl text-xs font-bold transition-colors shadow-sm"
+              className="w-full py-3 bg-[#000a37] hover:bg-[#000a37]/90 text-white rounded-xl text-xs font-bold transition-colors shadow-sm"
             >
               Log In to Portal
             </button>
@@ -196,11 +196,11 @@ export const AdminCMS: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* CMS Top Bar */}
-      <div className="bg-[#17324D] text-white p-6 rounded-3xl flex flex-wrap items-center justify-between gap-4 shadow-md">
+      <div className="bg-[#000a37] text-white p-6 rounded-3xl flex flex-wrap items-center justify-between gap-4 shadow-md">
         <div className="flex items-center gap-3.5">
-          <div className="w-12 h-12 rounded-full p-0.5 bg-white border-2 border-[#E98A32] shadow-sm flex items-center justify-center shrink-0 overflow-hidden">
+          <div className="w-12 h-12 rounded-full p-0.5 bg-white border-2 border-[#ef5a20] shadow-sm flex items-center justify-center shrink-0 overflow-hidden">
             <img
-              src="https://i.postimg.cc/nV7TcH8r/Gemini-Generated-Image.jpg"
+              src="https://i.postimg.cc/J4CrQcrZ/Whats-App-Image-2026-10-23-at-9-33-54-AM.jpg"
               alt="Mercy Link Foundation Africa Logo"
               className="w-full h-full object-contain rounded-full"
               onError={(e) => {
@@ -213,7 +213,7 @@ export const AdminCMS: React.FC = () => {
               <h1 className="font-['Manrope'] font-bold text-lg text-white">
                 Mercy Link Content Management System
               </h1>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/20 text-[#E98A32]">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/20 text-[#ef5a20]">
                 {currentUser.role}
               </span>
             </div>
@@ -228,7 +228,7 @@ export const AdminCMS: React.FC = () => {
           <select
             value={currentUser.role}
             onChange={(e) => switchRole(e.target.value as AdminRole)}
-            className="px-3 py-1.5 text-xs bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-[#E98A32]"
+            className="px-3 py-1.5 text-xs bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-1 focus:ring-[#ef5a20]"
             title="Switch staff role"
           >
             {rolesList.map((r) => (
@@ -279,7 +279,7 @@ export const AdminCMS: React.FC = () => {
               onClick={() => setActiveTab(tab.id as any)}
               className={`flex items-center gap-2 px-4 py-2.5 text-xs font-bold rounded-xl transition-all whitespace-nowrap shrink-0 ${
                 activeTab === tab.id
-                  ? 'bg-[#17324D] text-white shadow-xs'
+                  ? 'bg-[#000a37] text-white shadow-xs'
                   : 'bg-white text-stone-600 hover:text-stone-900 border border-stone-200 hover:border-stone-300'
               }`}
             >
@@ -296,7 +296,7 @@ export const AdminCMS: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-2">
               <span className="text-[11px] font-bold text-stone-400 uppercase">Active Programs</span>
-              <p className="font-['Manrope'] font-extrabold text-3xl text-[#17324D] tabular-nums">
+              <p className="font-['Manrope'] font-extrabold text-3xl text-[#000a37] tabular-nums">
                 {programs.length}
               </p>
               <p className="text-xs text-stone-500">7 verified ministries in Uganda</p>
@@ -304,7 +304,7 @@ export const AdminCMS: React.FC = () => {
 
             <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-2">
               <span className="text-[11px] font-bold text-stone-400 uppercase">Published Reports</span>
-              <p className="font-['Manrope'] font-extrabold text-3xl text-[#2459A9] tabular-nums">
+              <p className="font-['Manrope'] font-extrabold text-3xl text-[#000a37] tabular-nums">
                 {reports.filter((r) => r.isPublished).length}
               </p>
               <p className="text-xs text-stone-500">Field documentation summaries</p>
@@ -312,7 +312,7 @@ export const AdminCMS: React.FC = () => {
 
             <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-2">
               <span className="text-[11px] font-bold text-stone-400 uppercase">Education Applications</span>
-              <p className="font-['Manrope'] font-extrabold text-3xl text-[#E98A32] tabular-nums">
+              <p className="font-['Manrope'] font-extrabold text-3xl text-[#ef5a20] tabular-nums">
                 {educationApplications.length}
               </p>
               <p className="text-xs text-stone-500">
@@ -335,12 +335,12 @@ export const AdminCMS: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                   Recent Enquiries
                 </h3>
                 <button
                   onClick={() => setActiveTab('enquiries')}
-                  className="text-xs font-bold text-[#2459A9] hover:underline"
+                  className="text-xs font-bold text-[#000a37] hover:underline"
                 >
                   View All ({enquiries.length}) →
                 </button>
@@ -350,11 +350,11 @@ export const AdminCMS: React.FC = () => {
                 {enquiries.slice(0, 3).map((enq) => (
                   <div key={enq.id} className="p-3.5 bg-stone-50 rounded-xl border border-stone-100 space-y-1">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-[#17324D]">{enq.fullName}</span>
+                      <span className="font-bold text-[#000a37]">{enq.fullName}</span>
                       <span className="text-[11px] text-stone-400">{enq.date}</span>
                     </div>
                     <p className="text-xs text-stone-600 line-clamp-1">{enq.message}</p>
-                    <span className="text-[10px] font-semibold text-[#2459A9]">{enq.programInterest}</span>
+                    <span className="text-[10px] font-semibold text-[#000a37]">{enq.programInterest}</span>
                   </div>
                 ))}
               </div>
@@ -362,12 +362,12 @@ export const AdminCMS: React.FC = () => {
 
             <div className="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                   Recent Education Applications
                 </h3>
                 <button
                   onClick={() => setActiveTab('applications')}
-                  className="text-xs font-bold text-[#2459A9] hover:underline"
+                  className="text-xs font-bold text-[#000a37] hover:underline"
                 >
                   View All ({educationApplications.length}) →
                 </button>
@@ -377,7 +377,7 @@ export const AdminCMS: React.FC = () => {
                 {educationApplications.slice(0, 3).map((app) => (
                   <div key={app.id} className="p-3.5 bg-stone-50 rounded-xl border border-stone-100 space-y-1">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-[#17324D]">{app.studentName} ({app.currentLevel})</span>
+                      <span className="font-bold text-[#000a37]">{app.studentName} ({app.currentLevel})</span>
                       <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">
                         {app.status}
                       </span>
@@ -397,7 +397,7 @@ export const AdminCMS: React.FC = () => {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+              <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                 Ministry Program Management
               </h2>
               <p className="text-xs text-stone-500">
@@ -414,18 +414,18 @@ export const AdminCMS: React.FC = () => {
               >
                 <div className="space-y-1 max-w-2xl">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-[#2459A9]">{prog.category}</span>
+                    <span className="text-xs font-bold text-[#000a37]">{prog.category}</span>
                     <span aria-hidden="true" className="text-stone-300">·</span>
                     <span className="text-xs text-stone-500">Period: {prog.reportingPeriod}</span>
                   </div>
-                  <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">{prog.name}</h3>
+                  <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">{prog.name}</h3>
                   <p className="text-xs text-stone-600 line-clamp-2">{prog.overview}</p>
                 </div>
 
                 <div className="flex items-center gap-3 shrink-0">
                   <button
                     onClick={() => setEditingProgram(prog)}
-                    className="px-4 py-2 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
+                    className="px-4 py-2 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
                   >
                     <Edit2 className="w-3.5 h-3.5" />
                     <span>Edit Program</span>
@@ -439,7 +439,7 @@ export const AdminCMS: React.FC = () => {
           {editingProgram && (
             <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
               <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 p-6 space-y-4 my-8">
-                <h3 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                   Edit Program: {editingProgram.name}
                 </h3>
 
@@ -505,7 +505,7 @@ export const AdminCMS: React.FC = () => {
                       updateProgram(editingProgram);
                       setEditingProgram(null);
                     }}
-                    className="px-5 py-2 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs font-bold rounded-lg"
+                    className="px-5 py-2 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs font-bold rounded-lg"
                   >
                     Save Changes
                   </button>
@@ -521,7 +521,7 @@ export const AdminCMS: React.FC = () => {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+              <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                 Field Reports Archive Management
               </h2>
               <p className="text-xs text-stone-500">
@@ -531,7 +531,7 @@ export const AdminCMS: React.FC = () => {
 
             <button
               onClick={() => setIsAddingReport(true)}
-              className="px-4 py-2 bg-[#E98A32] hover:bg-[#d47926] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-4 py-2 bg-[#ef5a20] hover:bg-[#d94a14] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Publish New Report</span>
@@ -546,13 +546,13 @@ export const AdminCMS: React.FC = () => {
               >
                 <div className="space-y-1 max-w-2xl">
                   <div className="flex items-center gap-2 text-xs">
-                    <span className="font-bold text-[#2459A9]">{report.category}</span>
+                    <span className="font-bold text-[#000a37]">{report.category}</span>
                     <span aria-hidden="true" className="text-stone-300">·</span>
                     <span className="text-stone-500">{report.publicationDate}</span>
                     <span aria-hidden="true" className="text-stone-300">·</span>
                     <span className="text-stone-500">{report.location}</span>
                   </div>
-                  <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">{report.title}</h3>
+                  <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">{report.title}</h3>
                   <p className="text-xs text-stone-600 line-clamp-1">{report.excerpt}</p>
                 </div>
 
@@ -573,7 +573,7 @@ export const AdminCMS: React.FC = () => {
           {isAddingReport && (
             <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
               <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 p-6 space-y-4 my-8">
-                <h3 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                   Publish New Field Report
                 </h3>
 
@@ -669,7 +669,7 @@ export const AdminCMS: React.FC = () => {
                       setNewReportTitle('');
                       setNewReportContent('');
                     }}
-                    className="px-5 py-2 bg-[#E98A32] text-white text-xs font-bold rounded-lg"
+                    className="px-5 py-2 bg-[#ef5a20] text-white text-xs font-bold rounded-lg"
                   >
                     Publish to Website
                   </button>
@@ -685,7 +685,7 @@ export const AdminCMS: React.FC = () => {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+              <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                 Event Calendar Management
               </h2>
               <p className="text-xs text-stone-500">
@@ -695,7 +695,7 @@ export const AdminCMS: React.FC = () => {
 
             <button
               onClick={() => setIsAddingEvent(true)}
-              className="px-4 py-2 bg-[#E98A32] hover:bg-[#d47926] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-4 py-2 bg-[#ef5a20] hover:bg-[#d94a14] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Add Ministry Event</span>
@@ -710,11 +710,11 @@ export const AdminCMS: React.FC = () => {
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-xs">
-                    <span className="font-bold text-[#E98A32]">{evt.date}</span>
+                    <span className="font-bold text-[#ef5a20]">{evt.date}</span>
                     <span aria-hidden="true" className="text-stone-300">·</span>
                     <span className="text-stone-500">{evt.location}</span>
                   </div>
-                  <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">{evt.title}</h3>
+                  <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">{evt.title}</h3>
                   <p className="text-xs text-stone-600">{evt.description}</p>
                 </div>
 
@@ -736,7 +736,7 @@ export const AdminCMS: React.FC = () => {
           {isAddingEvent && (
             <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
               <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-stone-200 p-6 space-y-4 my-8">
-                <h3 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                   Add Ministry Event
                 </h3>
 
@@ -809,7 +809,7 @@ export const AdminCMS: React.FC = () => {
                       setNewEventTitle('');
                       setNewEventDesc('');
                     }}
-                    className="px-5 py-2 bg-[#17324D] text-white text-xs font-bold rounded-lg"
+                    className="px-5 py-2 bg-[#000a37] text-white text-xs font-bold rounded-lg"
                   >
                     Save Event
                   </button>
@@ -824,7 +824,7 @@ export const AdminCMS: React.FC = () => {
       {activeTab === 'impact' && (
         <div className="space-y-6">
           <div>
-            <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
               Approved Impact Statistics
             </h2>
             <p className="text-xs text-stone-500">
@@ -840,12 +840,12 @@ export const AdminCMS: React.FC = () => {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-['Manrope'] font-bold text-2xl text-[#17324D] tabular-nums">
+                    <span className="font-['Manrope'] font-bold text-2xl text-[#000a37] tabular-nums">
                       {met.value}
                     </span>
                     <button
                       onClick={() => setEditingMetric(met)}
-                      className="text-xs font-bold text-[#2459A9] hover:underline flex items-center gap-1"
+                      className="text-xs font-bold text-[#000a37] hover:underline flex items-center gap-1"
                     >
                       <Edit2 className="w-3 h-3" />
                       <span>Edit Metric</span>
@@ -866,7 +866,7 @@ export const AdminCMS: React.FC = () => {
           {editingMetric && (
             <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
               <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-stone-200 p-6 space-y-4 my-8">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
                   Edit Statistic: {editingMetric.label}
                 </h3>
 
@@ -919,7 +919,7 @@ export const AdminCMS: React.FC = () => {
                       });
                       setEditingMetric(null);
                     }}
-                    className="px-5 py-2 bg-[#17324D] text-white text-xs font-bold rounded-lg"
+                    className="px-5 py-2 bg-[#000a37] text-white text-xs font-bold rounded-lg"
                   >
                     Save Metric
                   </button>
@@ -934,7 +934,7 @@ export const AdminCMS: React.FC = () => {
       {activeTab === 'applications' && (
         <div className="space-y-6">
           <div>
-            <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
               Education Fund Applications Review
             </h2>
             <p className="text-xs text-stone-500">
@@ -950,7 +950,7 @@ export const AdminCMS: React.FC = () => {
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
                   <div>
-                    <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                    <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                       {app.studentName} ({app.gender}, DOB: {app.dateOfBirth})
                     </h3>
                     <p className="text-xs text-stone-500 font-mono">
@@ -963,7 +963,7 @@ export const AdminCMS: React.FC = () => {
                     <select
                       value={app.status}
                       onChange={(e) => updateApplicationStatus(app.id, e.target.value as any)}
-                      className="px-2.5 py-1 text-xs border border-stone-300 rounded-lg bg-white font-semibold text-[#17324D]"
+                      className="px-2.5 py-1 text-xs border border-stone-300 rounded-lg bg-white font-semibold text-[#000a37]"
                     >
                       <option value="Pending Review">Pending Review</option>
                       <option value="Documents Under Verification">Under Verification</option>
@@ -1003,7 +1003,7 @@ export const AdminCMS: React.FC = () => {
       {activeTab === 'enquiries' && (
         <div className="space-y-6">
           <div>
-            <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
               Incoming Enquiries & Partnership Requests
             </h2>
             <p className="text-xs text-stone-500">
@@ -1020,7 +1020,7 @@ export const AdminCMS: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+                      <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
                         {enq.fullName}
                       </h3>
                       {enq.organization && (
@@ -1036,7 +1036,7 @@ export const AdminCMS: React.FC = () => {
                     <select
                       value={enq.status}
                       onChange={(e) => updateEnquiryStatus(enq.id, e.target.value as any)}
-                      className="px-2.5 py-1 text-xs border border-stone-300 rounded-lg bg-white font-semibold text-[#17324D]"
+                      className="px-2.5 py-1 text-xs border border-stone-300 rounded-lg bg-white font-semibold text-[#000a37]"
                     >
                       <option value="new">New</option>
                       <option value="in-progress">In Progress</option>
@@ -1046,7 +1046,7 @@ export const AdminCMS: React.FC = () => {
                 </div>
 
                 <div className="text-xs text-stone-700 leading-relaxed">
-                  <p className="font-semibold text-[#2459A9] mb-1">Subject: {enq.programInterest}</p>
+                  <p className="font-semibold text-[#000a37] mb-1">Subject: {enq.programInterest}</p>
                   <p>{enq.message}</p>
                 </div>
               </div>
@@ -1060,7 +1060,7 @@ export const AdminCMS: React.FC = () => {
         <div className="bg-white p-8 rounded-3xl border border-stone-200 space-y-6 max-w-2xl">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+              <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
                 Approved Contact & Donation Configuration
               </h2>
               <p className="text-xs text-stone-500">
@@ -1138,11 +1138,48 @@ export const AdminCMS: React.FC = () => {
                 />
               </div>
               <div>
-                <label className="block font-bold text-stone-700 mb-1">Account Number / SWIFT</label>
+                <label className="block font-bold text-stone-700 mb-1">SWIFT Code</label>
                 <input
                   type="text"
-                  value={tempContact.bankAccountNumber}
-                  onChange={(e) => setTempContact({ ...tempContact, bankAccountNumber: e.target.value })}
+                  value={tempContact.bankSwift}
+                  onChange={(e) => setTempContact({ ...tempContact, bankSwift: e.target.value })}
+                  className="w-full px-3 py-2 border border-stone-300 rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block font-bold text-stone-700 mb-1">Dollar Account (USD)</label>
+                <input
+                  type="text"
+                  value={tempContact.bankAccountNumberUSD || ''}
+                  onChange={(e) => {
+                    const usd = e.target.value;
+                    const ugx = tempContact.bankAccountNumberUGX || '';
+                    setTempContact({
+                      ...tempContact,
+                      bankAccountNumberUSD: usd,
+                      bankAccountNumber: `${usd} (USD) / ${ugx} (UGX)`
+                    });
+                  }}
+                  className="w-full px-3 py-2 border border-stone-300 rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block font-bold text-stone-700 mb-1">Shillings Account (UGX)</label>
+                <input
+                  type="text"
+                  value={tempContact.bankAccountNumberUGX || ''}
+                  onChange={(e) => {
+                    const ugx = e.target.value;
+                    const usd = tempContact.bankAccountNumberUSD || '';
+                    setTempContact({
+                      ...tempContact,
+                      bankAccountNumberUGX: ugx,
+                      bankAccountNumber: `${usd} (USD) / ${ugx} (UGX)`
+                    });
+                  }}
                   className="w-full px-3 py-2 border border-stone-300 rounded-lg"
                 />
               </div>
@@ -1175,7 +1212,7 @@ export const AdminCMS: React.FC = () => {
                 setContactSavedAlert(true);
                 setTimeout(() => setContactSavedAlert(false), 2500);
               }}
-              className="px-6 py-2.5 bg-[#17324D] hover:bg-[#2459A9] text-white font-bold rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-6 py-2.5 bg-[#000a37] hover:bg-[#000a37]/90 text-white font-bold rounded-lg transition-colors flex items-center gap-1.5"
             >
               <Save className="w-3.5 h-3.5" />
               <span>Save Contact & Donation Instructions</span>
@@ -1187,7 +1224,7 @@ export const AdminCMS: React.FC = () => {
       {/* TAB 9: SUBSCRIBERS */}
       {activeTab === 'subscribers' && (
         <div className="bg-white p-6 rounded-2xl border border-stone-200 space-y-4 max-w-xl">
-          <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D]">
+          <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37]">
             Newsletter & Field Report Subscribers ({subscribers.length})
           </h2>
           <div className="space-y-2">

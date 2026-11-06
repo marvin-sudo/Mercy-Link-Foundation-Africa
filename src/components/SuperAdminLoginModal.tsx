@@ -61,7 +61,7 @@ export const SuperAdminLoginModal: React.FC = () => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#17324D]/80 backdrop-blur-md animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#000a37]/80 backdrop-blur-md animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
       aria-labelledby="super-admin-modal-title"
@@ -69,14 +69,14 @@ export const SuperAdminLoginModal: React.FC = () => {
         if (e.target === e.currentTarget) closeSuperAdminModal();
       }}
     >
-      <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-stone-200 relative overflow-hidden animate-in zoom-in-95 duration-250">
+      <div className="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-stone-200 relative overflow-hidden max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-250">
         {/* Subtle decorative top bar */}
-        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#17324D] via-[#2459A9] to-[#E98A32]" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#000a37] via-[#ef5a20] to-[#ef5a20]" />
 
         {/* Close Button */}
         <button
           onClick={closeSuperAdminModal}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-500 hover:text-stone-800 flex items-center justify-center transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-500 hover:text-stone-800 flex items-center justify-center transition-colors"
           aria-label="Close Super Admin Login"
         >
           <X className="w-4 h-4" />
@@ -84,26 +84,26 @@ export const SuperAdminLoginModal: React.FC = () => {
 
         {/* Header with Secret Handshake Badge */}
         <div className="text-center space-y-3 mb-6">
-          <div className="w-20 h-20 rounded-full p-1 bg-white border-2 border-[#E98A32] shadow-xl shadow-amber-500/10 mx-auto relative group flex items-center justify-center">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-white border-2 border-[#ef5a20] shadow-xl shadow-amber-500/10 mx-auto relative group flex items-center justify-center">
             <img
-              src="https://i.postimg.cc/nV7TcH8r/Gemini-Generated-Image.jpg"
+              src="https://i.postimg.cc/J4CrQcrZ/Whats-App-Image-2026-10-23-at-9-33-54-AM.jpg"
               alt="Mercy Link Foundation Africa Logo"
               className="w-full h-full object-contain rounded-full"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = '/assets/logo.jpg';
               }}
             />
-            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#E98A32] text-white flex items-center justify-center ring-2 ring-white shadow-md">
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#ef5a20] text-white flex items-center justify-center ring-2 ring-white shadow-md">
               <Lock className="w-3.5 h-3.5" />
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#E98A32] text-[11px] font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-[#E98A32]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#ef5a20] text-[11px] font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-[#ef5a20]" />
             <span>Secret Handshake Verified: 5 Logo Clicks</span>
           </div>
 
-          <h2 id="super-admin-modal-title" className="font-['Manrope'] font-extrabold text-2xl text-[#17324D] tracking-tight">
+          <h2 id="super-admin-modal-title" className="font-['Manrope'] font-extrabold text-xl sm:text-2xl text-[#000a37] tracking-tight">
             Super Admin & Staff CMS Login
           </h2>
           <p className="text-xs text-stone-500 max-w-sm mx-auto leading-relaxed">
@@ -116,7 +116,7 @@ export const SuperAdminLoginModal: React.FC = () => {
             <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
               <CheckCircle className="w-6 h-6 animate-bounce" />
             </div>
-            <p className="text-sm font-bold text-[#17324D]">Credentials Verified</p>
+            <p className="text-sm font-bold text-[#000a37]">Credentials Verified</p>
             <p className="text-xs text-stone-500">Launching Super Administrator Dashboard...</p>
           </div>
         ) : (
@@ -128,7 +128,7 @@ export const SuperAdminLoginModal: React.FC = () => {
               <select
                 value={selectedRole}
                 onChange={(e) => setSelectedRole(e.target.value as AdminRole)}
-                className="w-full px-3.5 py-2.5 text-xs font-medium border border-stone-300 rounded-xl bg-stone-50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2459A9] focus:border-transparent transition-all"
+                className="w-full px-3.5 py-2.5 text-xs font-medium border border-stone-300 rounded-xl bg-stone-50 hover:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20] focus:border-transparent transition-all"
               >
                 {rolesList.map((r) => (
                   <option key={r} value={r}>
@@ -148,7 +148,7 @@ export const SuperAdminLoginModal: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="staff@mercylinkfoundationafrica.org"
-                className="w-full px-3.5 py-2.5 text-xs border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2459A9] focus:border-transparent transition-all"
+                className="w-full px-3.5 py-2.5 text-xs border border-stone-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#ef5a20] focus:border-transparent transition-all"
               />
             </div>
 
@@ -162,7 +162,7 @@ export const SuperAdminLoginModal: React.FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-xs border border-stone-300 rounded-xl pr-10 focus:outline-none focus:ring-2 focus:ring-[#2459A9] focus:border-transparent transition-all"
+                  className="w-full px-3.5 py-2.5 text-xs border border-stone-300 rounded-xl pr-10 focus:outline-none focus:ring-2 focus:ring-[#ef5a20] focus:border-transparent transition-all"
                 />
                 <button
                   type="button"
@@ -179,9 +179,9 @@ export const SuperAdminLoginModal: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 px-4 bg-[#17324D] hover:bg-[#2459A9] text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2 group"
+                className="w-full py-3 px-4 bg-[#000a37] hover:bg-[#000a37]/90 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2 group"
               >
-                <KeyRound className="w-4 h-4 text-[#E98A32]" />
+                <KeyRound className="w-4 h-4 text-[#ef5a20]" />
                 <span>Log In & Open CMS Portal</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -189,7 +189,7 @@ export const SuperAdminLoginModal: React.FC = () => {
               <button
                 type="button"
                 onClick={handleQuickSuperAdmin}
-                className="w-full py-2.5 px-4 bg-amber-500/10 hover:bg-[#E98A32] text-[#17324D] hover:text-white rounded-xl text-xs font-bold border border-[#E98A32]/30 transition-all flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 bg-amber-500/10 hover:bg-[#ef5a20] text-[#000a37] hover:text-white rounded-xl text-xs font-bold border border-[#ef5a20]/30 transition-all flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Instant 1-Click Access (Super Administrator)</span>

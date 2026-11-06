@@ -67,7 +67,7 @@ export const DonationModal: React.FC = () => {
   };
 
   const copyBankDetails = () => {
-    const text = `Bank: ${contactInfo.bankName}\nAccount Name: ${contactInfo.bankAccountTitle}\nAccount: ${contactInfo.bankAccountNumber}\nSWIFT: ${contactInfo.bankSwift}`;
+    const text = `Bank: ${contactInfo.bankName}\nAccount Name: ${contactInfo.bankAccountTitle}\nDollar Account: ${contactInfo.bankAccountNumberUSD || '50244877001'}\nShillings Account: ${contactInfo.bankAccountNumberUGX || '50244877002'}\nSWIFT Code: ${contactInfo.bankSwift}\nBranch: Kampala, Uganda`;
     navigator.clipboard?.writeText(text);
     setCopiedBank(true);
     setTimeout(() => setCopiedBank(false), 2500);
@@ -79,19 +79,19 @@ export const DonationModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 overflow-hidden my-8 animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-2.5 sm:p-4">
+      <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-stone-200 overflow-hidden my-2 sm:my-8 max-h-[92vh] flex flex-col animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="bg-[#17324D] text-white p-6 flex items-center justify-between">
+        <div className="bg-[#000a37] text-white p-4 sm:p-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#E98A32] flex items-center justify-center text-white">
-              <Heart className="w-5 h-5 fill-white" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#ef5a20] flex items-center justify-center text-white shrink-0">
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 fill-white" />
             </div>
             <div>
-              <h3 className="font-['Manrope'] font-bold text-lg text-white">
+              <h3 className="font-['Manrope'] font-bold text-base sm:text-lg text-white">
                 Support Mercy Link Foundation Africa
               </h3>
-              <p className="text-xs text-white/70">
+              <p className="text-[11px] sm:text-xs text-white/70">
                 Transforming Communities – Creating a Legacy of Peace
               </p>
             </div>
@@ -107,16 +107,16 @@ export const DonationModal: React.FC = () => {
 
         {submittedRef ? (
           /* Confirmation View */
-          <div className="p-8 text-center space-y-4">
+          <div className="p-6 sm:p-8 text-center space-y-4 overflow-y-auto">
             <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-8 h-8" />
             </div>
 
-            <h4 className="font-['Manrope'] font-bold text-2xl text-[#17324D]">
+            <h4 className="font-['Manrope'] font-bold text-xl sm:text-2xl text-[#000a37]">
               Thank You for Your Faithful Support!
             </h4>
 
-            <p className="text-sm text-stone-600 max-w-md mx-auto">
+            <p className="text-xs sm:text-sm text-stone-600 max-w-md mx-auto">
               Your gift of{' '}
               <strong className="text-stone-900 font-semibold">
                 {currency} {amount.toLocaleString()}
@@ -125,7 +125,7 @@ export const DonationModal: React.FC = () => {
             </p>
 
             <div className="bg-stone-50 border border-stone-200 rounded-xl p-3 max-w-xs mx-auto">
-              <span className="text-xs font-mono font-bold text-[#17324D] tracking-wider">
+              <span className="text-xs font-mono font-bold text-[#000a37] tracking-wider">
                 {submittedRef}
               </span>
             </div>
@@ -139,7 +139,7 @@ export const DonationModal: React.FC = () => {
             <div className="pt-4">
               <button
                 onClick={handleClose}
-                className="px-6 py-2.5 bg-[#17324D] text-white rounded-lg text-xs font-bold hover:bg-[#2459A9] transition-colors"
+                className="px-6 py-2.5 bg-[#000a37] text-white rounded-lg text-xs font-bold hover:bg-[#000a37]/90 transition-colors"
               >
                 Close & Return to Website
               </button>
@@ -147,7 +147,7 @@ export const DonationModal: React.FC = () => {
           </div>
         ) : (
           /* Form View */
-          <form onSubmit={handleSubmit} className="p-6 space-y-6">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5 sm:space-y-6 overflow-y-auto flex-1">
             {/* Frequency & Currency Segmented Selectors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Frequency */}
@@ -161,7 +161,7 @@ export const DonationModal: React.FC = () => {
                     onClick={() => setFrequency('one-time')}
                     className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${
                       frequency === 'one-time'
-                        ? 'bg-white text-[#17324D] shadow-sm'
+                        ? 'bg-white text-[#000a37] shadow-sm'
                         : 'text-stone-600 hover:text-stone-900'
                     }`}
                   >
@@ -172,7 +172,7 @@ export const DonationModal: React.FC = () => {
                     onClick={() => setFrequency('monthly')}
                     className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${
                       frequency === 'monthly'
-                        ? 'bg-white text-[#17324D] shadow-sm'
+                        ? 'bg-white text-[#000a37] shadow-sm'
                         : 'text-stone-600 hover:text-stone-900'
                     }`}
                   >
@@ -198,7 +198,7 @@ export const DonationModal: React.FC = () => {
                       }}
                       className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${
                         currency === curr
-                          ? 'bg-[#17324D] text-white shadow-sm'
+                          ? 'bg-[#000a37] text-white shadow-sm'
                           : 'text-stone-600 hover:text-stone-900'
                       }`}
                     >
@@ -222,7 +222,7 @@ export const DonationModal: React.FC = () => {
                     onClick={() => handlePresetSelect(val)}
                     className={`py-2 px-3 text-xs font-bold rounded-lg border transition-all ${
                       amount === val && !customAmount
-                        ? 'bg-[#17324D] text-white border-[#17324D] shadow-sm'
+                        ? 'bg-[#000a37] text-white border-[#000a37] shadow-sm'
                         : 'bg-white text-stone-700 border-stone-200 hover:border-stone-400'
                     }`}
                   >
@@ -242,7 +242,7 @@ export const DonationModal: React.FC = () => {
                   placeholder="Or enter custom amount..."
                   value={customAmount}
                   onChange={handleCustomChange}
-                  className="w-full pl-14 pr-4 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32] focus:border-[#E98A32]"
+                  className="w-full pl-14 pr-4 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20] focus:border-[#ef5a20]"
                 />
               </div>
             </div>
@@ -255,7 +255,7 @@ export const DonationModal: React.FC = () => {
               <select
                 value={designation}
                 onChange={(e) => setDesignation(e.target.value)}
-                className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
               >
                 <option value="General Ministry & Operational Fund">Where Most Needed (General Ministry Fund)</option>
                 <option value="Church Planter Training">Church Planter Training (5-Module Modular Training)</option>
@@ -279,11 +279,11 @@ export const DonationModal: React.FC = () => {
                   onClick={() => setPaymentMethod('card_simulation')}
                   className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all ${
                     paymentMethod === 'card_simulation'
-                      ? 'border-[#2459A9] bg-[#2459A9]/5 ring-1 ring-[#2459A9]'
+                      ? 'border-[#000a37] bg-[#000a37]/5 ring-1 ring-[#000a37]'
                       : 'border-stone-200 hover:border-stone-300'
                   }`}
                 >
-                  <CreditCard className="w-4 h-4 text-[#2459A9] mb-1.5" />
+                  <CreditCard className="w-4 h-4 text-[#000a37] mb-1.5" />
                   <span className="text-xs font-bold text-stone-800">Online Card</span>
                   <span className="text-[11px] text-stone-500">Secure Direct Processing</span>
                 </button>
@@ -293,13 +293,13 @@ export const DonationModal: React.FC = () => {
                   onClick={() => setPaymentMethod('bank_wire')}
                   className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all ${
                     paymentMethod === 'bank_wire'
-                      ? 'border-[#2459A9] bg-[#2459A9]/5 ring-1 ring-[#2459A9]'
+                      ? 'border-[#000a37] bg-[#000a37]/5 ring-1 ring-[#000a37]'
                       : 'border-stone-200 hover:border-stone-300'
                   }`}
                 >
-                  <Building2 className="w-4 h-4 text-[#17324D] mb-1.5" />
+                  <Building2 className="w-4 h-4 text-[#000a37] mb-1.5" />
                   <span className="text-xs font-bold text-stone-800">Bank Wire</span>
-                  <span className="text-[11px] text-stone-500">Orient / I&M Bank Uganda</span>
+                  <span className="text-[11px] text-stone-500">I&M Bank (Uganda) Limited</span>
                 </button>
 
                 <button
@@ -307,11 +307,11 @@ export const DonationModal: React.FC = () => {
                   onClick={() => setPaymentMethod('mobile_money')}
                   className={`flex flex-col items-start p-3 rounded-xl border text-left transition-all ${
                     paymentMethod === 'mobile_money'
-                      ? 'border-[#2459A9] bg-[#2459A9]/5 ring-1 ring-[#2459A9]'
+                      ? 'border-[#ef5a20] bg-[#ef5a20]/5 ring-1 ring-[#ef5a20]'
                       : 'border-stone-200 hover:border-stone-300'
                   }`}
                 >
-                  <Smartphone className="w-4 h-4 text-[#E98A32] mb-1.5" />
+                  <Smartphone className="w-4 h-4 text-[#ef5a20] mb-1.5" />
                   <span className="text-xs font-bold text-stone-800">Mobile Money</span>
                   <span className="text-[11px] text-stone-500">MTN & Airtel Uganda</span>
                 </button>
@@ -322,22 +322,31 @@ export const DonationModal: React.FC = () => {
             {paymentMethod === 'bank_wire' && (
               <div className="p-3.5 bg-stone-50 border border-stone-200 rounded-xl space-y-2 text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-[#17324D]">Official Banking Instructions (Uganda)</span>
+                  <span className="font-bold text-[#000a37]">Official Banking Instructions (Uganda)</span>
                   <button
                     type="button"
                     onClick={copyBankDetails}
-                    className="flex items-center gap-1 text-[11px] font-semibold text-[#2459A9] hover:underline"
+                    className="flex items-center gap-1 text-[11px] font-semibold text-[#000a37] hover:text-[#ef5a20] hover:underline"
                   >
                     {copiedBank ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                     <span>{copiedBank ? 'Copied' : 'Copy Details'}</span>
                   </button>
                 </div>
-                <div className="font-mono text-[11px] text-stone-700 space-y-0.5">
+                <div className="font-mono text-[11px] text-stone-700 space-y-1">
                   <p>Bank: <strong className="text-stone-900">{contactInfo.bankName}</strong></p>
                   <p>Account Name: <strong className="text-stone-900">{contactInfo.bankAccountTitle}</strong></p>
-                  <p>Account No: <strong className="text-stone-900">{contactInfo.bankAccountNumber}</strong></p>
-                  <p>SWIFT: <strong className="text-stone-900">{contactInfo.bankSwift}</strong></p>
-                  <p>Branch: Kampala Main Branch, Uganda</p>
+                  <div className="p-2.5 my-1.5 bg-white border border-stone-200 rounded-lg space-y-1.5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between text-stone-800">
+                      <span className="font-sans font-semibold text-stone-500">Dollar Account (USD):</span>
+                      <strong className="text-stone-900 text-xs tracking-wider">{contactInfo.bankAccountNumberUSD || '50244877001'}</strong>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between text-stone-800 border-t border-stone-100 pt-1">
+                      <span className="font-sans font-semibold text-stone-500">Shillings Account (UGX):</span>
+                      <strong className="text-stone-900 text-xs tracking-wider">{contactInfo.bankAccountNumberUGX || '50244877002'}</strong>
+                    </div>
+                  </div>
+                  <p>SWIFT Code: <strong className="text-stone-900 font-bold">{contactInfo.bankSwift}</strong></p>
+                  <p>Branch: Kampala, Uganda</p>
                 </div>
                 <p className="text-[11px] text-stone-500 italic">
                   Note: Submit your details below so our treasury office can issue your acknowledgment receipt upon transfer arrival.
@@ -347,7 +356,7 @@ export const DonationModal: React.FC = () => {
 
             {paymentMethod === 'mobile_money' && (
               <div className="p-3.5 bg-amber-50/60 border border-amber-200/80 rounded-xl space-y-2 text-xs">
-                <span className="font-bold text-[#17324D]">Verified Mobile Money Lines (Uganda)</span>
+                <span className="font-bold text-[#000a37]">Verified Mobile Money Lines (Uganda)</span>
                 <div className="text-[11px] text-stone-700 space-y-1">
                   <p className="flex items-center justify-between">
                     <span>MTN Uganda:</span>
@@ -377,7 +386,7 @@ export const DonationModal: React.FC = () => {
                   placeholder="Full Name / Church / Organization *"
                   value={donorName}
                   onChange={(e) => setDonorName(e.target.value)}
-                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
                 <input
                   type="email"
@@ -385,7 +394,7 @@ export const DonationModal: React.FC = () => {
                   placeholder="Email Address (for receipt) *"
                   value={donorEmail}
                   onChange={(e) => setDonorEmail(e.target.value)}
-                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
               </div>
 
@@ -395,21 +404,21 @@ export const DonationModal: React.FC = () => {
                   placeholder="Phone / WhatsApp Number (optional)"
                   value={donorPhone}
                   onChange={(e) => setDonorPhone(e.target.value)}
-                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
                 <input
                   type="text"
                   placeholder="Prayer request or dedication note (optional)"
                   value={donorNotes}
                   onChange={(e) => setDonorNotes(e.target.value)}
-                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
               </div>
             </div>
 
             {/* Trust disclaimer */}
             <div className="flex items-start gap-2 text-[11px] text-stone-500 bg-stone-50 p-2.5 rounded-lg border border-stone-200/60">
-              <ShieldCheck className="w-4 h-4 text-[#2459A9] shrink-0 mt-0.5" />
+              <ShieldCheck className="w-4 h-4 text-[#000a37] shrink-0 mt-0.5" />
               <span>
                 Mercy Link Foundation Africa is an officially registered Ugandan NGO. All funds are held in audited
                 accounts and allocated in strict accordance with your program designation.
@@ -428,14 +437,11 @@ export const DonationModal: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-2.5 bg-[#E98A32] hover:bg-[#d47926] disabled:opacity-50 text-white rounded-lg text-xs font-bold transition-all shadow-sm flex items-center gap-1.5"
+                className="px-6 py-2.5 bg-[#ef5a20] hover:bg-[#d94a14] disabled:opacity-50 text-white rounded-lg text-xs font-bold transition-all shadow-sm"
               >
-                <Heart className="w-3.5 h-3.5 fill-white" />
-                <span>
-                  {isSubmitting
-                    ? 'Recording Gift...'
-                    : `Confirm Gift of ${currency} ${amount.toLocaleString()}`}
-                </span>
+                {isSubmitting
+                  ? 'Recording Gift...'
+                  : `Confirm Gift of ${currency} ${amount.toLocaleString()}`}
               </button>
             </div>
           </form>

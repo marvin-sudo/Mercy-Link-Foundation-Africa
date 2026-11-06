@@ -1,5 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import { NationsImpactedSection } from '../components/NationsImpactedSection';
+import { UgandaMapGraphic } from '../components/UgandaMapGraphic';
 import {
   Heart,
   ArrowRight,
@@ -28,7 +30,6 @@ export const HomePage: React.FC = () => {
   const {
     programs,
     reports,
-    events,
     impactMetrics,
     navigateTo,
     openDonationModal,
@@ -62,9 +63,9 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Decorative accent dots matching design */}
-        <div className="absolute top-12 left-[48%] w-3 h-3 rounded-full bg-[#E98A32]" />
+        <div className="absolute top-12 left-[48%] w-3 h-3 rounded-full bg-[#ef5a20]" />
         <div className="absolute top-36 left-[8%] w-2.5 h-2.5 rounded-full bg-[#0284c7]" />
-        <div className="absolute top-20 right-[12%] w-2.5 h-2.5 rounded-full bg-[#E98A32]" />
+        <div className="absolute top-20 right-[12%] w-2.5 h-2.5 rounded-full bg-[#ef5a20]" />
         <div className="absolute bottom-10 right-[42%] w-2.5 h-2.5 rounded-full bg-[#0284c7]" />
 
         {/* Full-width container with responsive outer margin and edge padding */}
@@ -72,26 +73,29 @@ export const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-10 items-center">
             {/* Left Column: Editorial Serif Typography & CTA */}
             <div className="lg:col-span-6 xl:col-span-6 space-y-4">
-              <h1 className="hero-headline font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] text-[#17324D] tracking-tight leading-[1.14]">
-                Transforming Lives Across Africa
+              <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20] block">
+                Mercy Link Foundation Africa
+              </span>
+
+              <h1 className="hero-headline font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-[40px] xl:text-[46px] text-[#000a37] tracking-tight leading-[1.18]">
+                Developing Leaders, Transforming Communities, Creating a Legacy of Peace
               </h1>
 
               <p className="hero-subtext text-stone-600 text-xs sm:text-sm lg:text-base leading-relaxed max-w-xl">
-                Empowering the vulnerable. Serving with compassion across Africa.
+                Equipping the Church across Africa through indigenous leadership training, community Bible hubs, and Christ-centered compassion for vulnerable children and families.
               </p>
 
               <div className="hero-actions pt-1 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => openDonationModal()}
-                  className="interactive-button px-5 py-2.5 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+                  className="interactive-button px-5 py-2.5 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md hover:shadow-lg"
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
-                  <span>Donate Now</span>
+                  Donate Now
                 </button>
 
                 <button
                   onClick={() => navigateTo('programs')}
-                  className="interactive-button px-4 py-2.5 text-xs uppercase tracking-wider font-bold text-[#17324D] hover:text-[#E98A32] transition-colors"
+                  className="interactive-button px-4 py-2.5 text-xs uppercase tracking-wider font-bold text-[#000a37] hover:text-[#ef5a20] transition-colors"
                 >
                   Explore Our Programs →
                 </button>
@@ -99,7 +103,7 @@ export const HomePage: React.FC = () => {
 
               {/* Verified Trust Markers */}
               <div className="hero-trust pt-3 border-t border-stone-200/60 flex flex-wrap items-center gap-3 text-xs text-stone-500">
-                <span className="font-semibold text-[#17324D]">Bulange Mengo, Kampala</span>
+                <span className="font-semibold text-[#000a37]">Bulange Mengo, Kampala</span>
                 <span aria-hidden="true">·</span>
                 <span>Established 2007</span>
                 <span aria-hidden="true">·</span>
@@ -109,28 +113,45 @@ export const HomePage: React.FC = () => {
 
             {/* Right Column: Organic Silhouette Mask of Joyful African Children */}
             <div className="hero-visual lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end z-20">
-              <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
-                {/* Radiant Soft Backlight Halo for Maximum Visibility & Pop */}
-                <div className="absolute inset-0 -m-4 bg-gradient-to-tr from-[#E98A32]/20 via-white/90 to-[#2459A9]/10 rounded-full blur-2xl -z-10 pointer-events-none" />
+              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl flex items-center justify-center py-2 sm:py-4">
+                {/* Sunburst radial dashed ring for contrast & visibility (inspired by WordPress theme style) */}
+                <div className="absolute w-[260px] h-[260px] sm:w-[440px] sm:h-[440px] lg:w-[490px] lg:h-[490px] rounded-full border-2 border-dashed border-[#ef5a20]/45 pointer-events-none" />
+                <div className="absolute w-[290px] h-[290px] sm:w-[490px] sm:h-[490px] lg:w-[540px] lg:h-[540px] rounded-full border border-stone-200/90 pointer-events-none" />
+
+                {/* Soft Warm Radiant Backlight to elevate the Africa silhouette */}
+                <div className="absolute inset-0 -m-4 sm:-m-8 bg-gradient-to-tr from-[#ef5a20]/35 via-amber-100/70 to-[#000a37]/25 rounded-full blur-2xl sm:blur-3xl -z-10 pointer-events-none" />
+
+                {/* Circular Contrast Backdrop Disc to make edges crisp and defined */}
+                <div className="absolute w-[250px] h-[250px] sm:w-[410px] sm:h-[410px] lg:w-[460px] lg:h-[460px] rounded-full bg-gradient-to-br from-[#FAF9F6] via-white to-[#F5EADB] shadow-lg -z-10 border border-[#ef5a20]/25" />
 
                 {/* Organic Graphic Container */}
-                <div className="relative flex items-center justify-center p-1">
+                <div className="relative z-10 flex items-center justify-center p-1 sm:p-2 w-full">
                   <img
-                    src="https://i.postimg.cc/2872WvdN/TYU.png"
-                    alt="African children smiling joyfully - Mercy Link Foundation Africa"
-                    className="w-full h-auto max-h-[340px] sm:max-h-[380px] lg:max-h-[410px] object-contain drop-shadow-[0_16px_32px_rgba(23,50,77,0.2)] hover:scale-105 transition-transform duration-700 select-none"
+                    src="https://i.postimg.cc/C55mBj9K/dfghmgh.png"
+                    alt="African children smiling joyfully in Africa map silhouette - Mercy Link Foundation Africa"
+                    className="w-full h-auto max-h-[460px] sm:max-h-[520px] lg:max-h-[560px] xl:max-h-[620px] object-contain drop-shadow-[0_25px_35px_rgba(23,50,77,0.30)] filter contrast-[1.08] brightness-[1.03] saturate-[1.06] hover:scale-105 transition-transform duration-700 select-none"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
-                        "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80";
+                        "/assets/dfghmgh.png";
                     }}
                   />
                 </div>
 
+                {/* Floating Impact Badges to enhance focus & prominence */}
+                <div className="absolute -top-1 right-2 sm:right-6 bg-white/95 backdrop-blur-md rounded-2xl px-3.5 py-2 shadow-lg border border-stone-200/90 flex items-center gap-2 z-30">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[11px] font-bold text-[#000a37]">12,500+ Children Nurtured</span>
+                </div>
+
+                <div className="absolute -bottom-2 left-2 sm:left-6 bg-[#000a37] text-white rounded-2xl px-3.5 py-2 shadow-xl border border-white/20 flex items-center gap-2 z-30">
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
+                  <span className="text-[11px] font-bold tracking-wide">70+ Districts in Uganda</span>
+                </div>
+
                 {/* Satellite Floating Accent Elements matching design */}
-                <div className="absolute top-2 right-4 w-4 h-4 rounded-full bg-[#E98A32] shadow-md animate-pulse" />
-                <div className="absolute bottom-12 -left-2 w-3 h-3 rounded-full bg-[#0284c7] shadow-md" />
-                <div className="absolute -bottom-1 right-16 w-3 h-3 rounded-full bg-[#E98A32] shadow-md" />
+                <div className="absolute top-10 -left-1 w-4 h-4 rounded-full bg-[#ef5a20] shadow-md" />
+                <div className="absolute bottom-16 -right-1 w-3.5 h-3.5 rounded-full bg-[#0284c7] shadow-md" />
               </div>
             </div>
           </div>
@@ -146,10 +167,10 @@ export const HomePage: React.FC = () => {
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="reveal-up text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
             Who We Are
           </span>
-          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D] tracking-tight">
+          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#000a37] tracking-tight">
             Make a Difference
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 max-w-lg mx-auto">
@@ -161,10 +182,10 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-group">
           {/* Card 1 */}
           <div className="reveal-up interactive-card bg-white p-7 rounded-2xl clip-badge-notch border border-stone-200/80 shadow-sm hover:shadow-md transition-all space-y-3 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full border border-[#E98A32]/40 bg-[#FAF7F0] flex items-center justify-center text-[#E98A32]">
+            <div className="w-12 h-12 rounded-full border border-[#ef5a20]/40 bg-[#FAF9F6] flex items-center justify-center text-[#ef5a20]">
               <BookOpen className="w-5 h-5" />
             </div>
-            <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
               Accessible Training
             </h3>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -174,10 +195,10 @@ export const HomePage: React.FC = () => {
 
           {/* Card 2 */}
           <div className="reveal-up interactive-card bg-white p-7 rounded-2xl clip-badge-notch border border-stone-200/80 shadow-sm hover:shadow-md transition-all space-y-3 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full border border-[#2459A9]/40 bg-[#FAF7F0] flex items-center justify-center text-[#2459A9]">
+            <div className="w-12 h-12 rounded-full border border-[#000a37]/40 bg-[#FAF9F6] flex items-center justify-center text-[#000a37]">
               <Users className="w-5 h-5" />
             </div>
-            <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
               Locals For Locals
             </h3>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -187,10 +208,10 @@ export const HomePage: React.FC = () => {
 
           {/* Card 3 */}
           <div className="reveal-up interactive-card bg-white p-7 rounded-2xl clip-badge-notch border border-stone-200/80 shadow-sm hover:shadow-md transition-all space-y-3 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full border border-emerald-500/40 bg-[#FAF7F0] flex items-center justify-center text-emerald-600">
+            <div className="w-12 h-12 rounded-full border border-emerald-500/40 bg-[#FAF9F6] flex items-center justify-center text-emerald-600">
               <Award className="w-5 h-5" />
             </div>
-            <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
               Real Impact
             </h3>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -200,10 +221,10 @@ export const HomePage: React.FC = () => {
 
           {/* Card 4 */}
           <div className="reveal-up interactive-card bg-white p-7 rounded-2xl clip-badge-notch border border-stone-200/80 shadow-sm hover:shadow-md transition-all space-y-3 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full border border-[#E98A32]/40 bg-[#FAF7F0] flex items-center justify-center text-[#E98A32]">
+            <div className="w-12 h-12 rounded-full border border-[#ef5a20]/40 bg-[#FAF9F6] flex items-center justify-center text-[#ef5a20]">
               <Heart className="w-5 h-5" />
             </div>
-            <h3 className="font-['Manrope'] font-bold text-base text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-base text-[#000a37]">
               Compassionate Safety Net
             </h3>
             <p className="text-xs text-stone-500 leading-relaxed">
@@ -221,54 +242,80 @@ export const HomePage: React.FC = () => {
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Circular Overlapping Photo Montage */}
-          <div className="reveal-left reveal-image lg:col-span-6 relative flex justify-center items-center py-8">
+          {/* Left Column: Circular Overlapping Photo Montage with 180° Orbital Rotation */}
+          <div className="reveal-left reveal-image lg:col-span-6 relative flex justify-center items-center py-12 sm:py-16 overflow-visible">
             {/* Concentric dotted orbital ring background */}
-            <div className="absolute w-[360px] h-[360px] sm:w-[420px] sm:h-[420px] rounded-full border-2 border-dashed border-stone-300 pointer-events-none" />
-            <div className="absolute w-[460px] h-[460px] rounded-full border border-stone-200 pointer-events-none hidden sm:block" />
+            <div className="absolute w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-[#ef5a20]/30 pointer-events-none" />
+            <div className="absolute w-[380px] h-[380px] sm:w-[460px] sm:h-[460px] rounded-full border border-stone-200 pointer-events-none hidden sm:block" />
 
             {/* Accent colored dots */}
-            <div className="absolute top-12 left-8 w-4 h-4 rounded-full bg-[#E98A32]" />
-            <div className="absolute bottom-10 right-14 w-3.5 h-3.5 rounded-full bg-[#0284c7]" />
+            <div className="absolute top-8 left-8 w-4 h-4 rounded-full bg-[#ef5a20] shadow-sm animate-pulse" />
+            <div className="absolute bottom-6 right-10 w-3.5 h-3.5 rounded-full bg-[#000a37] shadow-sm" />
 
-            {/* Main Center Circular Portrait */}
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
+            {/* Main Center Circular Portrait - UNCHANGED & STATIC */}
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10 group shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80"
-                alt="Mercy Link Community Children"
-                className="w-full h-full object-cover"
+                src="https://i.postimg.cc/fLPM0pCF/Whats-App-Image-2026-10-22-at-5-04-22-PM-(1).jpg"
+                alt="Mercy Link Community Ministry"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/assets/about_center.jpg';
+                }}
               />
             </div>
 
-            {/* Top-Right Overlapping Floating Circle */}
-            <div className="absolute top-0 right-4 sm:right-10 w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-white shadow-xl z-20">
-              <img
-                src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=600&q=80"
-                alt="Children Smiling in African village"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+            {/* 180-Degree Rotating Orbital Track for Up & Down Images */}
+            {/* The orbital container smoothly rotates 180 degrees while the central image stays static */}
+            <div 
+              className="absolute inset-0 m-auto w-[250px] h-[250px] sm:w-[330px] sm:h-[330px] md:w-[370px] md:h-[370px] rounded-full pointer-events-none animate-orbit-180 z-20"
+              style={{ transformOrigin: 'center center' }}
+            >
+              {/* Up Image (positioned at top center of orbital track: 12 o'clock) */}
+              <div 
+                className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto"
+                title="Mercy Link Outreach and Ministry (180° orbital rotation)"
+              >
+                <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-white shadow-xl group bg-stone-100 ring-2 ring-[#ef5a20]/25 animate-counter-orbit-180">
+                  <img
+                    src="https://i.postimg.cc/jd0Lgn6P/Whats-App-Image-2026-10-22-at-5-13-51-PM.jpg"
+                    alt="Mercy Link Outreach and Ministry"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/assets/about_up.jpg';
+                    }}
+                  />
+                </div>
+              </div>
 
-            {/* Bottom-Left Overlapping Floating Circle */}
-            <div className="absolute bottom-2 left-2 sm:left-6 w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-xl z-20">
-              <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
-                alt="Young Ugandan children learning"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
+              {/* Down Image (positioned at bottom center of orbital track: 6 o'clock, 180° opposite) */}
+              <div 
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 pointer-events-auto"
+                title="Mercy Link Children and Community Work (180° orbital rotation)"
+              >
+                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl group bg-stone-100 ring-2 ring-[#000a37]/25 animate-counter-orbit-180">
+                  <img
+                    src="https://i.postimg.cc/MpYMjZQ4/Whats-App-Image-2026-10-22-at-5-13-49-PM.jpg"
+                    alt="Mercy Link Children and Community Work"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/assets/about_down.jpg';
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Editorial Narrative & Action Buttons */}
           <div className="reveal-right lg:col-span-6 space-y-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
               About Us
             </span>
 
-            <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#17324D] tracking-tight leading-[1.15]">
+            <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#000a37] tracking-tight leading-[1.15]">
               Mercy Link Foundation Africa
             </h2>
 
@@ -278,11 +325,11 @@ export const HomePage: React.FC = () => {
 
             <div className="space-y-2.5 pt-1">
               <div className="flex items-center gap-3 text-xs sm:text-sm text-stone-800 font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#E98A32] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#ef5a20] shrink-0" />
                 <span>Faith-driven grassroots empowerment</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm text-stone-800 font-semibold">
-                <CheckCircle2 className="w-4 h-4 text-[#2459A9] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#000a37] shrink-0" />
                 <span>Registered NGO operating across Uganda</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm text-stone-800 font-semibold">
@@ -294,14 +341,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => navigateTo('about')}
-                className="interactive-button px-6 py-3 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md"
+                className="interactive-button px-6 py-3 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md"
               >
                 Learn More
               </button>
 
               <button
                 onClick={openVideoModal}
-                className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-[#17324D] hover:text-[#2459A9] transition-colors group"
+                className="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-[#000a37] hover:text-[#ef5a20] transition-colors group"
               >
                 <div className="w-10 h-10 rounded-full border-2 border-emerald-600 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-sm">
                   <Play className="w-4 h-4 fill-current ml-0.5" />
@@ -325,10 +372,10 @@ export const HomePage: React.FC = () => {
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="reveal-up text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
             What We Do
           </span>
-          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D] tracking-tight">
+          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#000a37] tracking-tight">
             Our Core Programs
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 max-w-lg mx-auto">
@@ -340,11 +387,11 @@ export const HomePage: React.FC = () => {
           {/* 1. Disability Ministry */}
           <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-[#E98A32]/30 flex items-center justify-center text-[#E98A32] group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-[#ef5a20]/30 flex items-center justify-center text-[#ef5a20] group-hover:scale-105 transition-transform">
                 <HandHeart className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Disability Ministry
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -355,14 +402,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'disability-ministry')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal('Disability Ministry')}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -370,13 +417,13 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* 2. Prison Ministry */}
-          <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div className="reveal-up interactive-card bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-[#2459A9]/30 flex items-center justify-center text-[#2459A9] group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-[#000a37]/20 flex items-center justify-center text-[#000a37] group-hover:scale-105 transition-transform">
                 <Shield className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Prison Ministry
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -387,14 +434,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'prison-ministry')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal('Prison Ministry')}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -402,13 +449,13 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* 3. Positive Parenting */}
-          <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div className="reveal-up interactive-card bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-[#E98A32]/30 flex items-center justify-center text-[#E98A32] group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-[#ef5a20]/30 flex items-center justify-center text-[#ef5a20] group-hover:scale-105 transition-transform">
                 <Smile className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Positive Parenting
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -419,14 +466,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'family-foundations')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal('Family Foundations / Positive Parenting')}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -434,13 +481,13 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* 4. Church Planters Training */}
-          <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div className="reveal-up interactive-card bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-[#2459A9]/30 flex items-center justify-center text-[#2459A9] group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-[#000a37]/20 flex items-center justify-center text-[#000a37] group-hover:scale-105 transition-transform">
                 <Building2 className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Church Planters Training
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -451,14 +498,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'church-planters')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal('The Church Planter Program')}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -466,13 +513,13 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* 5. Children’s Ministry */}
-          <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div className="reveal-up interactive-card bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-emerald-500/30 flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-emerald-500/30 flex items-center justify-center text-emerald-600 group-hover:scale-105 transition-transform">
                 <BookOpen className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Children’s Ministry
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -483,14 +530,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'childrens-ministry')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal("Children's Ministry Program")}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -498,13 +545,13 @@ export const HomePage: React.FC = () => {
           </div>
 
           {/* 6. Youth Empowerment */}
-          <div className="reveal-up interactive-card bg-white p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div className="reveal-up interactive-card bg-white p-6 sm:p-7 rounded-2xl border border-stone-200/80 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FAF7F0] border border-[#E98A32]/30 flex items-center justify-center text-[#E98A32] group-hover:scale-105 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAF9F6] border border-[#ef5a20]/30 flex items-center justify-center text-[#ef5a20] group-hover:scale-105 transition-transform">
                 <Award className="w-6 h-6" />
               </div>
               <div className="space-y-1.5">
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Youth Empowerment
                 </h3>
                 <p className="text-xs text-stone-600 leading-relaxed">
@@ -515,14 +562,14 @@ export const HomePage: React.FC = () => {
             <div className="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'youth-empowerment')}
-                className="text-xs font-bold text-[#17324D] group-hover:text-[#2459A9] flex items-center gap-1"
+                className="text-xs font-bold text-[#000a37] group-hover:text-[#ef5a20] flex items-center gap-1"
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => openDonationModal('Youth Empowerment')}
-                className="text-[11px] font-semibold text-[#E98A32] hover:underline"
+                className="text-[11px] font-semibold text-[#ef5a20] hover:underline"
               >
                 Support
               </button>
@@ -540,10 +587,10 @@ export const HomePage: React.FC = () => {
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="reveal-up text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
             We Need Your Help
           </span>
-          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D] tracking-tight">
+          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#000a37] tracking-tight">
             Featured Campaigns & Ministries
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 max-w-md mx-auto">
@@ -558,10 +605,13 @@ export const HomePage: React.FC = () => {
             <div>
               <div className="relative h-56 charity-image-shape overflow-hidden bg-stone-100">
                 <img
-                  src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80"
+                  src="https://i.postimg.cc/MpYMjZQ4/Whats-App-Image-2026-10-22-at-5-13-49-PM.jpg"
                   alt="Disability Ministry at Kampala School of the Handicapped"
                   className="reveal-image interactive-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/assets/disability_care.jpg';
+                  }}
                 />
               </div>
 
@@ -574,12 +624,12 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="w-full h-2 bg-stone-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-[#E98A32] rounded-full w-[65%]" />
+                  <div className="h-full bg-[#ef5a20] rounded-full w-[65%]" />
                 </div>
               </div>
 
               <div className="p-5 space-y-2">
-                <h3 className="font-['Manrope'] font-bold text-base text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-base text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Disability Care & Inclusion
                 </h3>
                 <p className="text-xs text-stone-500 leading-relaxed line-clamp-3">
@@ -592,14 +642,14 @@ export const HomePage: React.FC = () => {
             <div className="p-5 pt-0 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'disability-ministry')}
-                className="text-xs font-bold text-[#17324D] hover:underline"
+                className="text-xs font-bold text-[#000a37] hover:underline"
               >
                 Learn More →
               </button>
 
               <button
                 onClick={() => openDonationModal('Disability Ministry')}
-                className="interactive-button w-8 h-8 rounded-lg bg-[#E98A32] hover:bg-[#d47926] text-white flex items-center justify-center shadow-xs transition-colors"
+                className="interactive-button w-8 h-8 rounded-lg bg-[#ef5a20] hover:bg-[#d94a14] text-white flex items-center justify-center shadow-xs transition-colors"
                 title="Support this campaign"
               >
                 <Plus className="w-4 h-4" />
@@ -612,10 +662,13 @@ export const HomePage: React.FC = () => {
             <div>
               <div className="relative h-56 charity-image-shape overflow-hidden bg-stone-100">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80"
+                  src="https://i.postimg.cc/bwdc13G6/Whats-App-Image-2026-10-22-at-5-13-54-PM.jpg"
                   alt="Children Bible Hubs and Literacy"
                   className="reveal-image interactive-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/assets/bible_hubs.jpg';
+                  }}
                 />
               </div>
 
@@ -628,12 +681,12 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="w-full h-2 bg-stone-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-[#E98A32] rounded-full w-[83%]" />
+                  <div className="h-full bg-[#ef5a20] rounded-full w-[83%]" />
                 </div>
               </div>
 
               <div className="p-5 space-y-2">
-                <h3 className="font-['Manrope'] font-bold text-base text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-base text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Community Bible Hubs & Literacy
                 </h3>
                 <p className="text-xs text-stone-500 leading-relaxed line-clamp-3">
@@ -646,14 +699,14 @@ export const HomePage: React.FC = () => {
             <div className="p-5 pt-0 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'childrens-ministry')}
-                className="text-xs font-bold text-[#17324D] hover:underline"
+                className="text-xs font-bold text-[#000a37] hover:underline"
               >
                 Learn More →
               </button>
 
               <button
                 onClick={() => openDonationModal("Children's Ministry Program")}
-                className="interactive-button w-8 h-8 rounded-lg bg-[#E98A32] hover:bg-[#d47926] text-white flex items-center justify-center shadow-xs transition-colors"
+                className="interactive-button w-8 h-8 rounded-lg bg-[#ef5a20] hover:bg-[#d94a14] text-white flex items-center justify-center shadow-xs transition-colors"
                 title="Support this campaign"
               >
                 <Plus className="w-4 h-4" />
@@ -666,10 +719,13 @@ export const HomePage: React.FC = () => {
             <div>
               <div className="relative h-56 charity-image-shape overflow-hidden bg-stone-100">
                 <img
-                  src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80"
+                  src="https://i.postimg.cc/X77T0QgN/Whats-App-Image-2026-10-22-at-5-13-56-PM.jpg"
                   alt="Family Foundations - Parenting & Mentorship"
                   className="reveal-image interactive-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/assets/family_foundations.jpg';
+                  }}
                 />
               </div>
 
@@ -682,12 +738,12 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div className="w-full h-2 bg-stone-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-[#E98A32] rounded-full w-[92%]" />
+                  <div className="h-full bg-[#ef5a20] rounded-full w-[92%]" />
                 </div>
               </div>
 
               <div className="p-5 space-y-2">
-                <h3 className="font-['Manrope'] font-bold text-base text-[#17324D] group-hover:text-[#2459A9] transition-colors">
+                <h3 className="font-['Manrope'] font-bold text-base text-[#000a37] group-hover:text-[#ef5a20] transition-colors">
                   Family Foundations
                 </h3>
                 <p className="text-xs text-stone-500 leading-relaxed line-clamp-3">
@@ -700,14 +756,14 @@ export const HomePage: React.FC = () => {
             <div className="p-5 pt-0 flex items-center justify-between">
               <button
                 onClick={() => navigateTo('program-detail', 'family-foundations')}
-                className="text-xs font-bold text-[#17324D] hover:underline"
+                className="text-xs font-bold text-[#000a37] hover:underline"
               >
                 Learn More →
               </button>
 
               <button
                 onClick={() => openDonationModal('Family Foundations')}
-                className="interactive-button w-8 h-8 rounded-lg bg-[#E98A32] hover:bg-[#d47926] text-white flex items-center justify-center shadow-xs transition-colors"
+                className="interactive-button w-8 h-8 rounded-lg bg-[#ef5a20] hover:bg-[#d94a14] text-white flex items-center justify-center shadow-xs transition-colors"
                 title="Support this campaign"
               >
                 <Plus className="w-4 h-4" />
@@ -724,15 +780,15 @@ export const HomePage: React.FC = () => {
           - Right: Stylized warm mustard/gold map of Africa with interactive location dots
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="reveal-up bg-white rounded-3xl border border-stone-200 p-8 sm:p-12 lg:p-16 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="reveal-up bg-white rounded-3xl border border-stone-200 p-5 sm:p-10 lg:p-16 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left: Volunteer & Impact Numbers */}
             <div className="reveal-left lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
                 Join the Movement
               </span>
 
-              <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D] tracking-tight">
+              <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-4xl text-[#000a37] tracking-tight">
                 Volunteer Positions & Regional Reach
               </h2>
 
@@ -742,115 +798,70 @@ export const HomePage: React.FC = () => {
               </p>
 
               {/* KPI Counters matching design */}
-              <div className="grid grid-cols-2 gap-6 pt-2 stagger-fast">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-2 stagger-fast">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <Heart className="w-4 h-4 text-[#E98A32]" />
-                    <span className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D] tabular-nums">
+                    <Heart className="w-4 h-4 text-[#ef5a20]" />
+                    <span className="font-['Playfair_Display'] font-bold text-xl sm:text-3xl text-[#000a37] tabular-nums">
                       12,500+
                     </span>
                   </div>
-                  <p className="text-xs text-stone-500 font-medium">Children Engaged Weekly</p>
+                  <p className="text-[11px] sm:text-xs text-stone-500 font-medium">Children Engaged Weekly</p>
                 </div>
 
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-[#2459A9]" />
-                    <span className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D] tabular-nums">
+                    <MapPin className="w-4 h-4 text-[#000a37]" />
+                    <span className="font-['Playfair_Display'] font-bold text-xl sm:text-3xl text-[#000a37] tabular-nums">
                       70+
                     </span>
                   </div>
-                  <p className="text-xs text-stone-500 font-medium">Districts Across Uganda</p>
+                  <p className="text-[11px] sm:text-xs text-stone-500 font-medium">Districts Across Uganda</p>
                 </div>
 
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-[#2459A9]" />
-                    <span className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D] tabular-nums">
+                    <Users className="w-4 h-4 text-[#000a37]" />
+                    <span className="font-['Playfair_Display'] font-bold text-xl sm:text-3xl text-[#000a37] tabular-nums">
                       450+
                     </span>
                   </div>
-                  <p className="text-xs text-stone-500 font-medium">Church Planters Equipped</p>
+                  <p className="text-[11px] sm:text-xs text-stone-500 font-medium">Church Planters Equipped</p>
                 </div>
 
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <Award className="w-4 h-4 text-emerald-600" />
-                    <span className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-[#17324D] tabular-nums">
+                    <span className="font-['Playfair_Display'] font-bold text-xl sm:text-3xl text-[#000a37] tabular-nums">
                       35,000+
                     </span>
                   </div>
-                  <p className="text-xs text-stone-500 font-medium">Annual Outreach Contacts</p>
+                  <p className="text-[11px] sm:text-xs text-stone-500 font-medium">Annual Outreach Contacts</p>
                 </div>
               </div>
 
               <div className="pt-2">
                 <button
                   onClick={() => navigateTo('get-involved')}
-                  className="interactive-button px-6 py-3 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md flex items-center gap-2"
+                  className="interactive-button px-6 py-3 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all shadow-md cursor-pointer"
                 >
-                  <span>Volunteer With Us</span>
-                  <ArrowRight className="w-4 h-4" />
+                  Volunteer With Us
                 </button>
               </div>
             </div>
 
-            {/* Right: Stylized Golden/Mustard Africa & Uganda Map Graphic matching design */}
+            {/* Right: Uganda Map Graphic crafted with user's uploaded Uganda map */}
             <div className="reveal-right reveal-scale lg:col-span-6 relative flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-square bg-[#FAF7F0] rounded-3xl p-6 border border-stone-200/80 flex items-center justify-center overflow-hidden">
-                {/* Stylized Africa silhouette in warm mustard tone */}
-                <svg
-                  className="w-full h-full text-[#E98A32]/80"
-                  viewBox="0 0 500 500"
-                  fill="currentColor"
-                >
-                  <path d="M220,60 C260,50 330,70 370,110 C410,150 430,200 420,250 C410,290 440,330 450,370 C460,400 440,440 410,460 C370,480 340,450 310,430 C270,400 240,360 210,310 C180,260 160,200 170,150 C180,100 200,70 220,60 Z" />
-                </svg>
-
-                {/* Pulsing Regional Hub Location Pins */}
-                {/* Kampala / Bulange Mengo */}
-                <div className="absolute top-[38%] left-[58%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                  <div className="w-4 h-4 rounded-full bg-white border-2 border-[#17324D] shadow-md flex items-center justify-center animate-ping absolute inset-0" />
-                  <div className="relative w-4 h-4 rounded-full bg-[#17324D] border-2 border-white shadow-md" />
-                  <span className="absolute left-5 top-0 bg-[#17324D] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow whitespace-nowrap">
-                    Kampala (Mengo Hub)
-                  </span>
-                </div>
-
-                {/* Northern Region / Gulu */}
-                <div className="absolute top-[28%] left-[54%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                  <div className="w-3 h-3 rounded-full bg-white border border-[#2459A9] shadow-md" />
-                  <span className="absolute -left-12 -top-5 bg-white text-stone-800 text-[9px] font-semibold px-1.5 py-0.5 rounded border border-stone-200 shadow-xs whitespace-nowrap">
-                    Northern Region
-                  </span>
-                </div>
-
-                {/* Eastern Region / Jinja & Mbale */}
-                <div className="absolute top-[42%] left-[65%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                  <div className="w-3 h-3 rounded-full bg-white border border-[#2459A9] shadow-md" />
-                  <span className="absolute left-4 top-1 bg-white text-stone-800 text-[9px] font-semibold px-1.5 py-0.5 rounded border border-stone-200 shadow-xs whitespace-nowrap">
-                    Eastern Region
-                  </span>
-                </div>
-
-                {/* Western Region / Mbarara */}
-                <div className="absolute top-[48%] left-[48%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
-                  <div className="w-3 h-3 rounded-full bg-white border border-[#2459A9] shadow-md" />
-                  <span className="absolute -left-12 top-4 bg-white text-stone-800 text-[9px] font-semibold px-1.5 py-0.5 rounded border border-stone-200 shadow-xs whitespace-nowrap">
-                    Western Region
-                  </span>
-                </div>
-
-                <div className="absolute bottom-4 inset-x-4 text-center">
-                  <span className="text-[11px] font-bold text-stone-600 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-full border border-stone-200 shadow-xs">
-                    Published Scope: Over 70 Districts in Uganda
-                  </span>
-                </div>
-              </div>
+              <UgandaMapGraphic />
             </div>
           </div>
         </div>
       </section>
+
+      {/* =========================================================================
+          SECTION 5B: NATIONS VISITED & IMPACTED BY MERCY LINK
+          ========================================================================= */}
+      <NationsImpactedSection />
 
       {/* =========================================================================
           SECTION 6: "ACCOUNTABILITY & TRANSPARENCY" / Recent Field Reports
@@ -858,10 +869,10 @@ export const HomePage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="reveal-up flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-stone-200/80 pb-6">
           <div className="space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
               Accountability & Evidence
             </span>
-            <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D] tracking-tight">
+            <h2 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-4xl text-[#000a37] tracking-tight">
               Verified Field & Impact Reports
             </h2>
             <p className="text-xs sm:text-sm text-stone-500 max-w-lg">
@@ -871,14 +882,14 @@ export const HomePage: React.FC = () => {
 
           <button
             onClick={() => navigateTo('reports')}
-            className="text-xs font-bold uppercase tracking-wider text-[#17324D] hover:text-[#E98A32] flex items-center gap-1.5 transition-colors self-start sm:self-auto"
+            className="text-xs font-bold uppercase tracking-wider text-[#000a37] hover:text-[#ef5a20] flex items-center gap-1.5 transition-colors self-start sm:self-auto"
           >
             <span>All Reports Archive</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-group">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 stagger-group">
           {reports.filter((r) => r.isPublished).slice(0, 3).map((report) => (
             <div
               key={report.id}
@@ -892,12 +903,12 @@ export const HomePage: React.FC = () => {
                     className="reveal-image interactive-image w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
-                  <span className="absolute bottom-3 left-3 text-[10px] font-bold text-white bg-[#17324D]/90 backdrop-blur-xs px-2.5 py-1 rounded">
+                  <span className="absolute bottom-3 left-3 text-[10px] font-bold text-white bg-[#000a37]/90 backdrop-blur-xs px-2.5 py-1 rounded">
                     {report.category}
                   </span>
                 </div>
 
-                <div className="p-6 space-y-3">
+                <div className="p-5 sm:p-6 space-y-3">
                   <div className="flex items-center gap-2 text-[11px] text-stone-500">
                     <span>{report.publicationDate}</span>
                     <span aria-hidden="true">·</span>
@@ -906,7 +917,7 @@ export const HomePage: React.FC = () => {
 
                   <h3
                     onClick={() => navigateTo('reports', undefined, report.slug)}
-                    className="font-['Manrope'] font-bold text-base text-[#17324D] group-hover:text-[#2459A9] transition-colors leading-snug cursor-pointer line-clamp-2"
+                    className="font-['Manrope'] font-bold text-base text-[#000a37] group-hover:text-[#ef5a20] transition-colors leading-snug cursor-pointer line-clamp-2"
                   >
                     {report.title}
                   </h3>
@@ -917,10 +928,10 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="p-6 pt-0 border-t border-stone-100 flex items-center justify-between">
+              <div className="p-5 sm:p-6 pt-0 border-t border-stone-100 flex items-center justify-between">
                 <button
                   onClick={() => navigateTo('reports', undefined, report.slug)}
-                  className="text-xs font-bold text-[#17324D] hover:text-[#2459A9] flex items-center gap-1.5"
+                  className="text-xs font-bold text-[#000a37] hover:text-[#ef5a20] flex items-center gap-1.5"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>Read Report Online</span>
@@ -928,7 +939,7 @@ export const HomePage: React.FC = () => {
 
                 <button
                   onClick={() => navigateTo('reports', undefined, report.slug)}
-                  className="p-1.5 rounded-lg border border-stone-200 text-[#E98A32] hover:bg-stone-50 transition-colors"
+                  className="p-1.5 rounded-lg border border-stone-200 text-[#ef5a20] hover:bg-stone-50 transition-colors"
                   title="Download Report"
                 >
                   <Download className="w-4 h-4" />

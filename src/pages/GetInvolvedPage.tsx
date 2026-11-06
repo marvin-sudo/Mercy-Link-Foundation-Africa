@@ -85,32 +85,43 @@ export const GetInvolvedPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16 pb-16">
-      {/* Hero Full Width */}
-      <section className="reveal-up w-full relative overflow-hidden bg-gradient-to-r from-[#17324D] to-[#2459A9] text-white py-14 sm:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#E98A32]">
+    <div className="space-y-10 sm:space-y-14 pb-16">
+      {/* Hero Full Width with Background Image & Transparent Navy Blue Overlay */}
+      <section className="reveal-up w-full relative overflow-hidden bg-[#000a37] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
+        {/* Relevant Background Photography */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1920&q=80"
+            alt="Volunteers and partners working together in community mission"
+            className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
+          <div className="absolute inset-0 bg-[#000a37]/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] space-y-3">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#ef5a20]">
             Collaboration & Service
           </span>
-          <h1 className="font-['Manrope'] font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             Get Involved With Mercy Link
           </h1>
-          <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl">
+          <p className="text-xs sm:text-sm text-stone-200 leading-relaxed max-w-3xl">
             Every lasting community transformation begins with committed partners. Explore pathways for churches, volunteers, professionals, and sponsors to walk alongside us in Uganda.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-4">
             <button
               onClick={() => openDonationModal()}
-              className="px-6 py-3 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-2 interactive-button"
+              className="px-6 py-3 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-xl text-xs font-bold transition-all shadow-sm interactive-button cursor-pointer"
             >
-              <Heart className="w-3.5 h-3.5 fill-white" />
-              <span>Make an Immediate Gift</span>
+              Make an Immediate Gift
             </button>
 
             <a
               href="#involvement-form"
-              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-semibold border border-white/20 transition-colors interactive-button"
+              className="px-6 py-3 bg-white/15 hover:bg-white/25 backdrop-blur-xs text-white rounded-xl text-xs font-semibold border border-white/20 transition-colors interactive-button"
             >
               Submit Partnership Enquiry ↓
             </a>
@@ -121,10 +132,10 @@ export const GetInvolvedPage: React.FC = () => {
       {/* Pathways Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="reveal-up max-w-2xl space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#2459A9]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#000a37]">
             Engagement Opportunities
           </span>
-          <h2 className="font-['Manrope'] font-extrabold text-3xl text-[#17324D]">
+          <h2 className="font-['Manrope'] font-extrabold text-3xl text-[#000a37]">
             Ways to Partner & Serve
           </h2>
         </div>
@@ -138,10 +149,10 @@ export const GetInvolvedPage: React.FC = () => {
                 className="reveal-up interactive-card bg-white p-6 rounded-2xl border border-stone-200 shadow-xs hover:shadow-md transition-all space-y-4 flex flex-col justify-between"
               >
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#FAF7F0] border border-[#2459A9]/20 flex items-center justify-center text-[#2459A9]">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF9F6] border border-[#000a37]/20 flex items-center justify-center text-[#000a37]">
                     <IconComponent className="w-5 h-5" />
                   </div>
-                  <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+                  <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
                     {path.title}
                   </h3>
                   <p className="text-xs text-stone-600 leading-relaxed">
@@ -153,7 +164,7 @@ export const GetInvolvedPage: React.FC = () => {
                   <a
                     href="#involvement-form"
                     onClick={() => setSelectedPathway(path.title)}
-                    className="text-xs font-bold text-[#2459A9] hover:underline"
+                    className="text-xs font-bold text-[#000a37] hover:underline"
                   >
                     Select & Enquire →
                   </a>
@@ -168,10 +179,10 @@ export const GetInvolvedPage: React.FC = () => {
       <section id="involvement-form" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="reveal-up bg-white p-8 sm:p-12 rounded-3xl border border-stone-200 shadow-sm max-w-3xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2459A9]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#000a37]">
               Partnership Intake
             </span>
-            <h2 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl text-[#000a37]">
               Express Your Interest to Collaborate
             </h2>
             <p className="text-xs text-stone-500 max-w-md mx-auto">
@@ -190,7 +201,7 @@ export const GetInvolvedPage: React.FC = () => {
               </p>
               <button
                 onClick={() => setSubmittedRef(null)}
-                className="text-xs text-[#2459A9] underline font-bold"
+                className="text-xs text-[#000a37] underline font-bold"
               >
                 Send another enquiry
               </button>
@@ -204,7 +215,7 @@ export const GetInvolvedPage: React.FC = () => {
                 <select
                   value={selectedPathway}
                   onChange={(e) => setSelectedPathway(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 >
                   <option value="Church Partnership">Church Partnership (Missions & Planters)</option>
                   <option value="Volunteering & Mission Service">Volunteering & Mission Service</option>
@@ -226,7 +237,7 @@ export const GetInvolvedPage: React.FC = () => {
                     placeholder="Full name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -240,7 +251,7 @@ export const GetInvolvedPage: React.FC = () => {
                     placeholder="email@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -255,7 +266,7 @@ export const GetInvolvedPage: React.FC = () => {
                     placeholder="+256..."
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -268,7 +279,7 @@ export const GetInvolvedPage: React.FC = () => {
                     placeholder="e.g. Grace Chapel / Independent"
                     value={organization}
                     onChange={(e) => setOrganization(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -283,7 +294,7 @@ export const GetInvolvedPage: React.FC = () => {
                   placeholder="Describe your vision, timeline, questions, or skills you would like to offer..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
               </div>
 
@@ -292,7 +303,7 @@ export const GetInvolvedPage: React.FC = () => {
                   type="checkbox"
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
-                  className="rounded border-stone-300 text-[#E98A32] focus:ring-[#E98A32]"
+                  className="rounded border-stone-300 text-[#ef5a20] focus:ring-[#ef5a20]"
                 />
                 <span>I consent to Mercy Link Foundation Africa contacting me regarding this enquiry.</span>
               </label>
@@ -300,7 +311,7 @@ export const GetInvolvedPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 bg-[#17324D] hover:bg-[#2459A9] disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 interactive-button"
+                className="w-full py-3 bg-[#000a37] hover:bg-[#000a37]/90 disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 interactive-button"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>{isSubmitting ? 'Submitting...' : 'Submit Partnership Expression'}</span>

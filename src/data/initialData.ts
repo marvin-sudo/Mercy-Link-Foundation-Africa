@@ -6,7 +6,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: 'Disability Ministry',
     tagline: 'Imitating Christ’s Love to Restore Dignity, Education & Life Skills for Children with Disabilities',
     category: 'Vulnerable Care & Inclusion',
-    imageUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://i.postimg.cc/MpYMjZQ4/Whats-App-Image-2026-10-22-at-5-13-49-PM.jpg',
     overview:
       'To imitate the love and compassion of Jesus Christ in reaching out to the deprived, neglected and needy people with disabilities, especially children. Helping them to make life meaningful through education, life skills training, and business assistance to integrate well into the Society.',
     needAddressed:
@@ -39,7 +39,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: 'Prison Ministry',
     tagline: 'Bringing Redemption, Prison Churches & Discipleship Behind Prison Walls',
     category: 'Correctional Outreach & Rehabilitation',
-    imageUrl: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://i.postimg.cc/2yBLq4QH/Gemini-Generated-Image-42rueg42rueg42ru.jpg',
     overview:
       'One other Major area of our operation is the prisons in Uganda. God has granted us full leverage and access to all prisons in Uganda. This has so far given us access to over 12,000 prisoners in different districts since the year begun and over 5,130 committing and rededicating their lives to Christ.',
     needAddressed:
@@ -106,7 +106,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: 'Family Foundations',
     tagline: 'When families struggle or fail, our churches, communities, culture and nations at large suffer.',
     category: 'Family Wellbeing & Parent Training',
-    imageUrl: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://i.postimg.cc/X77T0QgN/Whats-App-Image-2026-10-22-at-5-13-56-PM.jpg',
     overview:
       '“When families struggle or fail, our churches, communities, culture and nations at large suffer.” Vision: Healthy Families, Prosperous Communities, Stable Country. Mission: To establish family centered wholistic programs that will equip individuals at the different levels of development with life skills and coping mechanisms that enable them lead a fulfilling and productive life to and through families.',
     needAddressed:
@@ -142,7 +142,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: "Children's Ministry Program",
     tagline: 'Nurturing Children for Personal Relationship with God, Healthy Character, and Kingdom Outreach.',
     category: 'Child Evangelism & Discipleship',
-    imageUrl: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://i.postimg.cc/bwdc13G6/Whats-App-Image-2026-10-22-at-5-13-54-PM.jpg',
     overview:
       'The goal of the Children’s ministry program is to nurture children for Personal relationship with God, Grow with healthy character, Advance the kingdom through outreach.\n\nChildren Ministry training curriculum “Raising Hope” was developed in Uganda by a team of pastors as part of the response to the crisis that began in South Sudan in December 2013.\n\nThe curriculum consists of 3 modules:\n• CONNECTED (Our personal relationship with God)\n• PERFECTED (Pursuing Godly character)\n• DIRECTED (Advancing the Kingdom God’s way)\n\nToday the program is being introduced to different regions in Africa, refugee camps, churches and schools after consultation with church leaders and a vision casting seminar.\n\nVision: To empower, equip, and connect children’s ministry leaders to effectively reach and disciple children in the local church, communities and schools.',
     needAddressed:
@@ -341,7 +341,7 @@ export const INITIAL_REPORTS: Report[] = [
 During the reporting period, 157 students at the Kampala School of the Handicapped received targeted learning materials, hygiene supplies, and nutritional assistance. Furthermore, our field workers conducted quarterly parent support meetings, offering spiritual guidance, prayer, and practical coping mechanisms for families navigating special-needs caregiving.
 
 Community awareness rallies were also organized in surrounding parishes, dispelling harmful myths regarding disability and demonstrating Christ-centered compassion. Field workers engaged local leaders, emphasizing child protection and inclusion within mainstream schools where feasible.`,
-    featuredImage: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://i.postimg.cc/MpYMjZQ4/Whats-App-Image-2026-10-22-at-5-13-49-PM.jpg',
     verifiedMetrics: [
       { label: 'Children Supported', value: '157' },
       { label: 'Caregiver Support Sessions', value: '12' },
@@ -387,7 +387,7 @@ Community awareness rallies were also organized in surrounding parishes, dispell
 In 2024, our verified attendance records indicated regular weekly engagement with more than 12,500 children. Our team also conducted 18 teacher-training workshops, equipping 340 Sunday school and community educators with child-friendly storytelling, scripture memorization techniques, and strict child protection policies.
 
 Over 35,000 evangelistic contacts were recorded throughout the school term outreaches, accompanied by the placement of illustrated Bible story leaflets and school supplies. Hundreds of children made personal decisions for Christ and are being nurtured in local church congregations.`,
-    featuredImage: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://i.postimg.cc/qRxZP3h8/Whats-App-Image-2026-10-22-at-5-13-58-PM.jpg',
     verifiedMetrics: [
       { label: 'Weekly Children Engaged', value: '12,500+' },
       { label: 'Evangelistic Outreach Contacts', value: '35,000+' },
@@ -433,7 +433,7 @@ Over 35,000 evangelistic contacts were recorded throughout the school term outre
 Our focus remains on deep discipleship: planting internal fellowship groups led by inmate leaders who have been nurtured through scripture. Over the first six months of 2024, 76 inmates completed the Foundations of Faith course, and basic welfare kits containing soap, toothpaste, and notebooks were distributed to inmates in acute need.
 
 Particular emphasis was given to youth wards, engaging young offenders with practical life-rebuilding counseling to prevent future re-offending. Prison wardens reported noticeable drops in disciplinary infractions among participating inmates.`,
-    featuredImage: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://i.postimg.cc/2yBLq4QH/Gemini-Generated-Image-42rueg42rueg42ru.jpg',
     verifiedMetrics: [
       { label: 'Prison Stations Visited', value: '8' },
       { label: 'Course Graduates', value: '76' },
@@ -699,13 +699,15 @@ export const INITIAL_CONTACT_INFO: ContactInfo = {
   physicalLocation: 'Bulange Mengo, Kampala, Uganda',
   country: 'Uganda',
   regions: 'Central, Northern, Western, Southern, and Eastern Uganda (Over 70 Districts)',
-  bankName: 'Orient Bank Limited (Now I&M Bank Uganda)',
+  bankName: 'I&M Bank (Uganda) Limited',
   bankAccountTitle: 'Mercy Link Foundation Africa',
-  bankAccountNumber: '102384910293 (Verified for Authorized Direct Wire)',
-  bankSwift: 'ORBKUGKA',
+  bankAccountNumber: '50244877001 (USD) / 50244877002 (UGX)',
+  bankAccountNumberUSD: '50244877001',
+  bankAccountNumberUGX: '50244877002',
+  bankSwift: 'ORINUGKA',
   mobileMoneyMTN: '+256 772 314 262 (Mercy Link Admin)',
   mobileMoneyAirtel: '+256 704 927 362 (Mercy Link Field Desk)',
-  lastVerifiedDate: 'October 2026'
+  lastVerifiedDate: 'November 2026'
 };
 
 export const INITIAL_EDUCATION_APPLICATIONS = [

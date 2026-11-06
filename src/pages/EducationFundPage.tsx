@@ -67,32 +67,43 @@ export const EducationFundPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16 pb-16">
-      {/* Hero Full Width */}
-      <section className="reveal-up w-full relative overflow-hidden bg-[#17324D] text-white py-14 sm:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#E98A32]">
+    <div className="space-y-10 sm:space-y-14 pb-16">
+      {/* Hero Full Width with Background Image & Transparent Navy Blue Overlay */}
+      <section className="reveal-up w-full relative overflow-hidden bg-[#000a37] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
+        {/* Relevant Background Photography */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80"
+            alt="Students in classroom learning and receiving educational support"
+            className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
+          <div className="absolute inset-0 bg-[#000a37]/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] space-y-3">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#ef5a20]">
             Educational Stewardship
           </span>
-          <h1 className="font-['Manrope'] font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight">
+          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             Mercy Link Education Fund
           </h1>
-          <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl">
+          <p className="text-xs sm:text-sm text-stone-200 leading-relaxed max-w-3xl">
             Equipping vulnerable children, orphans, and students with disabilities with tuition assistance, learning materials, and mentoring so they can complete basic education and fulfill God's purpose.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-4">
             <button
               onClick={() => openDonationModal('Education Fund')}
-              className="px-6 py-3 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-2 interactive-button"
+              className="px-6 py-3 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-xl text-xs font-bold transition-all shadow-sm interactive-button cursor-pointer"
             >
-              <Heart className="w-3.5 h-3.5 fill-white" />
-              <span>Sponsor a Student's Education</span>
+              Sponsor a Student's Education
             </button>
 
             <a
               href="#apply-section"
-              className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-semibold border border-white/20 transition-colors interactive-button"
+              className="px-6 py-3 bg-white/15 hover:bg-white/25 backdrop-blur-xs text-white rounded-xl text-xs font-semibold border border-white/20 transition-colors interactive-button"
             >
               Submit Student Application ↓
             </a>
@@ -104,10 +115,10 @@ export const EducationFundPage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-group">
           <div className="reveal-up interactive-card bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-3">
-            <div className="w-9 h-9 rounded-lg bg-[#2459A9]/10 text-[#2459A9] flex items-center justify-center font-bold">
+            <div className="w-9 h-9 rounded-lg bg-[#000a37]/10 text-[#000a37] flex items-center justify-center font-bold">
               01
             </div>
-            <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
               Who the Fund Helps
             </h3>
             <p className="text-xs text-stone-600 leading-relaxed">
@@ -116,10 +127,10 @@ export const EducationFundPage: React.FC = () => {
           </div>
 
           <div className="reveal-up interactive-card bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-3">
-            <div className="w-9 h-9 rounded-lg bg-[#2459A9]/10 text-[#2459A9] flex items-center justify-center font-bold">
+            <div className="w-9 h-9 rounded-lg bg-[#000a37]/10 text-[#000a37] flex items-center justify-center font-bold">
               02
             </div>
-            <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
               Strict Eligibility Criteria
             </h3>
             <ul className="text-xs text-stone-600 space-y-1.5 leading-snug">
@@ -131,10 +142,10 @@ export const EducationFundPage: React.FC = () => {
           </div>
 
           <div className="reveal-up interactive-card bg-white p-6 rounded-2xl border border-stone-200 shadow-xs space-y-3">
-            <div className="w-9 h-9 rounded-lg bg-[#E98A32]/10 text-[#E98A32] flex items-center justify-center font-bold">
+            <div className="w-9 h-9 rounded-lg bg-[#ef5a20]/10 text-[#ef5a20] flex items-center justify-center font-bold">
               03
             </div>
-            <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
               Intake Cycles
             </h3>
             <div className="text-xs text-stone-600 space-y-2">
@@ -154,10 +165,10 @@ export const EducationFundPage: React.FC = () => {
 
       {/* Application Status Lookup Tool */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="reveal-up bg-[#FAF7F0] p-6 sm:p-8 rounded-3xl border border-stone-200 max-w-2xl mx-auto space-y-4">
+        <div className="reveal-up bg-[#FAF9F6] p-6 sm:p-8 rounded-3xl border border-stone-200 max-w-2xl mx-auto space-y-4">
           <div className="flex items-center gap-2">
-            <Search className="w-5 h-5 text-[#2459A9]" />
-            <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+            <Search className="w-5 h-5 text-[#000a37]" />
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
               Check Existing Application Status
             </h3>
           </div>
@@ -172,11 +183,11 @@ export const EducationFundPage: React.FC = () => {
               placeholder="e.g. ML-EDU-2026-0042"
               value={lookupQuery}
               onChange={(e) => setLookupQuery(e.target.value)}
-              className="flex-1 px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+              className="flex-1 px-3.5 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
             />
             <button
               type="submit"
-              className="px-4 py-2 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap"
+              className="px-4 py-2 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap"
             >
               Check Status
             </button>
@@ -192,7 +203,7 @@ export const EducationFundPage: React.FC = () => {
           {typeof lookupResult === 'object' && lookupResult !== null && (
             <div className="p-4 bg-white border border-stone-200 rounded-xl space-y-2 text-xs">
               <div className="flex items-center justify-between border-b border-stone-100 pb-2">
-                <span className="font-bold text-[#17324D]">{lookupResult.studentName}</span>
+                <span className="font-bold text-[#000a37]">{lookupResult.studentName}</span>
                 <span className="font-semibold text-xs px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800">
                   {lookupResult.status}
                 </span>
@@ -212,10 +223,10 @@ export const EducationFundPage: React.FC = () => {
       <section id="apply-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="reveal-up bg-white p-8 sm:p-12 rounded-3xl border border-stone-200 shadow-sm max-w-3xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#2459A9]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#000a37]">
               Student Intake Form
             </span>
-            <h2 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl text-[#17324D]">
+            <h2 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl text-[#000a37]">
               Apply for Education Fund Assistance
             </h2>
             <p className="text-xs text-stone-500 max-w-md mx-auto">
@@ -232,7 +243,7 @@ export const EducationFundPage: React.FC = () => {
               <p className="text-xs text-emerald-800 max-w-md mx-auto">
                 Your application has been logged with official reference:
               </p>
-              <div className="bg-white p-3 rounded-xl border border-emerald-300 font-mono text-base font-bold text-[#17324D] max-w-xs mx-auto">
+              <div className="bg-white p-3 rounded-xl border border-emerald-300 font-mono text-base font-bold text-[#000a37] max-w-xs mx-auto">
                 {submittedAppNumber}
               </div>
               <p className="text-xs text-emerald-700">
@@ -240,7 +251,7 @@ export const EducationFundPage: React.FC = () => {
               </p>
               <button
                 onClick={() => setSubmittedAppNumber(null)}
-                className="text-xs text-[#2459A9] underline font-bold"
+                className="text-xs text-[#000a37] underline font-bold"
               >
                 Submit another application
               </button>
@@ -258,7 +269,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="First & last name"
                     value={studentName}
                     onChange={(e) => setStudentName(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -270,7 +281,7 @@ export const EducationFundPage: React.FC = () => {
                     type="date"
                     value={dateOfBirth}
                     onChange={(e) => setDateOfBirth(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -283,7 +294,7 @@ export const EducationFundPage: React.FC = () => {
                   <select
                     value={gender}
                     onChange={(e) => setGender(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3 py-2 text-xs border border-stone-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   >
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
@@ -300,7 +311,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="e.g. Kampala, Gulu"
                     value={district}
                     onChange={(e) => setDistrict(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -313,7 +324,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="e.g. Primary 5, Senior 2"
                     value={currentLevel}
                     onChange={(e) => setCurrentLevel(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -329,7 +340,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="Full school name"
                     value={schoolName}
                     onChange={(e) => setSchoolName(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -342,7 +353,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="e.g. 600000"
                     value={annualFeeNeedUGX}
                     onChange={(e) => setAnnualFeeNeedUGX(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -358,7 +369,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="Guardian full name"
                     value={guardianName}
                     onChange={(e) => setGuardianName(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
 
@@ -372,7 +383,7 @@ export const EducationFundPage: React.FC = () => {
                     placeholder="+256 7..."
                     value={guardianPhone}
                     onChange={(e) => setGuardianPhone(e.target.value)}
-                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                 </div>
               </div>
@@ -387,7 +398,7 @@ export const EducationFundPage: React.FC = () => {
                   placeholder="Explain the student's family circumstances, vulnerability, or financial barrier..."
                   value={reasonForApplication}
                   onChange={(e) => setReasonForApplication(e.target.value)}
-                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                  className="w-full px-3.5 py-2 text-xs border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                 />
               </div>
 
@@ -398,7 +409,7 @@ export const EducationFundPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 bg-[#17324D] hover:bg-[#2459A9] disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 interactive-button"
+                className="w-full py-3 bg-[#000a37] hover:bg-[#000a37]/90 disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 interactive-button"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>{isSubmitting ? 'Submitting Application...' : 'Submit Application for Review'}</span>
@@ -411,17 +422,17 @@ export const EducationFundPage: React.FC = () => {
       {/* Frequently Asked Questions */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="reveal-up max-w-2xl space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#2459A9]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#000a37]">
             Transparency & Governance
           </span>
-          <h3 className="font-['Manrope'] font-extrabold text-2xl text-[#17324D]">
+          <h3 className="font-['Manrope'] font-extrabold text-2xl text-[#000a37]">
             Frequently Asked Questions
           </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-stone-600 stagger-group">
           <div className="reveal-up interactive-card bg-white p-5 rounded-2xl border border-stone-200 space-y-2">
-            <h4 className="font-bold text-[#17324D] text-sm">
+            <h4 className="font-bold text-[#000a37] text-sm">
               How are tuition funds disbursed?
             </h4>
             <p>
@@ -430,7 +441,7 @@ export const EducationFundPage: React.FC = () => {
           </div>
 
           <div className="reveal-up interactive-card bg-white p-5 rounded-2xl border border-stone-200 space-y-2">
-            <h4 className="font-bold text-[#17324D] text-sm">
+            <h4 className="font-bold text-[#000a37] text-sm">
               Can donors sponsor a specific child?
             </h4>
             <p>
@@ -439,7 +450,7 @@ export const EducationFundPage: React.FC = () => {
           </div>
 
           <div className="reveal-up interactive-card bg-white p-5 rounded-2xl border border-stone-200 space-y-2">
-            <h4 className="font-bold text-[#17324D] text-sm">
+            <h4 className="font-bold text-[#000a37] text-sm">
               Are students required to attend a specific denomination?
             </h4>
             <p>
@@ -448,7 +459,7 @@ export const EducationFundPage: React.FC = () => {
           </div>
 
           <div className="reveal-up interactive-card bg-white p-5 rounded-2xl border border-stone-200 space-y-2">
-            <h4 className="font-bold text-[#17324D] text-sm">
+            <h4 className="font-bold text-[#000a37] text-sm">
               What documents must accompany the application?
             </h4>
             <p>

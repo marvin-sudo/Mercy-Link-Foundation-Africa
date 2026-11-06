@@ -7,9 +7,9 @@ export type PageId =
   | 'programs'
   | 'program-detail'
   | 'reports'
+  | 'children-ministry'
   | 'children-services'
   | 'education-fund'
-  | 'events'
   | 'get-involved'
   | 'contact'
   | 'cms';
@@ -111,6 +111,8 @@ export interface ContactInfo {
   bankName: string;
   bankAccountTitle: string;
   bankAccountNumber: string;
+  bankAccountNumberUSD?: string;
+  bankAccountNumberUGX?: string;
   bankSwift: string;
   mobileMoneyMTN: string;
   mobileMoneyAirtel: string;

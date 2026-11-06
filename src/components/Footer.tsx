@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#17324D] text-white pt-16 pb-10 border-t border-[#2459A9]/40">
+    <footer className="bg-[#000a37] text-white pt-12 sm:pt-16 pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 stagger-group">
@@ -56,18 +56,18 @@ export const Footer: React.FC = () => {
           <div className="reveal-up lg:col-span-2 space-y-4">
             <button
               onClick={handleFooterLogoClick}
-              className="flex items-center gap-4 text-left focus:outline-none focus:ring-2 focus:ring-[#E98A32] rounded-xl p-1 group"
+              className="flex items-center gap-4 text-left focus:outline-none focus:ring-2 focus:ring-[#ef5a20] rounded-xl p-1 group"
               title="Mercy Link Foundation Africa (Click 5 times for Super Admin Staff CMS)"
             >
               <div
                 className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-white border-2 ${
                   footerClickCount > 1
-                    ? 'border-[#E98A32] ring-4 ring-[#E98A32]/60 scale-105'
-                    : 'border-[#E98A32]'
+                    ? 'border-[#ef5a20] ring-4 ring-[#ef5a20]/60 scale-105'
+                    : 'border-[#ef5a20]'
                 } shadow-lg shrink-0 flex items-center justify-center transition-all group-hover:scale-105 overflow-hidden`}
               >
                 <img
-                  src="https://i.postimg.cc/nV7TcH8r/Gemini-Generated-Image.jpg"
+                  src="https://i.postimg.cc/J4CrQcrZ/Whats-App-Image-2026-10-23-at-9-33-54-AM.jpg"
                   alt="Mercy Link Foundation Africa Logo"
                   className="w-full h-full object-contain rounded-full"
                   onError={(e) => {
@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
                 <h3 className="font-['Manrope'] font-extrabold text-xl sm:text-2xl tracking-tight text-white leading-snug group-hover:text-amber-200 transition-colors">
                   Mercy Link Foundation Africa
                 </h3>
-                <p className="text-xs text-[#E98A32] font-semibold tracking-wider uppercase mt-1">
+                <p className="text-xs text-[#ef5a20] font-semibold tracking-wider uppercase mt-1">
                   Transforming Communities – Creating a Legacy of Peace
                 </p>
               </div>
@@ -104,27 +104,26 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <button
                 onClick={() => openDonationModal()}
-                className="interactive-button inline-flex items-center gap-2 px-4 py-2 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-lg text-xs font-bold transition-all shadow-sm"
+                className="interactive-button px-4 py-2 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-lg text-xs font-bold transition-all shadow-sm"
               >
-                <Heart className="w-3.5 h-3.5 fill-white" />
-                <span>Partner or Support Us Today</span>
+                Partner or Support Us Today
               </button>
             </div>
 
             {/* Social Media Channels */}
             <div className="pt-3 space-y-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#E98A32]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#ef5a20]">
                 Follow & Connect With Us
               </span>
               <div className="flex items-center gap-2 pt-0.5">
                 {/* Facebook */}
                 <a
-                  href="https://facebook.com/mercylinkfoundationafrica"
+                  href="https://www.facebook.com/pages/Mercy-Link-FoundationAfrica/212454875452484"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#1877F2] hover:text-white text-white/80 flex items-center justify-center transition-all hover:scale-110 shadow-xs"
                   aria-label="Mercy Link Foundation Africa on Facebook"
-                  title="Facebook: @mercylinkfoundationafrica"
+                  title="Facebook: Mercy Link Foundation Africa"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -133,11 +132,11 @@ export const Footer: React.FC = () => {
 
                 {/* X (formerly Twitter) */}
                 <a
-                  href="https://x.com/mercylinkafrica"
+                  href="https://twitter.com/mercylinkafrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-white/10 hover:bg-black hover:text-white text-white/80 flex items-center justify-center transition-all hover:scale-110 shadow-xs"
-                  aria-label="Mercy Link Foundation Africa on X"
+                  aria-label="Mercy Link Foundation Africa on X (Twitter)"
                   title="X (Twitter): @mercylinkafrica"
                 >
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -206,7 +205,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Quick Navigation */}
           <div className="reveal-up">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#E98A32] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#ef5a20] mb-4">
               Explore
             </h4>
             <ul className="space-y-2 text-xs text-white/80">
@@ -260,18 +259,10 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => navigateTo('children-services')}
+                  onClick={() => navigateTo('children-ministry')}
                   className="hover:text-white transition-colors"
                 >
-                  Children Services
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => navigateTo('education-fund')}
-                  className="hover:text-white transition-colors"
-                >
-                  Education Fund
+                  Children's Ministry (Services & Fund)
                 </button>
               </li>
               <li>
@@ -280,14 +271,6 @@ export const Footer: React.FC = () => {
                   className="hover:text-white transition-colors"
                 >
                   Impact & Field Reports
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => navigateTo('events')}
-                  className="hover:text-white transition-colors"
-                >
-                  Ministry Events
                 </button>
               </li>
               <li>
@@ -303,7 +286,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Ministry Programs */}
           <div className="reveal-up">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#E98A32] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#ef5a20] mb-4">
               Our Ministries
             </h4>
             <ul className="space-y-2 text-xs text-white/80">
@@ -360,12 +343,12 @@ export const Footer: React.FC = () => {
 
           {/* Col 5: Verified Contact Details */}
           <div className="reveal-up">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#E98A32] mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#ef5a20] mb-4">
               Contact & Location
             </h4>
             <div className="space-y-3 text-xs text-white/80">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#E98A32] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#ef5a20] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">{contactInfo.postalAddress}</p>
                   <p className="text-white/60 text-[11px]">{contactInfo.physicalLocation}</p>
@@ -373,7 +356,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#E98A32] shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#ef5a20] shrink-0 mt-0.5" />
                 <div className="flex flex-col">
                   {contactInfo.emails.map((email) => (
                     <a
@@ -388,7 +371,7 @@ export const Footer: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#E98A32] shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#ef5a20] shrink-0 mt-0.5" />
                 <div className="flex flex-col">
                   {contactInfo.phones.map((phone) => (
                     <a
@@ -405,7 +388,7 @@ export const Footer: React.FC = () => {
               <div className="pt-2">
                 <button
                   onClick={() => navigateTo('contact')}
-                  className="text-xs text-[#E98A32] hover:underline font-semibold flex items-center gap-1"
+                  className="text-xs text-[#ef5a20] hover:underline font-semibold flex items-center gap-1"
                 >
                   <span>Submit Online Enquiry</span>
                   <ExternalLink className="w-3 h-3" />
@@ -428,8 +411,8 @@ export const Footer: React.FC = () => {
 
           <div className="lg:col-span-6">
             {subscribed ? (
-              <div className="flex items-center gap-2 p-3 bg-[#2459A9]/40 border border-[#2459A9] rounded-lg text-white text-xs">
-                <CheckCircle className="w-4 h-4 text-[#E98A32]" />
+              <div className="flex items-center gap-2 p-3 bg-white/10 border border-[#ef5a20] rounded-lg text-white text-xs">
+                <CheckCircle className="w-4 h-4 text-[#ef5a20]" />
                 <span>Thank you for subscribing! Your privacy is respected and you can unsubscribe anytime.</span>
               </div>
             ) : (
@@ -441,14 +424,13 @@ export const Footer: React.FC = () => {
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
                     placeholder="Enter your email address..."
-                    className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3.5 py-2 text-xs text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#E98A32]"
+                    className="flex-1 bg-white/10 border border-white/20 rounded-lg px-3.5 py-2 text-xs text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#ef5a20]"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-[#E98A32] hover:bg-[#d47926] text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap shrink-0"
+                    className="px-4 py-2 bg-[#ef5a20] hover:bg-[#d94a14] text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap shrink-0"
                   >
-                    <span>Subscribe</span>
-                    <Send className="w-3 h-3" />
+                    Subscribe
                   </button>
                 </div>
                 <label className="flex items-center gap-2 text-[11px] text-white/60 cursor-pointer">
@@ -456,7 +438,7 @@ export const Footer: React.FC = () => {
                     type="checkbox"
                     checked={consentChecked}
                     onChange={(e) => setConsentChecked(e.target.checked)}
-                    className="rounded border-white/30 text-[#E98A32] focus:ring-[#E98A32]"
+                    className="rounded border-white/30 text-[#ef5a20] focus:ring-[#ef5a20]"
                   />
                   <span>I agree to receive ministry updates. Mercy Link Foundation Africa does not share donor data.</span>
                 </label>
@@ -475,9 +457,9 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-2 text-[11px]">
               <button
                 onClick={() => navigateTo('cms')}
-                className="text-[#E98A32] hover:text-white flex items-center gap-1 font-semibold"
+                className="text-[#ef5a20] hover:text-white flex items-center gap-1 font-semibold"
               >
-                <Shield className="w-3 h-3 text-[#E98A32]" />
+                <Shield className="w-3 h-3 text-[#ef5a20]" />
                 <span>CMS ({currentUser.role.split(' ')[0]})</span>
               </button>
             </div>

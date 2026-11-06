@@ -18,64 +18,76 @@ export const VisionMissionValuesPage: React.FC = () => {
   const coreValues = [
     {
       num: '01',
-      title: 'God-Fearing',
+      title: 'Godliness',
       tagline: 'Recognizing God as Our Ultimate Source',
       description:
-        'We acknowledge the Lord as the sovereign source and anchor of our lives and labors. Every program, outreach, and resource is pursued under His guidance and prayerful devotion.'
+        'We recognize God as our source and are fully dependent on Him. Our goal is to bring glory to His name and reflect His love and grace to the people.'
     },
     {
       num: '02',
-      title: 'Teamwork',
-      tagline: 'United in Purpose and Mutual Respect',
+      title: 'Integrity',
+      tagline: 'Standards of Honesty, Trust & Stewardship',
       description:
-        'We value every staff member, church volunteer, and community beneficiary. Genuine collaboration and mutual honor produce far greater fruit than solitary efforts.'
+        'We uphold the highest standards of honesty, trust, and ethical accountability. We manage financial and material resources with total transparency before God, churches, and society.'
     },
     {
       num: '03',
       title: 'Excellence',
-      tagline: 'Diligent Commitment to Quality',
+      tagline: 'Faithful Commitment to Quality',
       description:
-        'We fulfill our ministry duties with utmost diligence, excellence, and care, knowing that whatever we do, we do it heartily as unto the Lord and not unto men.'
+        'Always doing what we say we will and striving for excellence, diligence, and quality in all we do heartily as unto the Lord.'
     },
     {
       num: '04',
-      title: 'Partnering',
-      tagline: 'Walking Together Across Denominations',
+      title: 'Compassion',
+      tagline: 'Loving Concern, Honesty & Empathy',
       description:
-        'We bridge divides to work alongside local congregations, grassroots agencies, and international supporters, leveraging shared strengths to transform communities.'
+        'Providing loving concern for people in a safe, non-judgmental atmosphere. We address practical, emotional, and spiritual needs with honesty, empathy, and unconditional love.'
     },
     {
       num: '05',
-      title: 'Compassion',
-      tagline: 'Empathy, Dignity, and Christlike Love',
+      title: 'Partnering',
+      tagline: 'Walking with the Global Body of Christ',
       description:
-        'We respond with heartfelt compassion to the physical, emotional, social, and spiritual suffering of vulnerable children, disabled persons, and prisoners, defending their human dignity.'
+        'We believe we are part of the worldwide body of Christ, partnering across denominations, agencies, and communities in friendship and mutual honor to multiply kingdom fruit.'
     },
     {
       num: '06',
-      title: 'Integrity',
-      tagline: 'Accountability, Honesty, and Stewardship',
+      title: 'Teamwork',
+      tagline: 'Cooperative, Respectful, and Joyful Work',
       description:
-        'We maintain uncompromising honesty, open financial stewardship, and ethical transparency before God, governmental authorities, partner churches, and the public.'
+        'Providing support to one another, working cooperatively, respecting one another’s views, and making our work environment joyful, supportive, and productive.'
     }
   ];
 
   return (
     <div className="space-y-10 sm:space-y-14 lg:space-y-16 pb-16">
-      {/* Header - Full Width */}
-      <section className="reveal-up w-full bg-gradient-to-b from-white via-[#FAF7F0] to-[#FAF7F0] border-b border-stone-200/80 py-6 sm:py-8 lg:py-10 px-4 sm:px-8 lg:px-12 xl:px-16">
-        <div className="max-w-7xl mx-auto space-y-2.5">
-          <div className="inline-flex items-center gap-2 text-[11px] font-semibold text-[#2459A9]">
+      {/* Header - Full Width with Background Image & Transparent Navy Blue Overlay */}
+      <section className="reveal-up w-full relative overflow-hidden bg-[#000a37] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
+        {/* Relevant Background Photography */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1920&q=80"
+            alt="Compassion, peace, and humanitarian mission in East Africa"
+            className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
+          <div className="absolute inset-0 bg-[#000a37]/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#ef5a20]">
             <span>About Us</span>
             <span aria-hidden="true">·</span>
             <span>Spiritual & Strategic Anchors</span>
             <span aria-hidden="true">·</span>
             <span>Uganda</span>
           </div>
-          <h1 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17324D] tracking-tight leading-tight">
+          <h1 className="font-['Playfair_Display'] font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             Vision, Mission & Core Values
           </h1>
-          <p className="text-xs sm:text-sm text-stone-600 max-w-3xl leading-relaxed font-['Plus_Jakarta_Sans']">
+          <p className="text-xs sm:text-sm text-stone-200 max-w-3xl leading-relaxed font-['Plus_Jakarta_Sans']">
             The immutable biblical pillars, theological convictions, and strategic focus that guide Mercy Link Foundation Africa in every outreach, classroom, and community fellowship.
           </p>
         </div>
@@ -87,14 +99,14 @@ export const VisionMissionValuesPage: React.FC = () => {
           - Right: "What We Do", "Our Vision", Vision Quote, Description & Orange Pill Button
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-14 border border-stone-200/90 shadow-sm relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="bg-white rounded-[28px] sm:rounded-[40px] p-4 sm:p-8 lg:p-14 border border-stone-200/90 shadow-sm relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Left Column: 3-Photo Organic Collage with Sunburst SVG */}
             <div className="lg:col-span-6 reveal-left">
               <div className="relative max-w-lg mx-auto lg:max-w-none">
                 {/* Sunburst radial tick marks SVG watermark behind top-left of collage */}
                 <svg
-                  className="absolute -top-5 -left-5 sm:-top-7 sm:-left-7 w-28 h-28 sm:w-36 sm:h-36 text-[#E98A32]/60 pointer-events-none z-0 select-none"
+                  className="absolute -top-3 -left-3 sm:-top-7 sm:-left-7 w-20 h-20 sm:w-36 sm:h-36 text-[#ef5a20]/60 pointer-events-none z-0 select-none"
                   viewBox="0 0 100 100"
                   fill="none"
                   aria-hidden="true"
@@ -117,9 +129,9 @@ export const VisionMissionValuesPage: React.FC = () => {
                 </svg>
 
                 {/* 3-Photo Grid */}
-                <div className="relative z-10 grid grid-cols-12 gap-3.5 sm:gap-4 items-stretch">
+                <div className="relative z-10 grid grid-cols-12 gap-2.5 sm:gap-4 items-stretch">
                   {/* Left tall card */}
-                  <div className="col-span-6 relative h-[300px] sm:h-[360px] lg:h-[390px] charity-image-shape overflow-hidden shadow-[0_15px_30px_rgba(23,50,77,0.14)] border border-stone-200/60 bg-stone-100 group">
+                  <div className="col-span-6 relative h-[240px] sm:h-[360px] lg:h-[390px] charity-image-shape overflow-hidden shadow-[0_15px_30px_rgba(23,50,77,0.14)] border border-stone-200/60 bg-stone-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80"
                       alt="Donation relief box and community outreach"
@@ -128,15 +140,15 @@ export const VisionMissionValuesPage: React.FC = () => {
                         (e.target as HTMLImageElement).src = '/assets/aistudio/Donation_WordPress_Theme_2aed6214.jpg';
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                      <span className="text-[11px] font-bold text-white uppercase tracking-wider">Compassion in Action</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wider">Compassion in Action</span>
                     </div>
                   </div>
 
                   {/* Right stacked cards */}
-                  <div className="col-span-6 flex flex-col gap-3.5 sm:gap-4 justify-between">
+                  <div className="col-span-6 flex flex-col gap-2.5 sm:gap-4 justify-between">
                     {/* Top Right card */}
-                    <div className="relative h-[142px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
+                    <div className="relative h-[114px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
                       <img
                         src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80"
                         alt="Clothing distribution and child welfare"
@@ -165,16 +177,16 @@ export const VisionMissionValuesPage: React.FC = () => {
 
             {/* Right Column: Typography & Orange Pill CTA matching design */}
             <div className="lg:col-span-6 reveal-right space-y-5">
-              <span className="text-[#E98A32] font-bold text-xs sm:text-sm tracking-widest uppercase block">
+              <span className="text-[#ef5a20] font-bold text-xs sm:text-sm tracking-widest uppercase block">
                 What We Do
               </span>
 
-              <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#17324D] tracking-tight leading-[1.12]">
+              <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#000a37] tracking-tight leading-[1.12]">
                 Our Vision
               </h2>
 
-              <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#17324D] font-medium leading-relaxed italic border-l-2 border-[#E98A32] pl-4">
-                "Develop leaders, transform communities and create a legacy of peace through equipping the church in Africa for relevance, responsibility and sustainability."
+              <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#000a37] font-medium leading-relaxed italic border-l-2 border-[#ef5a20] pl-4">
+                "Developing Leaders, Transforming Communities, Creating a Legacy of Peace"
               </p>
 
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
@@ -183,19 +195,19 @@ export const VisionMissionValuesPage: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3 text-xs text-stone-700 font-semibold pt-1">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>70+ Reached Districts</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Christ-Centered Growth</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Self-Sustaining Churches</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Legacy of Lasting Peace</span>
                 </div>
               </div>
@@ -203,7 +215,7 @@ export const VisionMissionValuesPage: React.FC = () => {
               <div className="pt-3">
                 <button
                   onClick={() => navigateTo('programs')}
-                  className="interactive-button px-8 py-3.5 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-full text-xs font-extrabold uppercase tracking-widest transition-all shadow-md hover:shadow-lg active:scale-95 inline-flex items-center gap-2 group"
+                  className="interactive-button px-8 py-3.5 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-full text-xs font-extrabold uppercase tracking-widest transition-all shadow-md hover:shadow-lg active:scale-95 inline-flex items-center gap-2 group"
                 >
                   <span>LEARN MORE</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -220,19 +232,19 @@ export const VisionMissionValuesPage: React.FC = () => {
           - Right: 3-Image Organic Asymmetric Collage with Sunburst SVG
           ========================================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 lg:p-14 border border-stone-200/90 shadow-sm relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="bg-white rounded-[28px] sm:rounded-[40px] p-4 sm:p-8 lg:p-14 border border-stone-200/90 shadow-sm relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Left Column (Desktop order 1, mobile order 2): Typography & Orange Pill CTA */}
             <div className="lg:col-span-6 order-2 lg:order-1 reveal-left space-y-5">
-              <span className="text-[#E98A32] font-bold text-xs sm:text-sm tracking-widest uppercase block">
+              <span className="text-[#ef5a20] font-bold text-xs sm:text-sm tracking-widest uppercase block">
                 How We Serve
               </span>
 
-              <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#17324D] tracking-tight leading-[1.12]">
+              <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#000a37] tracking-tight leading-[1.12]">
                 Our Mission
               </h2>
 
-              <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#17324D] font-medium leading-relaxed italic border-l-2 border-[#E98A32] pl-4">
+              <p className="font-['Playfair_Display'] text-base sm:text-lg text-[#000a37] font-medium leading-relaxed italic border-l-2 border-[#ef5a20] pl-4">
                 "To develop programs that will empower people physically, emotionally, socially, and economically with a goal to draw them to Christ who meets their spiritual needs."
               </p>
 
@@ -242,19 +254,19 @@ export const VisionMissionValuesPage: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-3 text-xs text-stone-700 font-semibold pt-1">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Physical & Health Relief</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Emotional Counseling</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Social Inclusion</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#E98A32]" />
+                  <div className="w-2 h-2 rounded-full bg-[#ef5a20]" />
                   <span>Economic Empowerment</span>
                 </div>
               </div>
@@ -262,15 +274,14 @@ export const VisionMissionValuesPage: React.FC = () => {
               <div className="pt-3 flex flex-wrap gap-3">
                 <button
                   onClick={() => openDonationModal()}
-                  className="interactive-button px-8 py-3.5 bg-[#E98A32] hover:bg-[#d47926] text-white rounded-full text-xs font-extrabold uppercase tracking-widest transition-all shadow-md hover:shadow-lg active:scale-95 inline-flex items-center gap-2 group"
+                  className="interactive-button px-6 sm:px-8 py-3 sm:py-3.5 bg-[#ef5a20] hover:bg-[#d94a14] text-white rounded-full text-xs font-extrabold uppercase tracking-widest transition-all shadow-md hover:shadow-lg active:scale-95"
                 >
-                  <Heart className="w-3.5 h-3.5 fill-white" />
-                  <span>SUPPORT OUR MISSION</span>
+                  SUPPORT OUR MISSION
                 </button>
 
                 <button
                   onClick={() => navigateTo('get-involved')}
-                  className="interactive-button px-6 py-3.5 bg-stone-100 hover:bg-stone-200 text-[#17324D] rounded-full text-xs font-bold uppercase tracking-wider transition-all"
+                  className="interactive-button px-5 sm:px-6 py-3 sm:py-3.5 bg-stone-100 hover:bg-stone-200 text-[#000a37] rounded-full text-xs font-bold uppercase tracking-wider transition-all"
                 >
                   LEARN MORE
                 </button>
@@ -282,7 +293,7 @@ export const VisionMissionValuesPage: React.FC = () => {
               <div className="relative max-w-lg mx-auto lg:max-w-none">
                 {/* Sunburst radial tick marks SVG watermark behind top-right of collage */}
                 <svg
-                  className="absolute -top-5 -right-5 sm:-top-7 sm:-right-7 w-28 h-28 sm:w-36 sm:h-36 text-[#E98A32]/60 pointer-events-none z-0 select-none scale-x-[-1]"
+                  className="absolute -top-3 -right-3 sm:-top-7 sm:-right-7 w-20 h-20 sm:w-36 sm:h-36 text-[#ef5a20]/60 pointer-events-none z-0 select-none scale-x-[-1]"
                   viewBox="0 0 100 100"
                   fill="none"
                   aria-hidden="true"
@@ -305,23 +316,23 @@ export const VisionMissionValuesPage: React.FC = () => {
                 </svg>
 
                 {/* 3-Photo Grid */}
-                <div className="relative z-10 grid grid-cols-12 gap-3.5 sm:gap-4 items-stretch">
+                <div className="relative z-10 grid grid-cols-12 gap-2.5 sm:gap-4 items-stretch">
                   {/* Left tall card */}
-                  <div className="col-span-6 relative h-[300px] sm:h-[360px] lg:h-[390px] charity-image-shape overflow-hidden shadow-[0_15px_30px_rgba(23,50,77,0.14)] border border-stone-200/60 bg-stone-100 group">
+                  <div className="col-span-6 relative h-[240px] sm:h-[360px] lg:h-[390px] charity-image-shape overflow-hidden shadow-[0_15px_30px_rgba(23,50,77,0.14)] border border-stone-200/60 bg-stone-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80"
                       alt="Pastors and church planter training fellowship"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                      <span className="text-[11px] font-bold text-white uppercase tracking-wider">Church Equipping</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3 sm:p-4">
+                      <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-wider">Church Equipping</span>
                     </div>
                   </div>
 
                   {/* Right stacked cards */}
-                  <div className="col-span-6 flex flex-col gap-3.5 sm:gap-4 justify-between">
+                  <div className="col-span-6 flex flex-col gap-2.5 sm:gap-4 justify-between">
                     {/* Top Right card */}
-                    <div className="relative h-[142px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
+                    <div className="relative h-[114px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
                       <img
                         src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80"
                         alt="Mother and child family foundations support"
@@ -330,7 +341,7 @@ export const VisionMissionValuesPage: React.FC = () => {
                     </div>
 
                     {/* Bottom Right card */}
-                    <div className="relative h-[142px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
+                    <div className="relative h-[114px] sm:h-[172px] lg:h-[187px] charity-image-shape overflow-hidden shadow-[0_12px_24px_rgba(23,50,77,0.1)] border border-stone-200/60 bg-stone-100 group">
                       <img
                         src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80"
                         alt="Disability and vulnerable community care"
@@ -365,9 +376,9 @@ export const VisionMissionValuesPage: React.FC = () => {
                 (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/85 via-[#17324D]/25 to-transparent flex items-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-[#000a37]/25 to-transparent flex items-end p-5">
               <div>
-                <span className="text-[11px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                <span className="text-[11px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                   Family & Infant Care
                 </span>
                 <p className="text-white text-sm font-bold font-['Manrope']">
@@ -387,9 +398,9 @@ export const VisionMissionValuesPage: React.FC = () => {
                 (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/85 via-[#17324D]/25 to-transparent flex items-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-[#000a37]/25 to-transparent flex items-end p-5">
               <div>
-                <span className="text-[11px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                <span className="text-[11px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                   Household Discipleship
                 </span>
                 <p className="text-white text-sm font-bold font-['Manrope']">
@@ -409,9 +420,9 @@ export const VisionMissionValuesPage: React.FC = () => {
                 (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#17324D]/85 via-[#17324D]/25 to-transparent flex items-end p-5">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-[#000a37]/25 to-transparent flex items-end p-5">
               <div>
-                <span className="text-[11px] font-bold text-[#E98A32] uppercase tracking-wider block">
+                <span className="text-[11px] font-bold text-[#ef5a20] uppercase tracking-wider block">
                   Generational Hope
                 </span>
                 <p className="text-white text-sm font-bold font-['Manrope']">
@@ -425,8 +436,8 @@ export const VisionMissionValuesPage: React.FC = () => {
 
       {/* Core Organizational Goal */}
       <section className="reveal-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#17324D] text-white p-8 sm:p-12 rounded-3xl space-y-4 shadow-xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+        <div className="bg-[#000a37] text-white p-8 sm:p-12 rounded-3xl space-y-4 shadow-xl">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
             Core Organizational Goal
           </span>
           <h2 className="font-['Playfair_Display'] font-bold text-2xl sm:text-3xl text-white">
@@ -456,10 +467,10 @@ export const VisionMissionValuesPage: React.FC = () => {
       {/* Six Core Values */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="reveal-up text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#E98A32]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#ef5a20]">
             Organizational Ethics
           </span>
-          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#17324D]">
+          <h2 className="font-['Playfair_Display'] font-extrabold text-3xl sm:text-4xl text-[#000a37]">
             Our Six Core Values
           </h2>
           <p className="text-xs text-stone-500">
@@ -475,11 +486,11 @@ export const VisionMissionValuesPage: React.FC = () => {
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono font-bold text-xs text-[#E98A32]">{val.num}</span>
-                  <CheckCircle2 className="w-4 h-4 text-[#2459A9]" />
+                  <span className="font-mono font-bold text-xs text-[#ef5a20]">{val.num}</span>
+                  <CheckCircle2 className="w-4 h-4 text-[#000a37]" />
                 </div>
-                <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">{val.title}</h3>
-                <p className="text-xs font-semibold text-[#2459A9] italic">{val.tagline}</p>
+                <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">{val.title}</h3>
+                <p className="text-xs font-semibold text-[#000a37] italic">{val.tagline}</p>
                 <p className="text-xs text-stone-600 leading-relaxed">{val.description}</p>
               </div>
             </div>
@@ -492,7 +503,7 @@ export const VisionMissionValuesPage: React.FC = () => {
         <div className="bg-white p-8 rounded-3xl border border-stone-200 space-y-3 shadow-xs">
           <div className="flex items-center gap-3">
             <Shield className="w-5 h-5 text-emerald-600" />
-            <h3 className="font-['Manrope'] font-bold text-lg text-[#17324D]">
+            <h3 className="font-['Manrope'] font-bold text-lg text-[#000a37]">
               Our Non-Denominational Commitment
             </h3>
           </div>
@@ -504,7 +515,7 @@ export const VisionMissionValuesPage: React.FC = () => {
 
       {/* Bottom CTA */}
       <section className="reveal-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <h2 className="font-['Playfair_Display'] font-bold text-3xl text-[#17324D]">
+        <h2 className="font-['Playfair_Display'] font-bold text-3xl text-[#000a37]">
           Share in This Legacy of Peace
         </h2>
         <p className="text-xs sm:text-sm text-stone-600 max-w-lg mx-auto">
@@ -514,13 +525,13 @@ export const VisionMissionValuesPage: React.FC = () => {
         <div className="pt-2 flex flex-wrap justify-center gap-4">
           <button
             onClick={() => navigateTo('get-involved')}
-            className="interactive-button px-6 py-3 bg-[#17324D] hover:bg-[#2459A9] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all"
+            className="interactive-button px-6 py-3 bg-[#000a37] hover:bg-[#000a37]/90 text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all"
           >
             Get Involved With Us
           </button>
           <button
             onClick={() => openDonationModal()}
-            className="interactive-button px-6 py-3 bg-[#E98A32] hover:bg-[#d47926] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all flex items-center gap-2"
+            className="interactive-button px-6 py-3 bg-[#ef5a20] hover:bg-[#d94a14] text-white text-xs uppercase tracking-wider font-bold rounded-full transition-all flex items-center gap-2"
           >
             <Heart className="w-3.5 h-3.5 fill-white" />
             <span>Support Our Mission</span>

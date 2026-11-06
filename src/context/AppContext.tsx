@@ -93,15 +93,26 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [selectedProgramId, setSelectedProgramId] = useState<ProgramId | null>(null);
   const [selectedReportSlug, setSelectedReportSlug] = useState<string | null>(null);
 
-  const [programs, setPrograms] = useState<Program[]>(() =>
-    getStoredItem<Program[]>('programs', INITIAL_PROGRAMS)
-  );
+  const [programs, setPrograms] = useState<Program[]>(() => {
+    const stored = getStoredItem<Program[]>('programs', INITIAL_PROGRAMS);
+    if (!stored || stored.length < INITIAL_PROGRAMS.length) {
+      return INITIAL_PROGRAMS;
+    }
+    return stored.map((p) => {
+      const canonical = INITIAL_PROGRAMS.find((init) => init.id === p.id);
+      return canonical ? { ...p, imageUrl: canonical.imageUrl } : p;
+    });
+  });
+
   const [reports, setReports] = useState<Report[]>(() => {
     const stored = getStoredItem<Report[]>('reports', INITIAL_REPORTS);
     if (!stored || stored.length < INITIAL_REPORTS.length || !stored[0]?.executiveSummary) {
       return INITIAL_REPORTS;
     }
-    return stored;
+    return stored.map((r) => {
+      const canonical = INITIAL_REPORTS.find((init) => init.id === r.id);
+      return canonical ? { ...r, featuredImage: canonical.featuredImage } : r;
+    });
   });
   const [events, setEvents] = useState<EventItem[]>(() =>
     getStoredItem<EventItem[]>('events', INITIAL_EVENTS)
@@ -109,9 +120,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [impactMetrics, setImpactMetrics] = useState<ImpactMetric[]>(() =>
     getStoredItem<ImpactMetric[]>('impact_metrics', INITIAL_IMPACT_METRICS)
   );
-  const [contactInfo, setContactInfo] = useState<ContactInfo>(() =>
-    getStoredItem<ContactInfo>('contact_info', INITIAL_CONTACT_INFO)
-  );
+  const [contactInfo, setContactInfo] = useState<ContactInfo>(() => {
+    const stored = getStoredItem<ContactInfo>('contact_info', INITIAL_CONTACT_INFO);
+    if (!stored || stored.bankSwift !== 'ORINUGKA' || !stored.bankAccountNumberUSD) {
+      return INITIAL_CONTACT_INFO;
+    }
+    return stored;
+  });
   const [enquiries, setEnquiries] = useState<EnquirySubmission[]>(() =>
     getStoredItem<EnquirySubmission[]>('enquiries', [
       {

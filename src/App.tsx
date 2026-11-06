@@ -14,10 +14,10 @@ import { AboutFounderPage } from './pages/AboutFounderPage';
 import { VisionMissionValuesPage } from './pages/VisionMissionValuesPage';
 import { ProgramsPage } from './pages/ProgramsPage';
 import { ProgramDetailPage } from './pages/ProgramDetailPage';
+import { ChildrenMinistryPage } from './pages/ChildrenMinistryPage';
 import { ChildrenServicesPage } from './pages/ChildrenServicesPage';
 import { EducationFundPage } from './pages/EducationFundPage';
 import { ReportsPage } from './pages/ReportsPage';
-import { EventsPage } from './pages/EventsPage';
 import { GetInvolvedPage } from './pages/GetInvolvedPage';
 import { ContactPage } from './pages/ContactPage';
 import { AdminCMS } from './pages/AdminCMS';
@@ -38,10 +38,10 @@ const MainContent: React.FC = () => {
       {currentPage === 'vision-mission-values' && <VisionMissionValuesPage />}
       {currentPage === 'programs' && <ProgramsPage />}
       {currentPage === 'program-detail' && <ProgramDetailPage />}
-      {currentPage === 'children-services' && <ChildrenServicesPage />}
-      {currentPage === 'education-fund' && <EducationFundPage />}
+      {(currentPage === 'children-ministry' ||
+        currentPage === 'children-services' ||
+        currentPage === 'education-fund') && <ChildrenMinistryPage />}
       {currentPage === 'reports' && <ReportsPage />}
-      {currentPage === 'events' && <EventsPage />}
       {currentPage === 'get-involved' && <GetInvolvedPage />}
       {currentPage === 'contact' && <ContactPage />}
       {currentPage === 'cms' && <AdminCMS />}
@@ -52,7 +52,7 @@ const MainContent: React.FC = () => {
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen flex flex-col bg-[#FAF7F0] text-[#242B33] selection:bg-[#E98A32]/20 selection:text-[#17324D]">
+      <div className="min-h-screen flex flex-col bg-[#FAF9F6] text-[#242B33] selection:bg-[#ef5a20]/20 selection:text-[#000a37]">
         <Header />
         <div className="flex-1">
           <MainContent />

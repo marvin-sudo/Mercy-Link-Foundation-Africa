@@ -23,20 +23,32 @@ export const ProgramsPage: React.FC = () => {
 
   return (
     <div className="space-y-8 sm:space-y-10 pb-16">
-      {/* Header - Full Width */}
-      <section className="reveal-up w-full bg-gradient-to-b from-white via-[#FAF7F0] to-[#FAF7F0] border-b border-stone-200/80 py-6 sm:py-8 lg:py-10 px-4 sm:px-8 lg:px-12 xl:px-16">
-        <div className="max-w-7xl mx-auto space-y-2.5">
-          <div className="inline-flex items-center gap-2 text-[11px] font-semibold text-[#2459A9]">
-            <span>Our Ministries</span>
+      {/* Header - Full Width with Background Image & Transparent Navy Blue Overlay */}
+      <section className="reveal-up w-full relative overflow-hidden bg-[#000a37] text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-12 xl:px-16 shadow-md border-b border-white/10">
+        {/* Relevant Background Photography */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1920&q=80"
+            alt="Community learning, empowerment, and holistic outreach"
+            className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+          {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
+          <div className="absolute inset-0 bg-[#000a37]/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#ef5a20]">
+            <span>Our Programs</span>
             <span aria-hidden="true">·</span>
             <span>7 Baseline Programs</span>
             <span aria-hidden="true">·</span>
             <span>Uganda & East Africa</span>
           </div>
-          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17324D] tracking-tight leading-tight">
+          <h1 className="font-['Manrope'] font-extrabold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
             Comprehensive Ministry Programs
           </h1>
-          <p className="text-xs sm:text-sm text-stone-600 max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-stone-200 max-w-3xl leading-relaxed">
             From community Bible clubs and family foundations to prison chaplaincy, disability advocacy, and youth empowerment—explore our verified programs transforming lives across Uganda.
           </p>
 
@@ -48,8 +60,8 @@ export const ProgramsPage: React.FC = () => {
                 onClick={() => setFilterCategory(cat.id)}
                 className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all whitespace-nowrap shrink-0 ${
                   filterCategory === cat.id
-                    ? 'bg-[#17324D] text-white shadow-xs'
-                    : 'bg-white border border-stone-200 text-stone-700 hover:border-stone-400'
+                    ? 'bg-[#ef5a20] text-white shadow-xs font-bold'
+                    : 'bg-white/15 backdrop-blur-xs border border-white/20 text-white hover:bg-white/25'
                 }`}
               >
                 {cat.label}
@@ -76,16 +88,16 @@ export const ProgramsPage: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute bottom-3 left-4 text-[11px] font-bold text-white bg-[#17324D]/80 backdrop-blur-xs px-2.5 py-1 rounded">
+                  <span className="absolute bottom-3 left-4 text-[11px] font-bold text-white bg-[#000a37]/80 backdrop-blur-xs px-2.5 py-1 rounded">
                     {prog.category}
                   </span>
                 </div>
 
                 <div className="p-6 space-y-3">
-                  <h2 className="font-['Manrope'] font-bold text-xl text-[#17324D] group-hover:text-[#2459A9] transition-colors leading-snug">
+                  <h2 className="font-['Manrope'] font-bold text-xl text-[#000a37] group-hover:text-[#ef5a20] transition-colors leading-snug">
                     {prog.name}
                   </h2>
-                  <p className="text-xs font-semibold text-[#E98A32] italic">
+                  <p className="text-xs font-semibold text-[#ef5a20] italic">
                     "{prog.tagline}"
                   </p>
                   <p className="text-xs text-stone-600 line-clamp-3 leading-relaxed">
@@ -97,7 +109,7 @@ export const ProgramsPage: React.FC = () => {
               <div className="p-6 pt-0 border-t border-stone-100 flex items-center justify-between">
                 <button
                   onClick={() => navigateTo('program-detail', prog.id)}
-                  className="text-xs font-bold text-[#17324D] hover:text-[#2459A9] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform"
+                  className="text-xs font-bold text-[#000a37] hover:text-[#ef5a20] flex items-center gap-1.5 group-hover:translate-x-0.5 transition-transform"
                 >
                   <span>Explore Full Program Page</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -105,7 +117,7 @@ export const ProgramsPage: React.FC = () => {
 
                 <button
                   onClick={() => openDonationModal(prog.name)}
-                  className="text-xs font-semibold text-[#E98A32] hover:underline"
+                  className="text-xs font-semibold text-[#ef5a20] hover:underline"
                 >
                   Support
                 </button>
