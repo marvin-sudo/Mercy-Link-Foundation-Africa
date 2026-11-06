@@ -86,6 +86,13 @@ export const ProgramDetailPage: React.FC = () => {
             alt={program.name}
             className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              if (program.id === 'prison-ministry') {
+                (e.target as HTMLImageElement).src = '/assets/prison_ministry_hero.jpg';
+              } else if (program.id === 'church-planters') {
+                (e.target as HTMLImageElement).src = '/assets/church_planters_hero.jpg';
+              }
+            }}
           />
           {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
           <div className="absolute inset-0 bg-[#000a37]/50" />
@@ -550,11 +557,11 @@ export const ProgramDetailPage: React.FC = () => {
                 {/* 3. Church Planter Image with Signature Curved Border */}
                 <div className="charity-image-shape overflow-hidden border border-stone-200/80 shadow-md relative h-64 sm:h-80 group">
                   <img
-                    src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80"
+                    src="https://i.postimg.cc/fbDqqRMj/Whats-App-Image-2026-11-06-at-12-09-35-PM.jpg"
                     alt="Church Planter Summit and Leadership Training"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/assets/aistudio/Charity_website_0802821e.jpg';
+                      (e.target as HTMLImageElement).src = '/assets/church_planters_hero.jpg';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-[#000a37]/30 to-transparent flex items-end p-6">

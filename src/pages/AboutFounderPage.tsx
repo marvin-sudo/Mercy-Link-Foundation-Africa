@@ -22,10 +22,13 @@ export const AboutFounderPage: React.FC = () => {
         {/* Relevant Background Photography */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=1920&q=80"
-            alt="Pastoral leadership and visionary mentorship"
+            src="https://i.postimg.cc/q7xsYBzr/Whats-App-Image-2026-11-06-at-11-10-37-AM.jpg"
+            alt="Mercy Link Foundation Africa Founder and Field Work"
             className="reveal-image absolute inset-0 w-full h-full object-cover object-center scale-105"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/assets/founder_hero_bg.jpg';
+            }}
           />
           {/* 50% Opacity Transparent Navy Blue Overlay (#000a37) */}
           <div className="absolute inset-0 bg-[#000a37]/50" />
@@ -43,7 +46,7 @@ export const AboutFounderPage: React.FC = () => {
             About the Founder & Leadership
           </h1>
           <p className="text-xs sm:text-sm text-stone-200 max-w-3xl leading-relaxed font-['Plus_Jakarta_Sans']">
-            The pastoral burden, servant leadership, and grassroots faith that catalyzed Mercy Link Foundation Africa from a humble community Bible club into a nationwide movement.
+            The visionary burden, servant leadership, and grassroots faith that catalyzed Mercy Link Foundation Africa from a humble community Bible club into a nationwide movement.
           </p>
         </div>
       </section>
@@ -52,22 +55,25 @@ export const AboutFounderPage: React.FC = () => {
       <section className="reveal-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white charity-image-shape border border-stone-200 overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 items-center">
           {/* Portrait Column */}
-          <div className="reveal-left lg:col-span-5 relative h-full min-h-[280px] sm:min-h-[380px] bg-stone-100">
+          <div className="reveal-left lg:col-span-5 relative h-full min-h-[300px] sm:min-h-[420px] bg-stone-100">
             <img
-              src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1000&q=80"
-              alt="Pastor Martin Mugaba and Mercy Link Leadership"
-              className="reveal-image interactive-image w-full h-full object-cover"
+              src="https://i.postimg.cc/8ktyc4ks/Whats-App-Image-2026-11-06-at-11-24-25-AM.jpg"
+              alt="Mr. Robert Sebunya - Director/Founder, Mercy Link Foundation Africa"
+              className="reveal-image interactive-image w-full h-full object-cover object-top"
               referrerPolicy="no-referrer"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/assets/founder_robert_sebunya.jpg';
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/80 via-transparent to-transparent" />
-            <div className="absolute bottom-5 sm:bottom-6 inset-x-5 sm:inset-x-6 text-white space-y-0.5">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-[#ef5a20]">
-                Founding Visionary & Executive Director
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000a37]/85 via-transparent to-transparent" />
+            <div className="absolute bottom-5 sm:bottom-6 inset-x-5 sm:inset-x-6 text-white space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#ef5a20] block">
+                Director / Founder
               </span>
-              <h3 className="font-['Playfair_Display'] font-bold text-lg sm:text-xl text-white">
-                Pastor Martin Mugaba
+              <h3 className="font-['Playfair_Display'] font-bold text-xl sm:text-2xl text-white">
+                Mr. Robert Sebunya
               </h3>
-              <p className="text-[11px] sm:text-xs text-white/80">
+              <p className="text-xs text-white/90 font-medium">
                 Mercy Link Foundation Africa · Kampala, Uganda
               </p>
             </div>
@@ -86,13 +92,13 @@ export const AboutFounderPage: React.FC = () => {
 
             <div className="space-y-4 text-xs sm:text-sm text-stone-600 leading-relaxed">
               <p>
-                In <strong>2007</strong>, while walking through the streets of Bulange Mengo in Kampala, Pastor Martin Mugaba and a cohort of dedicated local believers were deeply burdened by the number of children lingering around informal settlements with neither biblical guidance nor safe spaces to learn.
+                In <strong>2007</strong>, while walking through the streets of Bulange Mengo in Kampala, <strong>Mr. Robert Sebunya</strong> and a cohort of dedicated local believers were deeply burdened by the number of children lingering around informal settlements with neither biblical guidance nor safe spaces to learn.
               </p>
               <p>
                 Responding to God's whisper, they established a weekend neighborhood Bible club. They sang songs, taught Scripture, shared small meals, and counseled parents. What became instantly apparent was that child discipleship could not be separated from family welfare, disability compassion, and local church equipping.
               </p>
               <p>
-                Driven by Christ's call to <em>"reach the lost and bind up the brokenhearted,"</em> Pastor Martin steered the growth of Mercy Link into formal local NGO registration in 2013, extending ministry operations across more than 70 districts throughout Uganda and cross-border missions.
+                Driven by Christ's call to <em>"reach the lost and bind up the brokenhearted,"</em> Mr. Robert Sebunya steered the growth of Mercy Link Foundation Africa into formal local NGO registration in 2013, extending ministry operations across more than 70 districts throughout Uganda and cross-border missions.
               </p>
             </div>
 
@@ -102,7 +108,7 @@ export const AboutFounderPage: React.FC = () => {
               <p className="font-['Playfair_Display'] italic text-xs sm:text-sm text-[#000a37]">
                 "Our calling in Africa is not to build monuments to ourselves, but to equip the local church so that ordinary believers become catalysts of peace, righteousness, and sustainable community transformation."
               </p>
-              <p className="text-[11px] font-bold text-stone-500">— Pastor Martin Mugaba</p>
+              <p className="text-[11px] font-bold text-stone-500">— Mr. Robert Sebunya, Director/Founder</p>
             </div>
           </div>
         </div>

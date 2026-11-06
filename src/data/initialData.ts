@@ -39,7 +39,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: 'Prison Ministry',
     tagline: 'Bringing Redemption, Prison Churches & Discipleship Behind Prison Walls',
     category: 'Correctional Outreach & Rehabilitation',
-    imageUrl: 'https://i.postimg.cc/2yBLq4QH/Gemini-Generated-Image-42rueg42rueg42ru.jpg',
+    imageUrl: 'https://i.postimg.cc/7P9HK5ww/Whats-App-Image-2026-11-06-at-12-07-22-PM.jpg',
     overview:
       'One other Major area of our operation is the prisons in Uganda. God has granted us full leverage and access to all prisons in Uganda. This has so far given us access to over 12,000 prisoners in different districts since the year begun and over 5,130 committing and rededicating their lives to Christ.',
     needAddressed:
@@ -72,7 +72,7 @@ export const INITIAL_PROGRAMS: Program[] = [
     name: 'Church Planter Training',
     tagline: 'A Living Church in every community, planted by ordinary believers who are equipped with practical skills and tools.',
     category: 'Leadership & Church Multiplication',
-    imageUrl: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80',
+    imageUrl: 'https://i.postimg.cc/fbDqqRMj/Whats-App-Image-2026-11-06-at-12-09-35-PM.jpg',
     overview:
       'VISION: The overall vision in this initiative is to produce “A LIVING CHURCH IN EVERY COMMUNITY, PLANTED BY ORDINARY BELIEVERS WHO ARE EQUIPPED WITH PRACTICAL SKILLS AND TOOLS”. A Living Church in every community planted by ordinary believers implies churches planted by mature and committed indigenous/local believers from a specific people group who have a burden to evangelize and disciple their own communities.\n\nGOAL: The goal in the Church Planting and Training Initiative is to establish a rapid increase of indigenous Churches among unreached people groups that will be capable of sustaining evangelization and discipleship of their own communities. The initiative is coordinated and run by trained local Church believers within a specific people group.\n\nIn the current program, ordinary, mature believers, native of a typical community/tribe, will be equipped with good knowledge of the Bible, trained on practical skills are envisaged for Church Planting and training to plant a living Church in every community in Africa.\n\nThe essence of the training is to build national church planters to plant churches as Jesus Christ commanded us to go, preach and make disciples of all nations. The training adopts a Modular (5 Modules) system offering a contextual and practical skill transfer on to the church planters providing opportunities to empower churches evangelize and counter non-biblical churches and groups. The alternative training program is sought because education of the church planters is expensive and churches don’t have adequate resources to address the needs. Hence, the alternative program, apart from helping churches focus on church planting has increased the native missionaries and cross-cultural missionaries to work beyond African boundaries. The program approach has also fostered unity among denominations and focused on the kingdom.\n\nTheme: To empower Churches in our Region with Practical Church Planting skills and other resources to establish in every community reproducible and sustainable indigenous churches through Church planting as the most appropriate method of evangelism to un-reached communities.',
     needAddressed:
@@ -433,7 +433,7 @@ Over 35,000 evangelistic contacts were recorded throughout the school term outre
 Our focus remains on deep discipleship: planting internal fellowship groups led by inmate leaders who have been nurtured through scripture. Over the first six months of 2024, 76 inmates completed the Foundations of Faith course, and basic welfare kits containing soap, toothpaste, and notebooks were distributed to inmates in acute need.
 
 Particular emphasis was given to youth wards, engaging young offenders with practical life-rebuilding counseling to prevent future re-offending. Prison wardens reported noticeable drops in disciplinary infractions among participating inmates.`,
-    featuredImage: 'https://i.postimg.cc/2yBLq4QH/Gemini-Generated-Image-42rueg42rueg42ru.jpg',
+    featuredImage: 'https://i.postimg.cc/7P9HK5ww/Whats-App-Image-2026-11-06-at-12-07-22-PM.jpg',
     verifiedMetrics: [
       { label: 'Prison Stations Visited', value: '8' },
       { label: 'Course Graduates', value: '76' },
@@ -479,7 +479,7 @@ Particular emphasis was given to youth wards, engaging young offenders with prac
 The year-end summit brought together leaders from rural sub-counties as well as cross-border representatives from Eastern DRC. Topics covered included expository preaching in African cultural contexts, community conflict resolution, sustainable church finances, and initiating community mercy ministries.
 
 Each graduate returned to their field with a study Bible, discipleship guide, and ongoing mentoring connection from regional directors. Field assessments confirm that congregations planted through this methodology achieve community self-support within 18 months.`,
-    featuredImage: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: 'https://i.postimg.cc/fbDqqRMj/Whats-App-Image-2026-11-06-at-12-09-35-PM.jpg',
     verifiedMetrics: [
       { label: 'Leaders Attended', value: '95' },
       { label: 'Districts Represented', value: '24' },

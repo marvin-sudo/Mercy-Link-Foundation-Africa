@@ -305,7 +305,7 @@ export const Header: React.FC = () => {
                       <Users className={`w-4 h-4 mt-0.5 shrink-0 ${currentPage === 'about-founder' ? 'text-[#ef5a20]' : 'text-[#000a37]'}`} />
                       <div>
                         <div className="text-xs font-bold leading-snug">About the Founder</div>
-                        <div className="text-[10px] text-stone-500 font-normal leading-tight">Pastor Martin Mugaba & leadership</div>
+                        <div className="text-[10px] text-stone-500 font-normal leading-tight">Mr. Robert Sebunya & leadership</div>
                       </div>
                     </button>
 
